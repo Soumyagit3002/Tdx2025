@@ -1,0 +1,36 @@
+import { LightningElement, api } from 'lwc';
+export default class ContactInformationSection extends LightningElement {
+
+    @api translations = [];
+    @api applicationData = [];
+
+    radioOptions = [
+        { label: 'Opt-in', value: 'Opt-in' },
+        { label: 'No thanks', value: 'No thanks' }
+    ];
+
+    get options() {
+        return [
+            { label: 'Text1', value: 'Text1' },
+            { label: 'Text2', value: 'Text2' },
+            { label: 'Text3', value: 'Text3' },
+            { label: 'Text4', value: 'Text4' }
+        ];
+    }
+
+    handleFormField(event) {
+
+        var fldName = event.target.name;
+        var fldval = event.detail.value;
+        
+        const custEvent = new CustomEvent('sendformvalue', {
+            detail: {
+                FieldName: fldName,
+                Value: fldval
+            }
+        });
+        this.dispatchEvent(custEvent);
+
+    }
+
+}

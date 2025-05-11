@@ -1,0 +1,98 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.StarScholarship}>{translations.StarScholarship}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.StarScholarship_Text1}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="chicagoStarS"
+                    value={applicationData.chicagoStarS} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.CPSHighSchoolGrade}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="cpsGrade"
+                    value={applicationData.cpsGrade} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.StarScholarship_Text2}</label>
+                <lightning-radio-group variant='label-hidden' options={graduatingOptions} type="radio" name="graduatingFrom"
+                    value={applicationData.graduatingFrom} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+            <!--<div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.CPSHighSchoolGrade}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions}>
+                </lightning-combobox>
+            </div>-->
+        </div>
+        <div class="inputCls">
+            <label class="lblCls">{translations.StarScholarship_Text3}:</label>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls">{translations.InterestedInChicagoStarScholarship}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="interestedCSS"
+                    value={applicationData.interestedCSS} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls">{translations.StarScholarship_Text4}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="authorizeHighS"
+                    value={applicationData.authorizeHighS} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls">{translations.StarScholarship_Text5}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="authorizeACT"
+                    value={applicationData.authorizeACT} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls">{translations.StarScholarship_Text6}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="authorizeCOC"
+                    value={applicationData.authorizeCOC} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.HighSchoolStudentIdNumber}</label>
+                <lightning-input type="text" variant='label-hidden' name="idNum"
+                    value={applicationData.idNum} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PreferredEmailAddress}</label>
+                <lightning-input type="text" variant='label-hidden' name="preferredEmail"
+                    value={applicationData.preferredEmail} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,7 @@
+.custom-modal {
+    z-index: 10000; /* Higher than the default progress modal */
+}
+
+.custom-backdrop {
+    z-index: 1040; /* Ensure the backdrop is behind the modal */
+}

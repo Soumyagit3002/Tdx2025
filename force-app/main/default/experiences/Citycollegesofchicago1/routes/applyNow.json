@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4ac02b9f-fb10-4fc7-b82e-a9e5df8e6459",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Early_Education_Application__c",
+  "id" : "a6cb77dd-fde0-42e1-9206-2dc14787f96c",
+  "label" : "Apply Now",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-early-education-application",
+  "type" : "route",
+  "urlPrefix" : "application"
+}

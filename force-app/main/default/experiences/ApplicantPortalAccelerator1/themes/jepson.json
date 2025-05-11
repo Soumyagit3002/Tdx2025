@@ -1,0 +1,489 @@
+{
+  "activeBrandingSetId" : "8d8463fe-6aa3-40d4-9fc3-faadd85cd3ba",
+  "customCSS" : "",
+  "developerName" : "jepson",
+  "id" : "1c9a9308-da3f-4769-a0f8-ca33e7ae183d",
+  "label" : "Jepson",
+  "layouts" : {
+    "Home" : "556ad2b6-cfb5-4c6e-9b40-cfcbcc9f7656",
+    "Inner" : "61815a6f-3a8d-4304-812c-a8c84f4e851b",
+    "Login" : "e2ef3b7e-8a10-4762-83b5-19a8b391bdb7",
+    "ServiceNotAvailable" : "6c32e21a-179a-4830-8bf1-699dada8a9e1"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "e2ef3b7e-8a10-4762-83b5-19a8b391bdb7",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "36edeb03-cd4f-4c1f-b6e8-55bfcad517fc",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "46843332-f387-4391-9753-d8f291ed7db3",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "42b708fb-19a7-46bd-8f46-2d5391f73b51",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(255, 255, 255, 0.8)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : false
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "61815a6f-3a8d-4304-812c-a8c84f4e851b",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0.3)",
+          "borderBottomColor" : "rgba(0, 0, 0, 0.5)",
+          "centerAlignLogo" : false,
+          "collapseNavMenu" : false,
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "#FFFFFF",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "#F0F0F0",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "headerHeight" : 16,
+          "linkActiveBorderColor" : "",
+          "linkColor" : "rgba(0, 0, 0, 0.8)",
+          "linkHoverColor" : "rgba(0, 0, 0, 0.7)",
+          "linkTextShadowColor" : "rgba(255, 255, 255, 0)",
+          "logoWidth" : 150,
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNavMenuOnLeft" : true,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true
+        },
+        "componentName" : "forceCommunity:themeHeaderCompact",
+        "id" : "247cf456-1af2-4aeb-acd7-b4fcfd1b20cb",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 15,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "customizableUserProfileMenuEditor" : "Default_User_Profile_Menu1",
+              "menuStyleSettings" : "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
+            },
+            "componentName" : "forceCommunity:customizableUserProfileMenu",
+            "id" : "5a5c7992-2e15-4165-9d96-c26cc38de3b8",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "b9c428df-cb0d-4ead-93a5-f71c972f10ae",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0.8)",
+              "borderRadius" : 20,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "rgba(0, 0, 0, 0.8)",
+              "placeholderText" : "Search...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "showInputFocusOutline" : true,
+              "showSearchButton" : false,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 5,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearch",
+            "id" : "c09979b9-903a-4cf4-a4f9-1c96e53e5ae1",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "dc41e221-e326-45b1-91a3-9736432d2c0a",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 4,
+              "navigationMenuEditorRefresh" : ""
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "5ea82606-1c88-4985-91d6-ffa9386b3e34",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "02d74f2c-72c1-4c77-896e-ab88e376ce13",
+          "regionName" : "nav",
+          "type" : "region"
+        }, {
+          "id" : "f987376c-1e5b-471b-8f59-24b0009fd60b",
+          "regionName" : "cartIcon",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "27d4e51c-a5fb-4222-ab23-fb28675de4ba",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "bgImage" : "background: #FFFFFF url(/sfsites/assets/themes/jepson-background.jpg) top center /cover",
+          "bgOverlayColor" : "rgba(255, 255, 255, 0.20)",
+          "captionText" : "Our Mission",
+          "captionTextColor" : "rgba(0, 0, 0, 0.8)",
+          "captionTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "contentAlignment" : "right",
+          "contentWidth" : 45,
+          "ctaBtnOneBgColor" : "",
+          "ctaBtnOneBgHoverColor" : "",
+          "ctaBtnOneBorderColor" : "rgba(10, 50, 198, 0)",
+          "ctaBtnOneOpenNewTab" : false,
+          "ctaBtnOneText" : "Our Projects",
+          "ctaBtnOneTextColor" : "",
+          "ctaBtnOneTextHoverColor" : "",
+          "ctaBtnOneUrl" : "",
+          "ctaBtnRadius" : 25,
+          "ctaBtnTwoBgColor" : "rgba(255, 255, 255, 0)",
+          "ctaBtnTwoBgHoverColor" : "rgba(255, 255, 255, 0.9)",
+          "ctaBtnTwoBorderColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoOpenNewTab" : false,
+          "ctaBtnTwoText" : "Contact Us",
+          "ctaBtnTwoTextColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoTextHoverColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoUrl" : "",
+          "ctaShowBtnOne" : true,
+          "ctaShowBtnTwo" : true,
+          "fixedHeroWidth" : true,
+          "heroHeight" : 162,
+          "heroWidth" : 1440,
+          "showCaption" : true,
+          "showSubtitle" : true,
+          "showTitle" : true,
+          "subtitleText" : "We specialize in the construction of unique and exclusive properties.  We deliver outstanding quality and design for leading architects and private clients around the world.",
+          "subtitleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "titleText" : "Your Dream Home",
+          "titleTextColor" : "rgba(0, 0, 0, 0.8)",
+          "titleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "type" : "callToAction"
+        },
+        "componentName" : "forceCommunity:themeHeroStarter",
+        "id" : "fc4d8c89-ef2a-4799-ad44-8303ea2a05c3",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0)",
+              "borderRadius" : 25,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "#FFFFFF",
+              "placeholderText" : "Ask a question...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "publicDropdownBackgroundColor" : "#FFFFFF",
+              "publicDropdownBackgroundHoverColor" : "",
+              "publicDropdownBorderColor" : "#F0F0F0",
+              "publicDropdownTextColor" : "",
+              "publicDropdownTextHoverColor" : "",
+              "showInputFocusOutline" : true,
+              "showSearchButton" : true,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 6,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearchHero",
+            "id" : "c733e619-f22c-4094-b4ee-b62f6c1918a1",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "184d7617-095d-4a1e-8ba4-4b68af170c0f",
+          "regionName" : "search",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "a7220aee-791a-43e3-865e-1c25e55ebc7b",
+      "regionName" : "themeHero",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"footer-top\" style=\"background-color: black; color: white;\">\n\n    <div class=\"footer-row\">\n        <div class=\"footer-left\">\n            <p class=\"colleges\">Our Colleges</p>\n            <div class=\"menu-colleges-container\">\n                <ul id=\"menu-colleges\" class=\"menu\">\n                    <li id=\"menu-item-299\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-299\">\n                        <a href=\"https://www.ccc.edu/colleges/washington/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Harold Washington</a>\n                    </li>\n                    <li id=\"menu-item-301\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-301\">\n                        <a href=\"https://www.ccc.edu/colleges/truman/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Harry S Truman</a>\n                    </li>\n                    <li id=\"menu-item-296\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-296\">\n                        <a href=\"https://www.ccc.edu/colleges/kennedy/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Kennedy-King</a>\n                    </li>\n                    <li id=\"menu-item-300\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-300\">\n                        <a href=\"https://www.ccc.edu/colleges/malcolm-x/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Malcolm X</a>\n                    </li>\n                    <li id=\"menu-item-297\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-297\">\n                        <a href=\"https://www.ccc.edu/colleges/olive-harvey/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Olive-Harvey</a>\n                    </li>\n                    <li id=\"menu-item-295\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-295\">\n                        <a href=\"https://www.ccc.edu/colleges/daley/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Richard J. Daley</a>\n                    </li>\n                    <li id=\"menu-item-298\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-298\">\n                        <a href=\"https://www.ccc.edu/colleges/wright/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Wilbur Wright</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"footer-right\">\n\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "4a77c2f8-e7f4-4bd0-9bdd-6f8d7a241083",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "0589a111-e497-4588-bb3f-cf6242db5fa4",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(255, 255, 255, 0.8)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "556ad2b6-cfb5-4c6e-9b40-cfcbcc9f7656",
+    "label" : "Home",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "background" : "background: #FFFFFF",
+          "backgroundOverlayColor" : "rgba(0, 0, 0, 0.3)",
+          "borderBottomColor" : "rgba(0, 0, 0, 0.5)",
+          "centerAlignLogo" : false,
+          "collapseNavMenu" : false,
+          "containHeader" : true,
+          "containHeaderWidth" : 1440,
+          "dropdownBackgroundColor" : "#FFFFFF",
+          "dropdownBackgroundHoverColor" : "",
+          "dropdownBorderColor" : "#F0F0F0",
+          "dropdownTextColor" : "",
+          "dropdownTextHoverColor" : "",
+          "headerHeight" : 16,
+          "linkActiveBorderColor" : "",
+          "linkColor" : "rgba(0, 0, 0, 0.8)",
+          "linkHoverColor" : "rgba(0, 0, 0, 0.7)",
+          "linkTextShadowColor" : "rgba(255, 255, 255, 0)",
+          "logoWidth" : 150,
+          "searchStyle" : "expanded",
+          "showAppLauncher" : false,
+          "showNavMenuOnLeft" : true,
+          "showNotifications" : true,
+          "showProfileMenu" : true,
+          "showSearch" : true
+        },
+        "componentName" : "forceCommunity:themeHeaderCompact",
+        "id" : "b66c51a8-7cbf-4b81-919f-36bdb2e80594",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "buttonBackgroundColor" : "",
+              "buttonBackgroundHoverColor" : "",
+              "buttonBorderColor" : "rgba(0, 0, 0, 0)",
+              "buttonBorderRadius" : 15,
+              "buttonText" : "Log in",
+              "buttonTextColor" : "",
+              "buttonTextHoverColor" : "",
+              "customizableUserProfileMenuEditor" : "Default_User_Profile_Menu1",
+              "menuStyleSettings" : "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
+            },
+            "componentName" : "forceCommunity:customizableUserProfileMenu",
+            "id" : "9bf53761-ab9f-4d73-8ed0-a22920563f46",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "e07f576e-798a-4cf1-b091-bc51845c19b7",
+          "regionName" : "themeHeaderProfileMenu",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0.8)",
+              "borderRadius" : 20,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "rgba(0, 0, 0, 0.8)",
+              "placeholderText" : "Search...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "showInputFocusOutline" : true,
+              "showSearchButton" : false,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 5,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearch",
+            "id" : "0d4099b9-7bcc-4fd7-9e95-f6870746acd6",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "8b88a8f0-4fe5-46c3-bd90-0c4a1ac72acf",
+          "regionName" : "search",
+          "type" : "region"
+        }, {
+          "components" : [ {
+            "componentAttributes" : {
+              "navAlignment" : "left",
+              "navItemThreshold" : 6,
+              "navigationMenuEditorRefresh" : "Default_Navigation"
+            },
+            "componentName" : "forceCommunity:themeNav",
+            "id" : "2fced266-af6c-4107-9389-f1a6db85bc07",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "031691b6-84a2-4276-b732-2ee0485bd8d9",
+          "regionName" : "nav",
+          "type" : "region"
+        }, {
+          "id" : "70b41d00-d45d-456a-9930-a9ea6cf0db49",
+          "regionName" : "cartIcon",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "be28e1cb-4d44-477c-9565-872869c85c58",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "bgImage" : "background: #FFFFFF url(/sfsites/c/file-asset/X28B3BC44A4844047B3CCF7A7C89AF1ED?v=1) center center /cover",
+          "bgOverlayColor" : "rgba(0, 0, 0, 0)",
+          "captionText" : "Our Mission",
+          "captionTextColor" : "rgba(0, 0, 0, 0.8)",
+          "captionTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "contentAlignment" : "left",
+          "contentWidth" : 45,
+          "ctaBtnOneBgColor" : "",
+          "ctaBtnOneBgHoverColor" : "",
+          "ctaBtnOneBorderColor" : "rgba(10, 50, 198, 0)",
+          "ctaBtnOneOpenNewTab" : false,
+          "ctaBtnOneText" : "Our Projects",
+          "ctaBtnOneTextColor" : "",
+          "ctaBtnOneTextHoverColor" : "",
+          "ctaBtnOneUrl" : "",
+          "ctaBtnRadius" : 25,
+          "ctaBtnTwoBgColor" : "rgba(255, 255, 255, 0)",
+          "ctaBtnTwoBgHoverColor" : "rgba(255, 255, 255, 0.9)",
+          "ctaBtnTwoBorderColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoOpenNewTab" : false,
+          "ctaBtnTwoText" : "Contact Us",
+          "ctaBtnTwoTextColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoTextHoverColor" : "rgba(0, 0, 0, 0.8)",
+          "ctaBtnTwoUrl" : "",
+          "ctaShowBtnOne" : false,
+          "ctaShowBtnTwo" : true,
+          "fixedHeroWidth" : false,
+          "heroHeight" : 124,
+          "heroWidth" : 1440,
+          "showCaption" : false,
+          "showSubtitle" : true,
+          "showTitle" : true,
+          "subtitleText" : "Your dream is right around the corner: Love it. Live it.",
+          "subtitleTextColor" : "rgba(255, 255, 255, 0.8)",
+          "subtitleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "titleText" : "WELCOME TO CITY COLLEGES OF CHICAGO",
+          "titleTextColor" : "rgba(255, 255, 255, 0.8)",
+          "titleTextShadowColor" : "rgba(0, 0, 0, 0)",
+          "type" : "callToAction"
+        },
+        "componentName" : "forceCommunity:themeHeroStarter",
+        "id" : "8081cd9f-b6c6-4b04-8b33-e41722bd484d",
+        "regions" : [ {
+          "components" : [ {
+            "componentAttributes" : {
+              "backgroundColor" : "#FFFFFF",
+              "borderColor" : "rgba(0, 0, 0, 0)",
+              "borderRadius" : 25,
+              "borderStyle" : "outline",
+              "buttonColor" : "",
+              "buttonHoverColor" : "",
+              "crossObjectTypeaheadApiNames" : "",
+              "iconColor" : "#FFFFFF",
+              "placeholderText" : "Ask a question...",
+              "placeholderTextColor" : "rgba(0, 0, 0, 0.6)",
+              "publicDropdownBackgroundColor" : "#FFFFFF",
+              "publicDropdownBackgroundHoverColor" : "",
+              "publicDropdownBorderColor" : "#F0F0F0",
+              "publicDropdownTextColor" : "",
+              "publicDropdownTextHoverColor" : "",
+              "showInputFocusOutline" : true,
+              "showSearchButton" : true,
+              "textColor" : "rgba(0, 0, 0, 0.8)",
+              "typeaheadResultMax" : 6,
+              "useTypeahead" : true
+            },
+            "componentName" : "forceCommunity:themeSearchHero",
+            "id" : "69724c73-2d3d-4fa2-b55d-1e840bd4c2aa",
+            "renditionMap" : { },
+            "type" : "component"
+          } ],
+          "id" : "c69076a7-685b-48cd-b1d6-57098ec390a5",
+          "regionName" : "search",
+          "type" : "region"
+        } ],
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5d835d3d-55a1-4623-855e-84ff4ac63d61",
+      "regionName" : "themeHero",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<div class=\"footer-top\" style=\"background-color: black; color: white;\">\n\n    <div class=\"footer-row\">\n        <div class=\"footer-left\">\n            <p class=\"colleges\">Our Colleges</p>\n            <div class=\"menu-colleges-container\">\n                <ul id=\"menu-colleges\" class=\"menu\">\n                    <li id=\"menu-item-299\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-299\">\n                        <a href=\"https://www.ccc.edu/colleges/washington/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Harold Washington</a>\n                    </li>\n                    <li id=\"menu-item-301\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-301\">\n                        <a href=\"https://www.ccc.edu/colleges/truman/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Harry S Truman</a>\n                    </li>\n                    <li id=\"menu-item-296\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-296\">\n                        <a href=\"https://www.ccc.edu/colleges/kennedy/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Kennedy-King</a>\n                    </li>\n                    <li id=\"menu-item-300\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-300\">\n                        <a href=\"https://www.ccc.edu/colleges/malcolm-x/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Malcolm X</a>\n                    </li>\n                    <li id=\"menu-item-297\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-297\">\n                        <a href=\"https://www.ccc.edu/colleges/olive-harvey/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Olive-Harvey</a>\n                    </li>\n                    <li id=\"menu-item-295\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-295\">\n                        <a href=\"https://www.ccc.edu/colleges/daley/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Richard J. Daley</a>\n                    </li>\n                    <li id=\"menu-item-298\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-298\">\n                        <a href=\"https://www.ccc.edu/colleges/wright/pages/default.aspx\" rel=\"menu\" style=\"color: white;\">Wilbur Wright</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n        <div class=\"footer-right\">\n\n</div>"
+        },
+        "componentName" : "forceCommunity:htmlBlock",
+        "id" : "8fb99ba3-2935-4b1d-9aa9-53e2feb49d7e",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "b7a91c48-f492-4534-8029-56a4ab4f6784",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "6c32e21a-179a-4830-8bf1-699dada8a9e1",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "882da809-063f-4e7d-8678-62949714f6f0",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "09f6b865-6b17-4e63-a15d-520779f6523c",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

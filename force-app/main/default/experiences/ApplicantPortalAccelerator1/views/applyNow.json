@@ -1,0 +1,72 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "ed5581b3-56ec-4915-82e7-5c7d76281b95",
+  "label" : "Apply Now",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "09b04354-692f-454d-866d-621c6fcae041",
+          "columns" : [ {
+            "UUID" : "c7fbcea8-51e2-4fac-bd6c-13db5ab98eb8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "09b04354-692f-454d-866d-621c6fcae041",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "formassemblyAuthToken" : "0478c7123a4095a522a520007ec19d5b511d340f",
+            "formassemblyFormID" : "4",
+            "formassemblyUseIFrame" : false
+          },
+          "componentName" : "tfa:FormAssemblyForm",
+          "id" : "b0896ac8-00e0-4c97-a3d1-d18a9ca0ba9d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c7fbcea8-51e2-4fac-bd6c-13db5ab98eb8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3f25dc53-f569-40a4-9ffc-1f02df7f8f0d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Apply Now"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0985c850-6f0f-4498-bbcf-eee362bcc40b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "44f3ce1d-f072-448a-bc2e-d57bd74aeac7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-apply-now"
+}

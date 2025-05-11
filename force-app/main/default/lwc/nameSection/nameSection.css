@@ -1,0 +1,28 @@
+.inputCls {
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.lblCls {
+	font-family: var(--lwc-fontFamily, Open Sans);
+	font-size: 0.8rem;
+}
+
+.section {
+	background-color: #0055B8;
+	font-family: var(--lwc-fontFamily, Open Sans);
+	font-size: 0.8rem;
+	color: #fff;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.borderCls {
+	margin: 10px;
+	border: 1px solid;
+}
+
+required {
+	color: red;
+}

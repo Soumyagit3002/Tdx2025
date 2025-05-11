@@ -1,0 +1,65 @@
+{
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "c55a10c5-bf8c-4246-89a8-bf052f404352",
+  "label" : "Adult ED Application",
+  "regions" : [ {
+    "id" : "6a49eea3-c549-4b85-b970-ebc12e921de4",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:helpButton",
+      "id" : "ce060640-ee86-4db4-ad4b-745726a766cd",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "Multi-Language",
+        "subType" : "ApplicationPages",
+        "theme" : "lightning",
+        "type" : "Portal"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "194d1dac-457a-43e1-8be9-c48bd283b8df",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7836f302-2365-4258-8e13-5236c6be6451",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "04ea19e2-29a6-4951-b66e-c57ce8c289dc",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Adult ED Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c3073694-9848-4ad4-9861-5a65cff86aad",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ccbc120c-c5de-41cc-adb9-cfdb676e2fae",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "aec51d6a-d93f-48ba-8d78-6b6f68623852",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-adult-ed-application"
+}

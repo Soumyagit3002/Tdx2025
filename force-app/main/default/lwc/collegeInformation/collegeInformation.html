@@ -1,0 +1,62 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.PriorCollegeInformation}>{translations.PriorCollegeInformation}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_3-of-4">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.HaveYouAttendedCollegePreviously}</label>
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="attendedCollegePreviously"
+                    value={applicationData.attendedCollegePreviously} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.EmploymentStatus}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="priorClgEmpStatus"
+                    value={applicationData.priorClgEmpStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2" style="display: flex">
+                <lightning-input type="checkbox" variant='label-hidden'></lightning-input>
+                <label class="lblCls">{translations.IAttendedCollegeOutsideUS}</label>
+
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2" style="display: flex">
+                <lightning-input type="checkbox" variant='label-hidden'></lightning-input>
+                <label class="lblCls">{translations.FindMyCollege}</label>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.CollegeUniversityName}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="collegeName"
+                    value={applicationData.collegeName} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.Degree}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="degree"
+                    value={applicationData.degree} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.DegreeDate}</label>
+                <lightning-input type="date" variant='label-hidden' name="degreeDate" value={applicationData.degreeDate}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+</template>

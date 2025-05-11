@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "0159b13e-5857-47e8-88e2-a9692fb35e5d",
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "configurationTags" : [ ],
+  "devName" : "Custom_Object_Record_List__c",
+  "id" : "3c0d74b1-2f1d-48fa-bccd-52bb4c5fe359",
+  "label" : "Custom Object Record List",
+  "objectApiName" : "hed__Application__c",
+  "routeType" : "list-a03",
+  "type" : "route",
+  "urlPrefix" : "application"
+}

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Error_Preferred_Phone_Number_Field_is_Blank</name>
+        <label>Error : Preferred Phone Number Field  is Blank</label>
+        <locationX>1106</locationX>
+        <locationY>539</locationY>
+        <customErrorMessages>
+            <errorMessage>There&apos;s no phone number in the Preferred Phone field. Add a number to this field or change the Preferred Phone value.</errorMessage>
+            <fieldSelection>hed__PreferredPhone__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Preferred_Phone_Check</name>
+        <label>Preferred Phone Check</label>
+        <locationX>1238</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Set_Populated_Number</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Preferred Phone</defaultConnectorLabel>
+        <rules>
+            <name>Preferred_Phone_Value_Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__PreferredPhone__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Preferred_Phone_Number_Check</targetReference>
+            </connector>
+            <label>Preferred Phone Value Present?</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Preferred_Phone_Number_Check</name>
+        <label>Preferred Phone Number Check</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Error_Preferred_Phone_Number_Field_is_Blank</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>N/A</defaultConnectorLabel>
+        <rules>
+            <name>Home_Phone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__PreferredPhone__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Home Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.HomePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Phone_Home_Phone</targetReference>
+            </connector>
+            <label>Home Phone</label>
+        </rules>
+        <rules>
+            <name>Mobile_Phone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__PreferredPhone__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Mobile Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Phone_Mobile_Phone</targetReference>
+            </connector>
+            <label>Mobile Phone</label>
+        </rules>
+        <rules>
+            <name>Work_Phone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__PreferredPhone__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Work Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.hed__WorkPhone__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Phone_Work_Phone</targetReference>
+            </connector>
+            <label>Work Phone</label>
+        </rules>
+        <rules>
+            <name>Other_Phone</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__PreferredPhone__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Other Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OtherPhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Phone_Other_Phone</targetReference>
+            </connector>
+            <label>Other Phone</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_Populated_Number</name>
+        <label>Set Populated Number</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Clear_Main_Phone</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Phone Numbers Present</defaultConnectorLabel>
+        <rules>
+            <name>Has_Mobile_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Preference_Mobile_Phone_Main_Phone_Mobile</targetReference>
+            </connector>
+            <label>Has Mobile Number?</label>
+        </rules>
+        <rules>
+            <name>Has_Home_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.HomePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Preference_Home_Phone_Main_Phone_Home</targetReference>
+            </connector>
+            <label>Has Home Number?</label>
+        </rules>
+        <rules>
+            <name>Has_Work_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__WorkPhone__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Preference_Work_Phone_Main_Phone_Work</targetReference>
+            </connector>
+            <label>Has Work Number?</label>
+        </rules>
+        <rules>
+            <name>Has_Other_Number</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OtherPhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Preference_Other_Phone_Main_Phone_Other</targetReference>
+            </connector>
+            <label>Has Other Number?</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Integration) Contact) Set Preferred Phone {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Integration) Contact) Set Preferred Phone</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Clear_Main_Phone</name>
+        <label>Clear Main Phone</label>
+        <locationX>2426</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Main_Phone_Home_Phone</name>
+        <label>Main Phone = Home Phone</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.HomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Main_Phone_Mobile_Phone</name>
+        <label>Main Phone = Mobile Phone</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Main_Phone_Other_Phone</name>
+        <label>Main Phone = Other Phone</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.OtherPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Main_Phone_Work_Phone</name>
+        <label>Main Phone = Work Phone</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.hed__WorkPhone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Preference_Home_Phone_Main_Phone_Home</name>
+        <label>Preference = Home Phone; Main Phone = Home</label>
+        <locationX>1634</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.HomePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>hed__PreferredPhone__c</field>
+            <value>
+                <stringValue>Home Phone</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Preference_Mobile_Phone_Main_Phone_Mobile</name>
+        <label>Preference = Mobile Phone; Main Phone = Mobile</label>
+        <locationX>1370</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.MobilePhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>hed__PreferredPhone__c</field>
+            <value>
+                <stringValue>Mobile Phone</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Preference_Other_Phone_Main_Phone_Other</name>
+        <label>Preference = Other Phone; Main Phone = Other</label>
+        <locationX>2162</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.OtherPhone</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>hed__PreferredPhone__c</field>
+            <value>
+                <stringValue>Other Phone</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Preference_Work_Phone_Main_Phone_Work</name>
+        <label>Preference = Work Phone; Main Phone = Work</label>
+        <locationX>1898</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>$Record.hed__WorkPhone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>hed__PreferredPhone__c</field>
+            <value>
+                <stringValue>Work Phone</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1112</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Preferred_Phone_Check</targetReference>
+        </connector>
+        <filterFormula>ISNEW() || (
+  ISCHANGED({!$Record.hed__PreferredPhone__c})
+|| ISCHANGED({!$Record.HomePhone})
+|| ISCHANGED({!$Record.hed__WorkPhone__c})
+|| ISCHANGED({!$Record.OtherPhone})
+|| ISCHANGED({!$Record.MobilePhone})
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "c279523b-bb09-4d61-8f03-d393abef4e8c",
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "configurationTags" : [ ],
+  "devName" : "EDApplication__c",
+  "id" : "889a298b-62b5-4b3b-92fd-ba4c09238323",
+  "label" : "EDApplication",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-edapplication",
+  "type" : "route",
+  "urlPrefix" : "edapplication"
+}

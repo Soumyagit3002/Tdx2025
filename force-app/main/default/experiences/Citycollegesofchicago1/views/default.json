@@ -1,0 +1,60 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4ac02b9f-fb10-4fc7-b82e-a9e5df8e6459",
+  "label" : "Default",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "976fcca5-91f2-4e78-819a-0a5d6f4d9700",
+          "columns" : [ {
+            "UUID" : "489fc761-0c91-4f0b-b345-9537b474a808",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "976fcca5-91f2-4e78-819a-0a5d6f4d9700",
+      "regions" : [ {
+        "id" : "489fc761-0c91-4f0b-b345-9537b474a808",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "35419c5a-159a-4e4f-bdf0-ff67ab2a43b3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Early Education Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "09f4c690-ec85-4e5b-b612-fbb42e63815f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "342d6917-13d2-4397-b638-1741fa882355",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-early-education-application"
+}

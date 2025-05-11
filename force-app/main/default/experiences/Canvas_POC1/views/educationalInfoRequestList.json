@@ -1,0 +1,61 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "c48fe2d9-c455-4a95-99dc-ecfd0269b42f",
+  "label" : "Educational Info Request List",
+  "regions" : [ {
+    "id" : "77267ed4-0f73-4ab4-83c1-258d93c33cbe",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1>       <span style=\"color: #2D2D2D;font-size: 18px;\">Requests for Information</span>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "c738ce00-8c6f-4015-9ad1-245ca4bcaa7a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "exposedAttributes" : "{\"UserId\": \"{!CurrentUser.id}\",\"Limit\": 50000}",
+        "flexcardName" : "EDUAdmissionsRFIListViewWrapper",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "aaca3731-9568-450a-ad54-59fc0cf680df",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e01e00de-9370-4d9b-b30f-8e75d19e2ec9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flexcardName" : "EDUApplicationPortalNeedHelpSection",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "43e1811a-e2b4-42f1-a639-76ffc8a45964",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "77a97001-c836-4a93-acdc-49b0dd93cb9d",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "cf214ed0-be2f-4ef3-a5a5-aa841468abfa",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-0yU"
+}

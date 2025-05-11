@@ -1,0 +1,17 @@
+<template>
+    <h1>Emplid: {emplId}</h1>
+    <template if:true={payload}>
+        <h1 style="font-size: 16px; font-weight: bold;">Selective Enrollment Application example Flow</h1>
+        <br>
+        <lightning-flow
+            flow-api-name='Selective_Enrollment_Application'>
+        </lightning-flow>
+    </template>
+    <lightning-button 
+        variant="brand" 
+        label="Launch Platform Event" 
+        onclick={handleClick} 
+        class="slds-m-left_x-small">
+    </lightning-button>
+    <br>
+</template>

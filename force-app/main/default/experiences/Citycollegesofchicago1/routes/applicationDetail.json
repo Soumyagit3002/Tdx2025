@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "52f235d9-bbdb-45c5-b348-b0e9dd273e28",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Application_Detail__c",
+  "id" : "24c402fa-7841-49ad-88a5-236633811fbb",
+  "label" : "Application Detail",
+  "objectApiName" : "hed__Application__c",
+  "routeType" : "detail-a03",
+  "type" : "route",
+  "urlPrefix" : "application"
+}

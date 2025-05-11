@@ -1,0 +1,54 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "d1d58bf6-df63-402b-a4ca-8f53b7472bc0",
+  "label" : "Application Detail",
+  "regions" : [ {
+    "id" : "d32634ba-cc12-4a06-9364-c499e492e85f",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "e6ec656c-1f52-4cb9-a8b7-6254d18b4884",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flexcardName" : "EDUApplicationPortalNeedHelpSection",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "fbce3100-eb6e-4a50-a3c3-d9a8696c3411",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "812c1335-e63f-4af9-a5e7-3717d05d694d",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "c349fc27-9e37-4abd-bf0b-6107eea4a092",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b3b8b9ec-5eec-46fa-97b8-663de4c73742",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "01f3567e-dabe-4456-b96b-655ce2f02b1d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-0go"
+}

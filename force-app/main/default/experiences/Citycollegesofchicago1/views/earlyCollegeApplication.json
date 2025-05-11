@@ -1,0 +1,72 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6e4c71ac-124c-44e1-8485-bdb5ed494ce3",
+  "label" : "Early College Application",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "37c93430-b0d9-4004-8ede-1b4c6c3b445a",
+          "columns" : [ {
+            "UUID" : "5dc2ae24-53dd-4928-8a89-15783c3a9dda",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "37c93430-b0d9-4004-8ede-1b4c6c3b445a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "formassemblyAuthToken" : "7c2ea0d32117477a195ea929cc55fc69e784dc2c",
+            "formassemblyFormID" : "46",
+            "formassemblyUseIFrame" : false
+          },
+          "componentName" : "tfa:FormAssemblyForm",
+          "id" : "b4161a5b-def6-4a04-b102-822038afe72e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5dc2ae24-53dd-4928-8a89-15783c3a9dda",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b71a2186-9fc2-4e42-b444-dc68396c50fa",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Early Education Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8de94a39-20e3-4f8c-bbe7-422405c9bf3d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "472023de-e25e-4e05-9abc-53c9ea5c016c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-early-education-application"
+}

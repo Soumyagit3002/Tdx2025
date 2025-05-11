@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "f877d9e6-7f61-48e8-b8ab-cd70028109f9",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "e00dd2ca-7a03-4e09-9489-6b8365dae1eb",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Early_College_Home_Tile_Menu_Component",
+  "id" : "54e6c832-7cad-4b32-b521-1b831e5604c2",
+  "type" : "experienceVariation"
+}

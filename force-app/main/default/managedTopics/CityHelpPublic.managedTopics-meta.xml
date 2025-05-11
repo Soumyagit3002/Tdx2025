@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:Admissions</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Admissions</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:Application</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Application</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:FAQ</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>FAQ</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:Financial Aid</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Financial Aid</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:Life at CCC</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Life at CCC</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Featured:Program Details</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Program Details</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:Admissions</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Admissions</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:Application</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Application</name>
+        <parentName></parentName>
+        <position>4</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:FAQ</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>FAQ</name>
+        <parentName></parentName>
+        <position>5</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:Financial Aid</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Financial Aid</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:Life at CCC</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Life at CCC</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>CityHelpPublic.Navigational:Program Details</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Program Details</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

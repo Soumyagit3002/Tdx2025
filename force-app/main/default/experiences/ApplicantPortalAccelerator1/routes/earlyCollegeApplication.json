@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4d7b4367-5eb6-4bf5-9f56-ab57c84d062e",
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "configurationTags" : [ ],
+  "devName" : "Early_College_Application__c",
+  "id" : "a9149025-01db-43ca-a0c0-cb2764388abc",
+  "label" : "Early College Application",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-early-college-application",
+  "type" : "route",
+  "urlPrefix" : "early-college-application"
+}

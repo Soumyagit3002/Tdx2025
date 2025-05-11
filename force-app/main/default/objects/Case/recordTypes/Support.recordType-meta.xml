@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support</fullName>
+    <active>true</active>
+    <businessProcess>Support</businessProcess>
+    <compactLayoutAssignment>Case</compactLayoutAssignment>
+    <description>Call Center Cases</description>
+    <label>Support</label>
+    <picklistValues>
+        <picklist>Channel__c</picklist>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Defer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Admit_Type__c</picklist>
+        <values>
+            <fullName>ABE %E2%80%93 Adult Basic Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUC %E2%80%93 Dual Credit HS Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DUE %E2%80%93 Dual Enrollment HS Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FYR %E2%80%93 First Year Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INT %E2%80%93 International Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRT %E2%80%93 International Returning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDG %E2%80%93 Non-Degree Seeking Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PCR %E2%80%93 Prior College Readmit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPD %E2%80%93 Personal %26 Professional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAD %E2%80%93 Readmit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RET -- Returning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Campus__c</picklist>
+        <values>
+            <fullName>Harold Washington College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harry S Truman College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kennedy-King College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malcolm X College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olive Harvey College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard J Daley College</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wilbur Wright College</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Academic Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisor Appointments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Degree Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remove_Phone_Number_on_File__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SubType__c</picklist>
+        <values>
+            <fullName>Academic Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Academic Standing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access Center %2F Dissability Access Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Add%2FDrop Classes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admissions Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advisor Appointments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternative High School</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Issue - Adult Ed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Issue-credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Athletics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Books-Akademos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHA Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changes for Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charge Backs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Childcare Lab%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt Relief Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Degree Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delinquent Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diploma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disconnected Chat%2FCall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESL Class Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESL Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Early College Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee%2FDepartment Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment at CCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facilities Rental Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid Book Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Support Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free Tax Prep Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Class Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Test Cost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Test Scholarship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GED Transcript Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grade Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grades Posting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holds%2FWarnings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hours%2FLocations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How do I apply for Financial Aid%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>How do I apply%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Students</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Library</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loaner Laptop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Log in Issues - Navigate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Login Issues - Brightspace%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Login Issues - Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Summer Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ordering Transcripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parking%2FTransportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password Reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Plans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal%2FProfessional Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement Testing - Adult Ed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portal Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Requisites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive Diploma%2FCertificate%2FLicense</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruiter Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Deadline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove from Contact List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residency Verification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returning Student Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAP%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety %26 Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling Orientation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scholarships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Book Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submit Transcripts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supsended Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To-Do List Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuition Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuition Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U-Pass %2F Ventra Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterans Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voter Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waivers%2FOverride</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wellness Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workforce Equity Initiative WEI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write Off Collections</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Adult Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class%2FDegree Program Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Aid%2FBusiness Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harold Washington Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harry S Truman Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kennedy-King Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malcolm X Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olive Harvey Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard J Daley Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wilber Wright Programs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Withdraw_the_Application_in_CS9__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>hed__Category__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Code of Conduct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Violation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Offense</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>hed__Location__c</picklist>
+        <values>
+            <fullName>Off Campus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Campus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "a3c36c0e-51ce-4c86-905e-5818e1a073ec",
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "configurationTags" : [ ],
+  "devName" : "handleApplication__c",
+  "id" : "a4c9e846-9259-4cae-9b4c-723a626a6462",
+  "label" : "handleApplication",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-handleapplication",
+  "type" : "route",
+  "urlPrefix" : "handleapplication"
+}

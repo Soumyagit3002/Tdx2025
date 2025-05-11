@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "1c9a9308-da3f-4769-a0f8-ca33e7ae183d",
+  "headMarkup" : "<script src=\"https://unpkg.com/aos@2.3.1/dist/aos.js\"></script>\n<link rel=\"stylesheet\" href=\"https://unpkg.com/aos@2.3.1/dist/aos.css\" />\n<script>\n    document.addEventListener('DOMContentLoaded', function () {\n        // Initialize AOS with desired options\n        AOS.init({\n            duration: 800, // Animation duration\n            easing: 'ease-in-out', // Easing for the animation\n            once: true // Whether animation should only happen once\n            // Add more options as needed\n        });\n    });\n</script>",
+  "id" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Service Community Template",
+  "type" : "appPage"
+}

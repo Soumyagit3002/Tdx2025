@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "c55a10c5-bf8c-4246-89a8-bf052f404352",
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "configurationTags" : [ ],
+  "devName" : "Adult_ED_Application__c",
+  "id" : "426f8267-e530-4bca-9d5c-d3c650c49155",
+  "label" : "Adult ED Application",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-adult-ed-application",
+  "type" : "route",
+  "urlPrefix" : "adult-ed-application"
+}

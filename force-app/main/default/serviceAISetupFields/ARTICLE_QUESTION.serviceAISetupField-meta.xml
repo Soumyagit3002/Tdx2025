@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceAISetupField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <entity>Knowledge__kav</entity>
+    <field>Summary</field>
+    <fieldMappingType>ARTICLE_QUESTION</fieldMappingType>
+    <fieldPosition>0</fieldPosition>
+    <name>ARTICLE_QUESTION</name>
+    <setupDefinition>BotFAQOrgSettings</setupDefinition>
+</ServiceAISetupField>

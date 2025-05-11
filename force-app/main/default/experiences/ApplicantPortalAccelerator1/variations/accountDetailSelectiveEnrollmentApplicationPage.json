@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "79e1265f-0bcc-45d7-886d-6a07c4c2632e",
+    "propertyOverrides" : {
+      "activeViewId" : "4d4a18ff-c1ce-4267-a3ec-9d057f0f112a"
+    },
+    "targetId" : "5257e67d-c671-4fcb-917e-2b21175c1bbc",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Account_Detail_Selective_Enrollment_Application_Page",
+  "id" : "8cb2363a-1699-497f-bffd-ca5bb9bfd331",
+  "type" : "experienceVariation"
+}

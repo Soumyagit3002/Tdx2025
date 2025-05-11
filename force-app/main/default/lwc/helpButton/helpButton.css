@@ -1,0 +1,24 @@
+.vertical-button-wrapper {
+    position: fixed;
+    right: 0;
+    bottom: 60%;
+    transform: rotate(-90deg); /* Rotate the button text bottom-to-top */
+    transform-origin: right bottom;
+    z-index: 1000;
+}
+
+.vertical-button-wrapper button {
+    background-color: #0055B8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px 6px 0 0;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.vertical-button-wrapper button:hover {
+    background-color: #0055B8;
+}

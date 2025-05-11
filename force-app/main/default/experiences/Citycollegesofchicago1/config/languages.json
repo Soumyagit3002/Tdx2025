@@ -1,0 +1,15 @@
+{
+  "defaultCode" : "en_US",
+  "defaultLabel" : "English (US)",
+  "id" : "e1b2aa2a-379a-4e39-a91b-be6f1abf6542",
+  "languages" : [ {
+    "countryCode" : "DZ",
+    "fallbackLanguageId" : null,
+    "id" : "1cb77951-2474-47fe-b24c-9ad7f3e11de2",
+    "isActive" : true,
+    "label" : "Arabic (Algeria) (DZ)",
+    "languageCode" : "ar",
+    "type" : "language"
+  } ],
+  "type" : "languageContainer"
+}

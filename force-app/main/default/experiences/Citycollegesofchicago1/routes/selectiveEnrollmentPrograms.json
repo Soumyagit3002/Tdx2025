@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "eeb73f83-8dfa-425e-9375-981060da976a",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Selective_Enrollment_Programs__c",
+  "id" : "f96be1b1-8b46-4755-ab02-c79513ec455e",
+  "label" : "Selective Enrollment Programs",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-selective-enrollment-programs",
+  "type" : "route",
+  "urlPrefix" : "selective-enrollment-programs"
+}

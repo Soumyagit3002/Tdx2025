@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Email Templates" icon-name="custom:custom63" style="width: 100%;">
+        <div class="slds-p-around_medium" style=" width: 100%; margin: 0 auto;">
+            <lightning-input type="text" label="Search" placeholder="Search by template name" onchange={handleSearchKeyChange}></lightning-input>
+            <template if:true={filteredEmailTemplates.length}>
+                <lightning-datatable
+                    key-field="id"
+                    data={filteredEmailTemplates}
+                    columns={columns}
+                    onrowselection={getSelectedTemplate}
+                    max-row-selection="1"
+                    suppress-bottom-bar>
+                </lightning-datatable>
+            </template>
+            <template if:false={filteredEmailTemplates.length}>
+                <p>No email templates found.</p>
+            </template>
+            
+        </div>
+    </lightning-card>
+</template>

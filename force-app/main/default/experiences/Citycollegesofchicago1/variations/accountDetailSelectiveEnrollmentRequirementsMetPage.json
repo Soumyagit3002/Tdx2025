@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "575a1988-0730-433b-bf98-c7daee06183d",
+    "propertyOverrides" : {
+      "activeViewId" : "0fe231a4-984a-4211-b836-712d57c9f622"
+    },
+    "targetId" : "53dd846e-df62-427c-b483-6df2fa740d08",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Account_Detail_Selective_Enrollment_Requirements_Met_Page",
+  "id" : "d2bd47ab-412d-45a6-ba80-164aa4562adb",
+  "type" : "experienceVariation"
+}

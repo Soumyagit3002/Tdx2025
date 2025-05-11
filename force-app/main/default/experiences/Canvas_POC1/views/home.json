@@ -1,0 +1,239 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "cf355c99-0c1e-4be5-9817-bffa71f64e2a",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "6686234e-e533-4807-83cf-bfa1c7067e17",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1>       <span style=\"color: #2D2D2D;font-size: 28px;\">Welcome, {!CurrentUser.firstName}! </span>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "908e1766-aa76-432b-915d-860659ad50ff",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<h1>             <span style=\"font-weight:bold ;color: #2D2D2D;font-size: 16px;\">Application Center</span>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "5c435ced-029d-4f89-b88d-9162f53bbf00",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "b65926e1-487d-40a0-bbbb-68c02c3de936",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "650bb300-bbde-4576-ba39-775b3f9c8fa5",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : { },
+              "fqn" : "eduadmissions:admissionsApplicationsListWrapper"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "{!$Label.MultiConstituentPortal.MyApplications}"
+          }, {
+            "UUID" : "fe077a80-0400-4f41-b9ec-1292bff95c2b",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "exposedAttributes" : "{\"UserId\": \"{!CurrentUser.id}\",\"Limit\": 3}",
+                "flexcardName" : "EDUAdmissionsRFIListViewWrapper"
+              },
+              "fqn" : "runtime_omnistudio:flexcard"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "{!$Label.MultiConstituentPortal.MyRFI}"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "b65926e1-487d-40a0-bbbb-68c02c3de936",
+      "regions" : [ {
+        "id" : "650bb300-bbde-4576-ba39-775b3f9c8fa5",
+        "regionLabel" : "{!$Label.MultiConstituentPortal.MyApplications}",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "exposedAttributes" : "{\"UserId\": \"{!CurrentUser.id}\",\"Limit\": 3}",
+            "flexcardName" : "EDUAdmissionsRFIListViewWrapper",
+            "objectApiName" : "{!objectApiName}",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "runtime_omnistudio:flexcard",
+          "id" : "f91d8190-a0be-42e4-b82d-be552c172169",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fe077a80-0400-4f41-b9ec-1292bff95c2b",
+        "regionLabel" : "{!$Label.MultiConstituentPortal.MyRFI}",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<h1><strong style=\"font-size: 16px; color: rgb(45, 45, 45);\">Action Center</strong></h1>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "09f9d801-13cf-4523-a56b-e2657fdadebc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:Canvas_POC",
+      "id" : "686d69c6-e602-455a-b830-f7459e9e3a3d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "505459c7-5442-4f68-aa2b-3cc2b51e1b05",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "5ecafe36-4af8-4cdd-8e74-45f789bb251b",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "241233a8-c116-4bf8-b6e3-bb1664501b27",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "flexcardName" : "EDUStudentMyAppointmentsHeader"
+              },
+              "fqn" : "runtime_omnistudio:flexcard"
+            }, {
+              "attributes" : { },
+              "fqn" : "healthcloud:myAppointmentsCommunity"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "{!$Label.MultiConstituentPortal.Appointments}"
+          }, {
+            "UUID" : "904ba645-389f-414a-bc0c-2ea1bb6a1199",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : {
+                "exposedAttributes" : "{\"SuccessTeamPageName\": \"Success_Team\",\"AdvisorPageName\":\"Advisor_Profile\"}",
+                "flexcardName" : "EDUStudentRecentlyAssignedSuccessTeam"
+              },
+              "fqn" : "runtime_omnistudio:flexcard"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "{!$Label.MultiConstituentPortal.SuccessTeams}"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "5ecafe36-4af8-4cdd-8e74-45f789bb251b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flexcardName" : "EDUStudentMyAppointmentsHeader",
+            "objectApiName" : "{!objectApiName}",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "runtime_omnistudio:flexcard",
+          "id" : "2faa64e9-d950-40ac-8222-613c8ddf8d00",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "healthcloud:myAppointmentsCommunity",
+          "id" : "7f3d669e-55c0-4037-9743-39ffce569acb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "241233a8-c116-4bf8-b6e3-bb1664501b27",
+        "regionLabel" : "{!$Label.MultiConstituentPortal.Appointments}",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "exposedAttributes" : "{\"SuccessTeamPageName\": \"Success_Team\",\"AdvisorPageName\":\"Advisor_Profile\"}",
+            "flexcardName" : "EDUStudentRecentlyAssignedSuccessTeam",
+            "objectApiName" : "{!objectApiName}",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "runtime_omnistudio:flexcard",
+          "id" : "1dfde8f2-d054-4d1a-b912-fd077d6316e2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "904ba645-389f-414a-bc0c-2ea1bb6a1199",
+        "regionLabel" : "{!$Label.MultiConstituentPortal.SuccessTeams}",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "flexcardName" : "EDUApplicationPortalNeedHelpSection",
+        "objectApiName" : "{!objectApiName}",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "runtime_omnistudio:flexcard",
+      "id" : "66a022ed-5105-491d-aad5-9bcfa9aeab1c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8e9fc4f6-79e5-4e2b-b204-03ec18949210",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "id" : "b17b1a39-59d8-4089-a548-64699dbca77c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "59a4201a-63c2-477a-b600-3023d3866763",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d4c3e77-34be-463a-8350-b27bb792f12c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

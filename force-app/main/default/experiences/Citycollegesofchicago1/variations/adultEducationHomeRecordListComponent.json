@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "ddd281d8-842c-48c6-9a9a-65c3dd20c11d",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "49919916-9ab7-4b13-a623-bc51624b83d3",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Adult_Education_Home_Record_List_Component",
+  "id" : "8f543ced-5284-494e-b9b2-c4c70cae0468",
+  "type" : "experienceVariation"
+}

@@ -1,0 +1,85 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.BasicInformation}>{translations.BasicInformation}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.BirthDate}:</label>
+                <lightning-input type="date" variant='label-hidden' name="birthDate" value={applicationData.birthDate}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.LegalSex}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="legalSex"
+                    value={applicationData.legalSex} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.GenderIdentity}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="genderIdentity"
+                    value={applicationData.genderIdentity} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.SocialSecurity} #:</label>
+                <lightning-input type="text" variant='label-hidden' name="socialSecurity" value={applicationData.socialSecurity}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.BasicInformation_FederalFinancialAid}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="federalFin"
+                    value={applicationData.federalFin} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.BasicInformation_CPSStudent}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="cpsStudent"
+                    value={applicationData.cpsStudent} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.BasicInformation_CitizenApplying}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="citizen"
+                    value={applicationData.citizen} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.BirthCountry}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="birthCountry"
+                    value={applicationData.birthCountry} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.MaritalStatus}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="maritalStatus"
+                    value={applicationData.maritalStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+    </div>
+</template>

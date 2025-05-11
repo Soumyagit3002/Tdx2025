@@ -1,0 +1,127 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "70396ade-1ea5-4530-8e9d-e1bf2c7c5552",
+  "label" : "Default Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5f30576f-0b31-4dad-ad20-34271caf2036",
+          "columns" : [ {
+            "UUID" : "baea8bb7-7b23-4b7e-bdbd-dc1787889a01",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5f30576f-0b31-4dad-ad20-34271caf2036",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "3abe0bc6-28a7-43f4-95ff-9d92813af80d",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "66d57cbd-6b78-40a0-b93b-99a4c85f040b",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Flow Application"
+              }, {
+                "UUID" : "77e86c72-4c27-4ad7-8567-03bab9888c4e",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Omni Application"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "3abe0bc6-28a7-43f4-95ff-9d92813af80d",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "flowArguments" : "",
+                "flowName" : "Credit_Application"
+              },
+              "componentName" : "forceCommunity:flowCommunity",
+              "id" : "11e407b6-0079-4d8d-b46c-51f021561318",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "66d57cbd-6b78-40a0-b93b-99a4c85f040b",
+            "regionLabel" : "Flow Application",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "direction" : "ltr",
+                "display" : "Display OmniScript on page",
+                "inlineVariant" : "brand",
+                "language" : "English",
+                "subType" : "application",
+                "theme" : "lightning",
+                "type" : "servio"
+              },
+              "componentName" : "runtime_omnistudio:omniscript",
+              "id" : "5b7821ea-9fd6-48a2-823c-41f7e4e035da",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "77e86c72-4c27-4ad7-8567-03bab9888c4e",
+            "regionLabel" : "Omni Application",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "baea8bb7-7b23-4b7e-bdbd-dc1787889a01",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6da4351a-91fa-4538-872c-8090b383a5ae",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a73a80b7-1299-4866-8a47-4c9d1e4ba06f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "428f4d69-de89-4240-ba9b-39ccc14fcafc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

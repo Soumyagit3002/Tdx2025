@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d2768dcd-ac11-4360-9610-03f8c98b0a85",
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "configurationTags" : [ ],
+  "devName" : "Schedule_Appointment",
+  "id" : "8c323a55-dc4c-436b-95cc-46de71e64ee8",
+  "label" : "Schedule Appointment",
+  "pageAccess" : "UseParent",
+  "routeType" : "scheduleappointment",
+  "type" : "route",
+  "urlPrefix" : "scheduleappointment"
+}

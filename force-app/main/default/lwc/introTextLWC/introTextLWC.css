@@ -1,0 +1,36 @@
+.text-container {
+	padding: 	;
+}
+
+/* Heading aligned left by default */
+.heading {
+	/* text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;*/
+	font-family: 'Gibson', 'Arial' !Important;
+	font-size: 20px !Important;
+	color: black !Important;
+	font-weight: 600 !Important;
+}
+
+/* Description justified for readability */
+.description {
+	font-family: 'Gibson', 'Arial' !Important;
+	font-size: 14px !Important;
+	color: black !Important;
+	font-weight: normal !Important;
+	/*text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;*/
+}
+
+/* Optional: Adjust padding/font for smaller screens 
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}*/

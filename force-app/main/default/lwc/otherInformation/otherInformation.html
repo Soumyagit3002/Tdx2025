@@ -1,0 +1,145 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.OtherInformation}>{translations.OtherInformation}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.IsEnglishYourNativeLanguage}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="nativeLanguage"
+                    value={applicationData.nativeLanguage} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.EmploymentStatus}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="employmentStatus"
+                    value={applicationData.employmentStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.ParentDegree}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="parentDegree"
+                    value={applicationData.parentDegree} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.FamilyIncome}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="familyIncome"
+                    value={applicationData.familyIncome} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.ParentalStatus}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="parentalStatus"
+                    value={applicationData.parentalStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.NoOfDependents}</label>
+                <lightning-input type="text" variant='label-hidden' name="NOfDependents"
+                    value={applicationData.NOfDependents} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.FosterCareStatus}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="fosterStatus"
+                    value={applicationData.fosterStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.WorkforceStatus}</label>
+                <lightning-combobox variant='label-hidden' options={statusOptions} name="workforceStatus"
+                    value={applicationData.workforceStatus} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_LegalCustody}</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="familyServices"
+                    value={applicationData.familyServices} onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="inputCls">
+            <label class="lblCls">{translations.PleaseAnswerTheFollowing}:</label>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_Q1}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="fosterCare"
+                    value={applicationData.fosterCare} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_Q2}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="counrtOrdered"
+                    value={applicationData.counrtOrdered} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_Q3}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="age18OrOlder"
+                    value={applicationData.age18OrOlder} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_Q4}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="adoptionAssistance"
+                    value={applicationData.adoptionAssistance} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OtherInformation_Q5}</label>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-radio-group variant='label-hidden' options={radioOptionsYesNo} type="radio" name="subsidized"
+                    value={applicationData.subsidized} onchange={handleFormField}>
+                    </lightning-radio-group>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-1">
+                    <label class="lblCls">{translations.IfOtherPleaseSpecify}</label>
+                    <lightning-textarea variant='label-hidden' name="otherPleaseSpecify"
+                    value={applicationData.otherPleaseSpecify} onchange={handleFormField}>
+                    </lightning-textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

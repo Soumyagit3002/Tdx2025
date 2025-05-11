@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "5da298ee-8f87-4cc3-95d0-92fea4d84877",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "b51b9681-5379-440b-9f14-b953df8c040a",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Adult_Education_Home_Rich_Content_Editor_2_Component",
+  "id" : "6d929ad4-7533-4a4c-af16-89a056b8c5de",
+  "type" : "experienceVariation"
+}

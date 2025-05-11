@@ -1,0 +1,143 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "27e996b7-8a67-43d1-8122-52fa35e56ffe",
+  "label" : "My Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8f77dd24-840a-4191-bf5b-91a64c9643c1",
+          "columns" : [ {
+            "UUID" : "fc8d200b-3f8e-47b4-822c-03905338d0a9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8f77dd24-840a-4191-bf5b-91a64c9643c1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "1e9f72c1-9e61-433c-bb00-9401042e3fa4",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "90878c63-4c6a-4d8a-9fed-5fd01fb851d4",
+                "allowGuestUser" : true,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Completed Applications"
+              }, {
+                "UUID" : "46b31b07-eac7-443d-863c-5ae80ecdb243",
+                "allowGuestUser" : true,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Incomplete Applications"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "1e9f72c1-9e61-433c-bb00-9401042e3fa4",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "Experience_Site_Student_View",
+                "layout" : "STANDARD",
+                "pageSize" : 5,
+                "scope" : "hed__Application__c",
+                "showActionBar" : true,
+                "showChartsPanel" : true,
+                "showDisplay" : "showall",
+                "showFilterPanel" : true,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : true,
+                "showPinnedList" : true,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "be773330-c678-4a81-a269-2360c43e778f",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "90878c63-4c6a-4d8a-9fed-5fd01fb851d4",
+            "regionLabel" : "Completed Applications",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "deleteButtonText" : "Delete",
+                "pageSize" : 10,
+                "resumeButtonAlign" : "center",
+                "resumeButtonLabel" : "Resume",
+                "showDeleteButton" : true,
+                "showNumberInTitle" : true,
+                "showOwnerName" : false,
+                "showPauseReason" : true,
+                "showPauseStep" : true,
+                "showPauseTime" : true,
+                "title" : "Saved Applications"
+              },
+              "componentName" : "forceCommunity:pausedInterviewCard",
+              "id" : "98e947d7-b67c-42e8-a083-10567448a10e",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "46b31b07-eac7-443d-863c-5ae80ecdb243",
+            "regionLabel" : "Incomplete Applications",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fc8d200b-3f8e-47b4-822c-03905338d0a9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "efcf8fc9-ac88-490a-895f-dfecdfb3d820",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d12ab537-009e-444f-a070-49256228cd2a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "410fe13c-f9c5-4655-ab6c-d90a8c6f89e1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-applications"
+}

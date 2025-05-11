@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubType__c</fullName>
+    <label>SubType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>How do I apply?</fullName>
+                <default>false</default>
+                <label>How do I apply?</label>
+            </value>
+            <value>
+                <fullName>Residency Verification</fullName>
+                <default>false</default>
+                <label>Residency Verification</label>
+            </value>
+            <value>
+                <fullName>Financial Documents</fullName>
+                <default>false</default>
+                <label>Financial Documents</label>
+            </value>
+            <value>
+                <fullName>Submit Transcripts</fullName>
+                <default>false</default>
+                <label>Submit Transcripts</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Academic Planning</fullName>
+                <default>false</default>
+                <label>Academic Planning</label>
+            </value>
+            <value>
+                <fullName>Payment Options</fullName>
+                <default>false</default>
+                <label>Payment Options</label>
+            </value>
+            <value>
+                <fullName>Supsended Application</fullName>
+                <default>false</default>
+                <label>Supsended Application</label>
+            </value>
+            <value>
+                <fullName>Changes for Admissions</fullName>
+                <default>false</default>
+                <label>Changes for Admissions</label>
+            </value>
+            <value>
+                <fullName>Ordering Transcripts</fullName>
+                <default>false</default>
+                <label>Ordering Transcripts</label>
+            </value>
+            <value>
+                <fullName>Advisor Appointments</fullName>
+                <default>false</default>
+                <label>Advisor Appointments</label>
+            </value>
+            <value>
+                <fullName>Degree Audit</fullName>
+                <default>false</default>
+                <label>Degree Audit</label>
+            </value>
+            <value>
+                <fullName>GED Enrollment</fullName>
+                <default>false</default>
+                <label>GED Enrollment</label>
+            </value>
+            <value>
+                <fullName>ESL Enrollment</fullName>
+                <default>false</default>
+                <label>ESL Enrollment</label>
+            </value>
+            <value>
+                <fullName>Placement Testing - Adult Ed</fullName>
+                <default>false</default>
+                <label>Placement Testing - Adult Ed</label>
+            </value>
+            <value>
+                <fullName>GED Test</fullName>
+                <default>false</default>
+                <label>GED Test</label>
+            </value>
+            <value>
+                <fullName>Application Issue - Adult Ed</fullName>
+                <default>false</default>
+                <label>Application Issue - Adult Ed</label>
+            </value>
+            <value>
+                <fullName>GED Test Cost</fullName>
+                <default>false</default>
+                <label>GED Test Cost</label>
+            </value>
+            <value>
+                <fullName>GED Transcript Request</fullName>
+                <default>false</default>
+                <label>GED Transcript Request</label>
+            </value>
+            <value>
+                <fullName>GED Test Scholarship</fullName>
+                <default>false</default>
+                <label>GED Test Scholarship</label>
+            </value>
+            <value>
+                <fullName>GED Class Details</fullName>
+                <default>false</default>
+                <label>GED Class Details</label>
+            </value>
+            <value>
+                <fullName>ESL Class Details</fullName>
+                <default>false</default>
+                <label>ESL Class Details</label>
+            </value>
+            <value>
+                <fullName>Alternative High School</fullName>
+                <default>false</default>
+                <label>Alternative High School</label>
+            </value>
+            <value>
+                <fullName>Debt Relief Program</fullName>
+                <default>false</default>
+                <label>Debt Relief Program</label>
+            </value>
+            <value>
+                <fullName>Class Details</fullName>
+                <default>false</default>
+                <label>Class Details</label>
+            </value>
+            <value>
+                <fullName>Pre-Requisites</fullName>
+                <default>false</default>
+                <label>Pre-Requisites</label>
+            </value>
+            <value>
+                <fullName>Class Schedule</fullName>
+                <default>false</default>
+                <label>Class Schedule</label>
+            </value>
+            <value>
+                <fullName>Class Availability</fullName>
+                <default>false</default>
+                <label>Class Availability</label>
+            </value>
+            <value>
+                <fullName>Class Location</fullName>
+                <default>false</default>
+                <label>Class Location</label>
+            </value>
+            <value>
+                <fullName>Personal/Professional Development</fullName>
+                <default>false</default>
+                <label>Personal/Professional Development</label>
+            </value>
+            <value>
+                <fullName>International Students</fullName>
+                <default>false</default>
+                <label>International Students</label>
+            </value>
+            <value>
+                <fullName>Workforce Equity Initiative WEI</fullName>
+                <default>false</default>
+                <label>Workforce Equity Initiative WEI</label>
+            </value>
+            <value>
+                <fullName>One Summer Chicago</fullName>
+                <default>false</default>
+                <label>One Summer Chicago</label>
+            </value>
+            <value>
+                <fullName>Early College Information</fullName>
+                <default>false</default>
+                <label>Early College Information</label>
+            </value>
+            <value>
+                <fullName>Registration Deadline</fullName>
+                <default>false</default>
+                <label>Registration Deadline</label>
+            </value>
+            <value>
+                <fullName>Admissions Status</fullName>
+                <default>false</default>
+                <label>Admissions Status</label>
+            </value>
+            <value>
+                <fullName>Returning Student Process</fullName>
+                <default>false</default>
+                <label>Returning Student Process</label>
+            </value>
+            <value>
+                <fullName>Scheduling Orientation</fullName>
+                <default>false</default>
+                <label>Scheduling Orientation</label>
+            </value>
+            <value>
+                <fullName>Application Issue-credit</fullName>
+                <default>false</default>
+                <label>Application Issue-credit</label>
+            </value>
+            <value>
+                <fullName>How do I apply for Financial Aid?</fullName>
+                <default>false</default>
+                <label>How do I apply for Financial Aid?</label>
+            </value>
+            <value>
+                <fullName>Financial Aid Status</fullName>
+                <default>false</default>
+                <label>Financial Aid Status</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+            <value>
+                <fullName>Refund Status</fullName>
+                <default>false</default>
+                <label>Refund Status</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Scholarships</fullName>
+                <default>false</default>
+                <label>Scholarships</label>
+            </value>
+            <value>
+                <fullName>STAR</fullName>
+                <default>false</default>
+                <label>STAR</label>
+            </value>
+            <value>
+                <fullName>Payment Plans</fullName>
+                <default>false</default>
+                <label>Payment Plans</label>
+            </value>
+            <value>
+                <fullName>Tuition Rate</fullName>
+                <default>false</default>
+                <label>Tuition Rate</label>
+            </value>
+            <value>
+                <fullName>Tuition Balance</fullName>
+                <default>false</default>
+                <label>Tuition Balance</label>
+            </value>
+            <value>
+                <fullName>Refund Amount</fullName>
+                <default>false</default>
+                <label>Refund Amount</label>
+            </value>
+            <value>
+                <fullName>Financial Support Services</fullName>
+                <default>false</default>
+                <label>Financial Support Services</label>
+            </value>
+            <value>
+                <fullName>Financial Aid Book Voucher</fullName>
+                <default>false</default>
+                <label>Financial Aid Book Voucher</label>
+            </value>
+            <value>
+                <fullName>Star Book Voucher</fullName>
+                <default>false</default>
+                <label>Star Book Voucher</label>
+            </value>
+            <value>
+                <fullName>Charge Backs</fullName>
+                <default>false</default>
+                <label>Charge Backs</label>
+            </value>
+            <value>
+                <fullName>Waivers/Override</fullName>
+                <default>false</default>
+                <label>Waivers/Override</label>
+            </value>
+            <value>
+                <fullName>Write Off Collections</fullName>
+                <default>false</default>
+                <label>Write Off Collections</label>
+            </value>
+            <value>
+                <fullName>Delinquent Account</fullName>
+                <default>false</default>
+                <label>Delinquent Account</label>
+            </value>
+            <value>
+                <fullName>To-Do List Items</fullName>
+                <default>false</default>
+                <label>To-Do List Items</label>
+            </value>
+            <value>
+                <fullName>Holds/Warnings</fullName>
+                <default>false</default>
+                <label>Holds/Warnings</label>
+            </value>
+            <value>
+                <fullName>Academic Standing</fullName>
+                <default>false</default>
+                <label>Academic Standing</label>
+            </value>
+            <value>
+                <fullName>ID Number</fullName>
+                <default>false</default>
+                <label>ID Number</label>
+            </value>
+            <value>
+                <fullName>User Name</fullName>
+                <default>false</default>
+                <label>User Name</label>
+            </value>
+            <value>
+                <fullName>Add/Drop Classes</fullName>
+                <default>false</default>
+                <label>Add/Drop Classes</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Class Status</fullName>
+                <default>false</default>
+                <label>Class Status</label>
+            </value>
+            <value>
+                <fullName>Grades Posting</fullName>
+                <default>false</default>
+                <label>Grades Posting</label>
+            </value>
+            <value>
+                <fullName>Login Issues - Portal</fullName>
+                <default>false</default>
+                <label>Login Issues - Portal</label>
+            </value>
+            <value>
+                <fullName>Login Issues - Brightspace</fullName>
+                <default>false</default>
+                <label>Login Issues - Brightspace</label>
+            </value>
+            <value>
+                <fullName>Log in Issues - Navigate</fullName>
+                <default>false</default>
+                <label>Log in Issues - Navigate</label>
+            </value>
+            <value>
+                <fullName>Portal Issues</fullName>
+                <default>false</default>
+                <label>Portal Issues</label>
+            </value>
+            <value>
+                <fullName>School Email</fullName>
+                <default>false</default>
+                <label>School Email</label>
+            </value>
+            <value>
+                <fullName>Grade Appeal</fullName>
+                <default>false</default>
+                <label>Grade Appeal</label>
+            </value>
+            <value>
+                <fullName>Update Information</fullName>
+                <default>false</default>
+                <label>Update Information</label>
+            </value>
+            <value>
+                <fullName>Self-Enrollment</fullName>
+                <default>false</default>
+                <label>Self-Enrollment</label>
+            </value>
+            <value>
+                <fullName>Remove from Contact List</fullName>
+                <default>false</default>
+                <label>Remove from Contact List</label>
+            </value>
+            <value>
+                <fullName>U-Pass / Ventra Card</fullName>
+                <default>false</default>
+                <label>U-Pass / Ventra Card</label>
+            </value>
+            <value>
+                <fullName>Future Ready</fullName>
+                <default>false</default>
+                <label>Future Ready</label>
+            </value>
+            <value>
+                <fullName>Veterans Services</fullName>
+                <default>false</default>
+                <label>Veterans Services</label>
+            </value>
+            <value>
+                <fullName>Loaner Laptop</fullName>
+                <default>false</default>
+                <label>Loaner Laptop</label>
+            </value>
+            <value>
+                <fullName>Access Center / Dissability Access Center</fullName>
+                <default>false</default>
+                <label>Access Center / Dissability Access Center</label>
+            </value>
+            <value>
+                <fullName>Wellness Center</fullName>
+                <default>false</default>
+                <label>Wellness Center</label>
+            </value>
+            <value>
+                <fullName>Childcare Lab</fullName>
+                <default>false</default>
+                <label>Childcare Lab</label>
+            </value>
+            <value>
+                <fullName>Library</fullName>
+                <default>false</default>
+                <label>Library</label>
+            </value>
+            <value>
+                <fullName>Books-Akademos</fullName>
+                <default>false</default>
+                <label>Books-Akademos</label>
+            </value>
+            <value>
+                <fullName>Career Services</fullName>
+                <default>false</default>
+                <label>Career Services</label>
+            </value>
+            <value>
+                <fullName>Athletics</fullName>
+                <default>false</default>
+                <label>Athletics</label>
+            </value>
+            <value>
+                <fullName>Student Activities</fullName>
+                <default>false</default>
+                <label>Student Activities</label>
+            </value>
+            <value>
+                <fullName>Tutoring</fullName>
+                <default>false</default>
+                <label>Tutoring</label>
+            </value>
+            <value>
+                <fullName>Transfer Planning</fullName>
+                <default>false</default>
+                <label>Transfer Planning</label>
+            </value>
+            <value>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+                <label>Diploma</label>
+            </value>
+            <value>
+                <fullName>Hours/Locations</fullName>
+                <default>false</default>
+                <label>Hours/Locations</label>
+            </value>
+            <value>
+                <fullName>Voter Registration</fullName>
+                <default>false</default>
+                <label>Voter Registration</label>
+            </value>
+            <value>
+                <fullName>CHA Information</fullName>
+                <default>false</default>
+                <label>CHA Information</label>
+            </value>
+            <value>
+                <fullName>Receive Diploma/Certificate/License</fullName>
+                <default>false</default>
+                <label>Receive Diploma/Certificate/License</label>
+            </value>
+            <value>
+                <fullName>Parking/Transportation</fullName>
+                <default>false</default>
+                <label>Parking/Transportation</label>
+            </value>
+            <value>
+                <fullName>Facilities Rental Request</fullName>
+                <default>false</default>
+                <label>Facilities Rental Request</label>
+            </value>
+            <value>
+                <fullName>Campus Housing</fullName>
+                <default>false</default>
+                <label>Campus Housing</label>
+            </value>
+            <value>
+                <fullName>Recruiter Request</fullName>
+                <default>false</default>
+                <label>Recruiter Request</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+            <value>
+                <fullName>Free Tax Prep Services</fullName>
+                <default>false</default>
+                <label>Free Tax Prep Services</label>
+            </value>
+            <value>
+                <fullName>Safety &amp; Security</fullName>
+                <default>false</default>
+                <label>Safety &amp; Security</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Employee/Department Contact Information</fullName>
+                <default>false</default>
+                <label>Employee/Department Contact Information</label>
+            </value>
+            <value>
+                <fullName>Employment at CCC</fullName>
+                <default>false</default>
+                <label>Employment at CCC</label>
+            </value>
+            <value>
+                <fullName>Complaints</fullName>
+                <default>false</default>
+                <label>Complaints</label>
+            </value>
+            <value>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+                <label>Compliment</label>
+            </value>
+            <value>
+                <fullName>Disconnected Chat/Call</fullName>
+                <default>false</default>
+                <label>Disconnected Chat/Call</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Create Lead</fullName>
+                <default>false</default>
+                <label>Create Lead</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Debt Relief Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Class Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Pre-Requisites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Class Schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Class Availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Class Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Personal/Professional Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>International Students</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Workforce Equity Initiative WEI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>One Summer Chicago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Class/Degree Program Information</controllingFieldValue>
+            <valueName>Early College Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>How do I apply?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Residency Verification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Submit Transcripts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Supsended Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Registration Deadline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Admissions Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Returning Student Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Scheduling Orientation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enrollment</controllingFieldValue>
+            <valueName>Application Issue-credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Hours/Locations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Voter Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>CHA Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Receive Diploma/Certificate/License</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Parking/Transportation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Facilities Rental Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Campus Housing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Recruiter Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Alumni</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Free Tax Prep Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Safety &amp; Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Events</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Employee/Department Contact Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Employment at CCC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Complaints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Compliment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Disconnected Chat/Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Information</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Financial Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Payment Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>How do I apply for Financial Aid?</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Financial Aid Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>SAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Refund Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Scholarships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>STAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Payment Plans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Tuition Rate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Tuition Balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Refund Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Financial Support Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Financial Aid Book Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Star Book Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Charge Backs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Waivers/Override</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Write Off Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Aid/Business Office</controllingFieldValue>
+            <valueName>Delinquent Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Only</controllingFieldValue>
+            <valueName>Create Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advising</controllingFieldValue>
+            <valueName>Academic Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advising</controllingFieldValue>
+            <valueName>Advisor Appointments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advising</controllingFieldValue>
+            <valueName>Degree Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Changes for Admissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>To-Do List Items</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Holds/Warnings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Academic Standing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>ID Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>User Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Add/Drop Classes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Password Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Class Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Grades Posting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Login Issues - Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Login Issues - Brightspace</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Log in Issues - Navigate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Portal Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>School Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Grade Appeal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Update Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Self-Enrollment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Account</controllingFieldValue>
+            <valueName>Remove from Contact List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Enrollment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>ESL Enrollment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>Placement Testing - Adult Ed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>Application Issue - Adult Ed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Test Cost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Transcript Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Test Scholarship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>GED Class Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>ESL Class Details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Education</controllingFieldValue>
+            <valueName>Alternative High School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Ordering Transcripts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>U-Pass / Ventra Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Future Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Veterans Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Loaner Laptop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Access Center / Dissability Access Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Wellness Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Childcare Lab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Library</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Books-Akademos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Career Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Athletics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Student Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Tutoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Transfer Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Services</controllingFieldValue>
+            <valueName>Diploma</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

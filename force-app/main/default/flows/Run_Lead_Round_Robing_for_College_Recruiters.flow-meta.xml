@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Most_Recent_Assignment</name>
+        <label>Most Recent Assignment?</label>
+        <locationX>974</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Assign_to_Harold_Washington_Recruiter</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Harold_Washington_Recruiter_Queue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Harold Washington Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Truman_Recruiter</targetReference>
+            </connector>
+            <label>Harold Washington Recruiter Queue</label>
+        </rules>
+        <rules>
+            <name>Truman_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Truman Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Kennedy_King_Recruiter</targetReference>
+            </connector>
+            <label>Truman Recruiter</label>
+        </rules>
+        <rules>
+            <name>Kennedy_King_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Kennedy-King Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Malcolm_X_Recruiter</targetReference>
+            </connector>
+            <label>Kennedy-King Recruiter</label>
+        </rules>
+        <rules>
+            <name>Malcolm_X_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Malcolm X Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Olive_Harvey_Recruiter</targetReference>
+            </connector>
+            <label>Malcolm X Recruiter</label>
+        </rules>
+        <rules>
+            <name>Olive_Harvey_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Olive-Harvey Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Daley_Recruiter</targetReference>
+            </connector>
+            <label>Olive-Harvey Recruiter</label>
+        </rules>
+        <rules>
+            <name>Daley_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Daley Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Wright_Recruiter</targetReference>
+            </connector>
+            <label>Daley Recruiter</label>
+        </rules>
+        <rules>
+            <name>Wright_Recruiter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Wright Recruiter</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Harold_Washington_Recruiter1</targetReference>
+            </connector>
+            <label>Wright Recruiter</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Run Lead Round Robing for College Recruiters {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Run Lead Round Robing for College Recruiters</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Most_Recent_Round_Robin</name>
+        <label>Get Most Recent Round Robin</label>
+        <locationX>974</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Most_Recent_Assignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Round_Robin__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Assign_to_Daley_Recruiter</name>
+        <label>Assign to Daley Recruiter</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LkshEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Harold_Washington_Recruiter</name>
+        <label>Assign to Harold Washington Recruiter</label>
+        <locationX>1898</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksjEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Harold_Washington_Recruiter1</name>
+        <label>Assign to Harold Washington Recruiter</label>
+        <locationX>1634</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksjEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Kennedy_King_Recruiter</name>
+        <label>Assign to Kennedy-King Recruiter</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LkslEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Malcolm_X_Recruiter</name>
+        <label>Assign to Malcolm X Recruiter</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksnEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Olive_Harvey_Recruiter</name>
+        <label>Assign to Olive-Harvey Recruiter</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>Get_Most_Recent_Round_Robin.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksqEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Truman_Recruiter</name>
+        <label>Assign to Truman Recruiter</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksvEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Wright_Recruiter</name>
+        <label>Assign to Wright Recruiter</label>
+        <locationX>1370</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksxEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Populate_Round_Robin_Checkbox</name>
+        <label>Populate Round Robin Checkbox</label>
+        <locationX>974</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Get_Most_Recent_Round_Robin</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Round_Robin__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Populate_Round_Robin_Checkbox</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>00G7z000000XUFlEAO</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

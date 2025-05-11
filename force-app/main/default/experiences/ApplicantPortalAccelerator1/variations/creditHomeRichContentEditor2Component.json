@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "8e8170d7-9666-45cb-a0c5-65c9962e2995",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "3f9f2d4a-71e1-46bd-983b-129f50eaf041",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Credit_Home_Rich_Content_Editor_2_Component",
+  "id" : "0240acd7-9e3c-41b0-8a95-5bcf15aede8d",
+  "type" : "experienceVariation"
+}

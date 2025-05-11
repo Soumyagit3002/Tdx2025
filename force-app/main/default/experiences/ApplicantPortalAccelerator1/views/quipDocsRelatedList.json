@@ -1,0 +1,23 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "24583a1a-efd1-4c00-9651-8d24d378bb95",
+  "label" : "Quip Docs Related List",
+  "regions" : [ {
+    "id" : "7038bd04-62e1-4004-99db-4ab7bf6eb9ec",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "6b7f7e96-afe5-46d7-b7d1-7640f8117c1d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "49640bff-2fa9-4b96-813c-727706243d62",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "extrelated-quip"
+}

@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "c37aa4fb-b5d1-4c4c-8c5b-449518a89c22",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "663fcfb3-79f3-4791-b156-4e11e641205d",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Early_College_Home_Rich_Content_Editor_4_Component",
+  "id" : "92fc17b7-af9b-4586-bfb3-b62883d929a7",
+  "type" : "experienceVariation"
+}

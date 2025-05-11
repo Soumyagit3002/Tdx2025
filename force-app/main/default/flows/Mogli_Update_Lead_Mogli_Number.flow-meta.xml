@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignMobileMogliNumber</name>
+        <label>AssignMobileMogliNumber</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>vMogliNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fMobileMogliNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead_Mogli_Number</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AssignPhoneMogliNumber</name>
+        <label>AssignPhoneMogliNumber</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>vMogliNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fPhoneMogliNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead_Mogli_Number</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Lead_Mogli_Number</name>
+        <label>Update Lead Mogli Number</label>
+        <locationX>314</locationX>
+        <locationY>587</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Mogli_SMS__Mogli_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>vMogliNumber</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Update_Type</name>
+        <label>Update Type</label>
+        <locationX>314</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Mobile</name>
+            <conditionLogic>2 AND (1 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Mogli_SMS__Mogli_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.MobilePhone</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignMobileMogliNumber</targetReference>
+            </connector>
+            <label>Mobile</label>
+        </rules>
+        <rules>
+            <name>Phone</name>
+            <conditionLogic>1 OR (2 AND 3) OR (2 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MobilePhone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Mogli_SMS__Mogli_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.MobilePhone</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.MobilePhone</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignPhoneMogliNumber</targetReference>
+            </connector>
+            <label>Phone</label>
+        </rules>
+    </decisions>
+    <description>Flow to update both Phone and Mobile number to Mogli Number on Lead object.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fMobileMogliNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK(TRIM({!$Record.MobilePhone})),&quot;&quot;,
+
+IF(REGEX(TRIM({!$Record.MobilePhone}),&quot;[\\s\\S\\w\\W]*[a-zA-Z@#$%^&amp;*&lt;&gt;!?\\[\\]_{};:&apos;/~`]+[\\s\\S\\w\\W]*&quot;),&quot;&quot;,
+
+&quot;+1&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE((&quot;+&quot;&amp; TRIM({!$Record.MobilePhone})),&quot;++1&quot;,&quot;&quot;),&quot;+1&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot;,&quot;,&quot;&quot;),&quot;.&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>fPhoneMogliNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK(TRIM({!$Record.Phone})),&quot;&quot;,
+
+IF(REGEX(TRIM({!$Record.Phone}),&quot;[\\s\\S\\w\\W]*[a-zA-Z@#$%^&amp;*&lt;&gt;!?\\[\\]_{};:&apos;/~`]+[\\s\\S\\w\\W]*&quot;),&quot;&quot;,
+
+&quot;+1&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE((&quot;+&quot;&amp; TRIM({!$Record.Phone})),&quot;++1&quot;,&quot;&quot;),&quot;+1&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot;,&quot;,&quot;&quot;),&quot;.&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+
+AND(
+
+ISBLANK({!$Record.Mogli_SMS__Mogli_Number__c}),
+
+OR(
+
+NOT(ISBLANK({!$Record.MobilePhone})),
+
+NOT(ISBLANK({!$Record.Phone}))
+
+)
+
+),
+
+ISCHANGED({!$Record.MobilePhone}),
+
+ISCHANGED({!$Record.Phone})
+
+)</expression>
+    </formulas>
+    <interviewLabel>[Mogli] Update Lead Mogli Number {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Mogli] Update Lead Mogli Number</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Type</targetReference>
+        </connector>
+        <filterFormula>OR(ISNEW(),OR(ISCHANGED({!$Record.Phone}),ISCHANGED({!$Record.MobilePhone})))</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>vMogliNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

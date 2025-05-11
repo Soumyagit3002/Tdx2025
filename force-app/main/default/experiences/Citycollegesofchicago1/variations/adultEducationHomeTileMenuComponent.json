@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "03d4ff64-0541-4705-9439-e2feecf4837f",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "9c5e510e-630c-4023-a4bb-ec093667c412",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Adult_Education_Home_Tile_Menu_Component",
+  "id" : "da6a5031-7258-4869-bd16-50896af17b76",
+  "type" : "experienceVariation"
+}

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "7e01a19e-6231-4d67-aee3-7f1893d1d343",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Apply_for_Credit__c",
+  "id" : "ff18e430-2a19-4c7b-b682-9b6e75b4bcf0",
+  "label" : "Apply for Credit",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-apply-for-credit",
+  "type" : "route",
+  "urlPrefix" : "apply-for-credit"
+}

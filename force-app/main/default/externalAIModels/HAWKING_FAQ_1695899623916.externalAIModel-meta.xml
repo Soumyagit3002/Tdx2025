@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalAIModel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationSourceType>FAQ</applicationSourceType>
+    <externalModelKey>094d69fd-9459-4c05-9fd2-4d60d9a63b72</externalModelKey>
+    <externalModelStatus>DISABLED</externalModelStatus>
+    <name>HAWKING_FAQ_1695899623916</name>
+    <trainingJobName>83c7244f-cc4e-4050-8f20-46fe0acb7a88_1</trainingJobName>
+</ExternalAIModel>

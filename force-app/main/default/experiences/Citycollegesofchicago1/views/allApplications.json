@@ -1,0 +1,228 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6255248e-cf1b-4cb3-a22a-3a53b0ef91fc",
+  "label" : "All Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8f7aca54-584b-4f84-a3f9-a7abf693ba18",
+          "columns" : [ {
+            "UUID" : "de87164a-f290-45d6-a91d-bc7a755b8123",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 239
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8f7aca54-584b-4f84-a3f9-a7abf693ba18",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 28px;\">Applications</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 18px;\">Which of the below describes why you are here﻿</span></p><p style=\"text-align: center;\"><br></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "21dca8fb-0691-43e8-9e17-e0998d85f306",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "de87164a-f290-45d6-a91d-bc7a755b8123",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "853923f5-11ff-423a-ada4-8605318bf12a",
+          "columns" : [ {
+            "UUID" : "cac881a3-91ae-4d0e-903d-a320e3e2255f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d074cbb4-939a-409b-9cf3-83232e58039a",
+            "columnKey" : "7b827",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "315af5ae-067a-4ee7-ab85-1bbfa0af00db",
+            "columnKey" : "adae2",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f4c1b131-4955-4b22-b9fe-3c06bfa41fb3",
+            "columnKey" : "0f89f",
+            "columnName" : "Column 4",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 202
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "853923f5-11ff-423a-ada4-8605318bf12a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px;\">I want to earn credits towards my associate's degree or transferring to a four year university</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "449343ce-8c98-43e8-a566-0109ece50191",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cac881a3-91ae-4d0e-903d-a320e3e2255f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px;\">I want to complete my highschool diploma or learn English</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9f6c41e3-b789-45a3-8220-8de167e5877f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d074cbb4-939a-409b-9cf3-83232e58039a",
+        "regionLabel" : "Column 2",
+        "regionName" : "7b827",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px;\">I'm a highschool student who wants to earn college credit</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "71b75ca3-5fe3-4941-b108-4d74d0c4e21c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "315af5ae-067a-4ee7-ab85-1bbfa0af00db",
+        "regionLabel" : "Column 3",
+        "regionName" : "adae2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px;\">I want to learn something new</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4d301a32-3cac-44a1-9baa-3e914ff3af6f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f4c1b131-4955-4b22-b9fe-3c06bfa41fb3",
+        "regionLabel" : "Column 4",
+        "regionName" : "0f89f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "84636273-f45e-45e9-b297-e65914e76afa",
+          "columns" : [ {
+            "UUID" : "39dc5f57-1d6a-4006-be49-deef2dcd0a65",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "84636273-f45e-45e9-b297-e65914e76afa",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 1,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(255, 255, 255)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "default",
+            "tileMenuEditor" : "All_Applications",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "5d844c42-269e-42e3-bf64-acb95b1d2aed",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "39dc5f57-1d6a-4006-be49-deef2dcd0a65",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "382b54bd-cbd7-4aff-8dd7-c15fa3a386a7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "All Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f99fe6fe-02a0-4905-8345-a3ba839cd32f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "52d95fe2-807b-4d53-8cef-b8727720ab36",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-all-applications"
+}

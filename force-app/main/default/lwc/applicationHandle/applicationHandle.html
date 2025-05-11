@@ -1,0 +1,88 @@
+<template>
+    <div class="slds-grid slds-gutters slds-p-bottom_large">
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <span>I want to earn credits towards my associate's degree or transferring to a four year university</span>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <span>I want to complete my highschool diploma or learn English</span>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <span>I'm a highschool student who wants to earn college credit</span>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <span>I want to learn something new</span>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <button class="slds-button custom-button" onclick={handleApplication} name="Credit Application">Credit Application</button>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <button class="slds-button custom-button" onclick={handleApplication} name="Adult Education Application">Adult Education Application</button>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <button class="slds-button custom-button" name="Early College Application">Early College Application</button>
+        </div>
+        <div class="slds-col slds-size_1-of-4 centerCSS">
+            <button class="slds-button custom-button" name="Continuing Education Application">Continuing Education Application</button>
+        </div>
+    </div>
+
+    <template if:true={showEdApp}>
+        <section role="dialog" tabindex="-1" class="custom-modal slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+
+                <!-- Modal/Popup Header -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse slds-modal__close" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Adult Education Application</h2>
+                </header>
+
+                <!-- Modal/Popup Body with Flow Component -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-combobox name="selectLang" label="Select Language" placeholder="Select Language"
+                        value={selectedLang} options={languageOptions} onchange={handleLanguageChange}>
+                    </lightning-combobox>
+                    <p class="slds-form-element__help" style="color:rgb(234, 0, 30)">{langErr}</p>
+                </div>
+
+                <!-- Modal/Popup Footer -->
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" class="btnPadding" onclick={closeModal}>
+                    </lightning-button>
+                    <lightning-button variant="neutral" label="Continue" onclick={handleEdApplication}>
+                    </lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <!--<div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-3">
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning-combobox name="selectedApp" label="Select an Application" placeholder="Select an Application"
+                value={selectedApp} options={applicationOptions} onchange={handleApplicationChange}>
+            </lightning-combobox>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters" if:true={showLangOpt}>
+        <div class="slds-col slds-size_1-of-3">
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning-combobox name="selectLang" label="Select Language" placeholder="Select Language"
+                value={selectedLang} options={languageOptions} onchange={handleLanguageChange}>
+            </lightning-combobox>
+        </div>
+    </div>
+    <div class="slds-grid slds-gutters" style="padding-bottom:50px;">
+        <div class="slds-col slds-size_1-of-3">
+        </div>
+        <div class="slds-col slds-size_1-of-3" style="">
+            <img class="image" src={nextBtn} onclick={handleApplication}>
+        </div>
+    </div>-->
+</template>

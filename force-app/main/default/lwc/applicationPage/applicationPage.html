@@ -1,0 +1,69 @@
+<template>
+    <!--<span>Application : {application}</span>-->
+
+    <div class="stepclass">
+        <div class="grantnewrequestbody">
+            <div class="processIndicator">
+                <ol class="timeline" style="font-family: var(--lwc-fontFamily,Open Sans);font-size: 0.9rem;">
+                    <template for:each={steps} for:item="step">
+                        <li key={step.value} class={step.cls} value={step.value} data-id={step.name}
+                            onclick={handleClick}>{step.name}</li>
+                    </template>
+                </ol>
+            </div>
+        </div>
+        <!--<c-steps onchangestep={handleChangeStep}></c-steps>-->
+    </div>
+    <div class="mainbody">
+        <template if:true={isStep1}>
+            <c-name-section translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-name-section>
+        </template>
+        <template if:true={isStep2}>
+            <c-address-section translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-address-section>
+        </template>
+        <template if:true={isStep3}>
+            <c-contact-information-section translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}>
+            </c-contact-information-section>
+        </template>
+        <template if:true={isStep4}>
+            <c-basic-information translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-basic-information>
+        </template>
+        <template if:true={isStep5}>
+            <c-emergency-contact translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-emergency-contact>
+        </template>
+        <template if:true={isStep6}>
+            <c-other-information translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-other-information>
+        </template>
+        <template if:true={isStep7}>
+            <c-education-information translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-education-information>
+        </template>
+        <template if:true={isStep8}>
+            <c-star-scholarship translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-star-scholarship>
+        </template>
+        <template if:true={isStep9}>
+            <c-transcript-authorization translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-transcript-authorization>
+        </template>
+        <template if:true={isStep10}>
+            <c-degree-authorization translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-degree-authorization>
+        </template>
+        <template if:true={isStep11}>
+            <c-college-information translations={translations} onsendformvalue={updateFormField}
+                application-data={applicationData}></c-college-information>
+        </template>
+        <div class="btnGrp">
+            <button if:false={isStep1} class="slds-button custom-button" onclick={handlePrevious}>{translations.PreviousButton}</button>
+            <button if:true={isStep11} class="slds-button custom-button" onclick={handleSubmitApplication}>{translations.SubmitButton}</button>
+            <button if:false={isStep11} class="slds-button custom-button" onclick={handleNext}>{translations.NextButton}</button>
+        </div>
+    </div>
+</template>

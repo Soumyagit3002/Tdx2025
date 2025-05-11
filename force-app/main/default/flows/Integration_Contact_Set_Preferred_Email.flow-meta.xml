@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <name>Error_Preferred_Email_Field_is_Blank</name>
+        <label>Error : Preferred Email Field  is Blank</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <customErrorMessages>
+            <errorMessage>There&apos;s no email address in the Preferred Email field. Add an email to this field or change the Preferred Email value.</errorMessage>
+            <fieldSelection>hed__Preferred_Email__c</fieldSelection>
+            <isFieldError>true</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Email_Value_Check</name>
+        <label>Email Value Check</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Error_Preferred_Email_Field_is_Blank</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>N/A</defaultConnectorLabel>
+        <rules>
+            <name>Campus_Email</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Preferred_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Campus Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Campus_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Email_Campus_Email</targetReference>
+            </connector>
+            <label>Campus Email</label>
+        </rules>
+        <rules>
+            <name>Personal_Email_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Preferred_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Personal Email Address</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Personal_Email_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Main_Email_Personal_Email_Address</targetReference>
+            </connector>
+            <label>Personal Email Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_Personal_Email_Address</name>
+        <label>Has Personal Email Address?</label>
+        <locationX>974</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Personal_Email_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Preferred_Email_Personal_Email</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Preferred_Email_Check</name>
+        <label>Preferred Email Check</label>
+        <locationX>644</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Has_Personal_Email_Address</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Preferred Email</defaultConnectorLabel>
+        <rules>
+            <name>Preferred_Email_Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Preferred_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Value_Check</targetReference>
+            </connector>
+            <label>Preferred Email Present</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Integration) Contact) Set Preferred Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Integration) Contact) Set Preferred Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Main_Email_Campus_Email</name>
+        <label>Main Email = Campus Email</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.Campus_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Main_Email_Personal_Email_Address</name>
+        <label>Main Email = Personal Email Address</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.Personal_Email_Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Preferred_Email_Personal_Email</name>
+        <label>Set Preferred Email = Personal Email</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.Personal_Email_Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>hed__Preferred_Email__c</field>
+            <value>
+                <stringValue>Personal Email Address</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Preferred_Email_Check</targetReference>
+        </connector>
+        <filterFormula>ISNEW() || (
+  ISCHANGED({!$Record.hed__Preferred_Email__c})
+|| ISCHANGED({!$Record.Campus_Email__c})
+|| ISCHANGED({!$Record.Personal_Email_Address__c})
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

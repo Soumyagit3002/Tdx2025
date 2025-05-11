@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "eb10c845-33d9-4e3b-bd88-ed9f7baf2708",
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "configurationTags" : [ ],
+  "devName" : "Success_Team",
+  "id" : "07ce060f-8a1a-4bc5-9795-b32a17b81bc4",
+  "label" : "Success Team",
+  "pageAccess" : "UseParent",
+  "routeType" : "success-team",
+  "type" : "route",
+  "urlPrefix" : "success-team"
+}

@@ -1,0 +1,23 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "779f802d-ea1f-4a60-bd88-6c67fe5713df",
+  "label" : "Alumni Profile",
+  "regions" : [ {
+    "id" : "bf0b60e2-fc16-4c42-b648-aafb8f6c27eb",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "d18c99f4-e466-4b4e-835e-a5099bcf6b38",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "77ada913-1c30-428b-9e57-c5b047b2f96b",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "alumni-profile"
+}

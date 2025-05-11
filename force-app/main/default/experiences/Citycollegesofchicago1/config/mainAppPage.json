@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "fcc550ea-5cba-407c-a6cd-d24c777b9e71",
+  "headMarkup" : "<link rel=\"shortcut icon\" href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/s/favicon.ico?v=2\" />\n<style>\n    ul.slds-carousel__indicators{\n  display:flex;\n  margin:0.5rem 0px;\n}\nli.slds-carousel__indicator{\n  display:flex;\n  margin:0px 0.25rem;\n}\n</style>\n<script>\nwindow.addEventListener(\"message\", receiveMessage, false);\nfunction receiveMessage(event) {\n    var payload = event.data;\n\n    if(payload && payload.type === \"chasitor.sendMessage\") {\n        embedded_svc.postMessage(\"chasitor.sendMessage\", payload.message);\n    }\n};\n</script>",
+  "id" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Service Community Template",
+  "type" : "appPage"
+}

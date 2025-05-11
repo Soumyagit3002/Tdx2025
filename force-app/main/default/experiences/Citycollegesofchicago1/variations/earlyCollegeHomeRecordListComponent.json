@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "7b66ea72-07bb-4e92-8864-476ea1e772e9",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "8a688bf6-09b3-49f2-83a0-d535b1c359fd",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Early_College_Home_Record_List_Component",
+  "id" : "f5a8b81e-cd49-4e38-8ea3-3a3b96a3da68",
+  "type" : "experienceVariation"
+}

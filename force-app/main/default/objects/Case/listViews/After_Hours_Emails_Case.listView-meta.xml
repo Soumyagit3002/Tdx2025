@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>After_Hours_Emails_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>After Hours Emails</label>
+    <queue>After_Hours_Emails</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

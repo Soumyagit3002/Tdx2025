@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Admit_Type__c</fullName>
+    <label>New Admit Type:</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ABE – Adult Basic Education</fullName>
+                <default>false</default>
+                <label>ABE – Adult Basic Education</label>
+            </value>
+            <value>
+                <fullName>PPD – Personal &amp; Professional Development</fullName>
+                <default>false</default>
+                <label>PPD – Personal &amp; Professional Development</label>
+            </value>
+            <value>
+                <fullName>DUC – Dual Credit HS Student</fullName>
+                <default>false</default>
+                <label>DUC – Dual Credit HS Student</label>
+            </value>
+            <value>
+                <fullName>DUE – Dual Enrollment HS Student</fullName>
+                <default>false</default>
+                <label>DUE – Dual Enrollment HS Student</label>
+            </value>
+            <value>
+                <fullName>FYR – First Year Student</fullName>
+                <default>false</default>
+                <label>FYR – First Year Student</label>
+            </value>
+            <value>
+                <fullName>PCR – Prior College Readmit</fullName>
+                <default>false</default>
+                <label>PCR – Prior College Readmit</label>
+            </value>
+            <value>
+                <fullName>RAD – Readmit</fullName>
+                <default>false</default>
+                <label>RAD – Readmit</label>
+            </value>
+            <value>
+                <fullName>RET -- Returning</fullName>
+                <default>false</default>
+                <label>RET -- Returning</label>
+            </value>
+            <value>
+                <fullName>NDG – Non-Degree Seeking Student</fullName>
+                <default>false</default>
+                <label>NDG – Non-Degree Seeking Student</label>
+            </value>
+            <value>
+                <fullName>INT – International Student</fullName>
+                <default>false</default>
+                <label>INT – International Student</label>
+            </value>
+            <value>
+                <fullName>IRT – International Returning</fullName>
+                <default>false</default>
+                <label>IRT – International Returning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

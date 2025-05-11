@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "99496cbc-3a32-499f-9213-a7db2817b9f5",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Demotest__c",
+  "id" : "dec0f090-645d-4e7b-8900-b059aeb3404e",
+  "label" : "Demotest",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-demotest",
+  "type" : "route",
+  "urlPrefix" : "demotest"
+}

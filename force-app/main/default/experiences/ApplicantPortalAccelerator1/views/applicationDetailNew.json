@@ -1,0 +1,48 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "c236767e-f10b-496a-ab8e-33e658a1a9da",
+  "label" : "Application Detail New",
+  "regions" : [ {
+    "id" : "b44c78a1-fe19-4fd4-9dcd-942d389c679d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.DesertImage.1}\"></p>\n<p style=\"text-align: center;\"><br></p>\n<p style=\"text-align: center;\"><b style=\"background-color: transparent; color: rgb(0, 0, 0); font-size: 24px;\">Continue setup </b></p>\n<p style=\"text-align: center;\"><br></p>\n<p style=\"text-align: center;\"><span style=\"color: rgb(0, 0, 0);\">Before applicants can create and submit applications, you need to set up a few things.</span><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\"> Learn more about</span><span style=\"color: rgb(0, 102, 204); background-color: rgb(255, 255, 255);\"> </span><a href=\"https://powerofus.force.com/AC_Omniscript\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(0, 102, 204); background-color: rgb(255, 255, 255);\">creating a guided experience with OmniStudio</a><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">.</span></p>\n<p style=\"text-align: center;\"><br></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "61d4415b-144d-45ea-9997-0dc7d3b526f5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f0b55caa-4427-4fe2-8916-6229d5a4aa0c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "34e641db-6a39-4f1e-be09-676e21897059",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0110e7a1-e62f-4744-81d7-1c28b14fb080",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "24b85a59-0363-40f1-afb1-dcf04bb45630",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-a03"
+}

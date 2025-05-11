@@ -1,0 +1,348 @@
+<template>
+
+    <template lwc:if={getLinkSection}>
+        <div class="container slds-m-around_medium">
+            <div class="box slds-box slds-theme_default slds-m-horizontal_small" onclick={handleLinkClick}
+                data-value="CREDIT">
+                CREDIT
+            </div>
+            <div class="box slds-box slds-theme_default slds-m-horizontal_small" onclick={handleLinkClick}
+                data-value="CREDIT">
+                EARLY COLLEGE
+            </div>
+            <div class="box slds-box slds-theme_default slds-m-horizontal_small" onclick={handleLinkClick}
+                data-value="CREDIT">
+                INTERNATIONAL
+            </div>
+            <div class="box slds-box slds-theme_default slds-m-horizontal_small" onclick={handleLinkClick}
+                data-value="CREDIT">
+                ADULT EDUCATION
+            </div>
+        </div>
+    </template>
+
+    <template lwc:if={getCreditSection}>
+        <div>
+            <lightning-button-group>
+                <lightning-button label="Personal Details" data-value="PersonalSection" onclick={openCreditSection}
+                    disabled={getPersonalDetailButtonDisable}>
+                </lightning-button>
+                <lightning-button label="Other Personal Details" data-value="OtherPersonalDetailSection"
+                    onclick={openCreditSection} disabled={getOtherPersonalDetailButtonDisable}>
+                </lightning-button>
+                <lightning-button label="Career/Applications Details" data-value="CareerDetailSection"
+                    onclick={openCreditSection} disabled={getCareerDetailButtonDisable}>
+                </lightning-button>
+                <lightning-button label="Preview Section" data-value="PreviewSection" onclick={openCreditSection}
+                    disabled={getPreviewSectionButtonDisable}>
+                </lightning-button>
+            </lightning-button-group>
+        </div>
+        <template lwc:if={getPersonalSection}>
+            <lightning-card title="Personal Information" icon-name="standard:contact">
+                <div class="slds-m-around_medium">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="First Name" name="firstName"
+                                onchange={handleReqDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-horizontal_small">
+                            <lightning-input type="text" label="Last Name" name="lastName"
+                                onchange={handleReqDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-left_small">
+                            <lightning-input type="email" label="Email" name="email" onchange={handleReqDetailChange}
+                                class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="School Name/Institution Name" name="school"
+                                onchange={handleReqDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-horizontal_small">
+                            <lightning-combobox name="personalPronoun" label="Personal Pronoun"
+                                options={PersonalPronoun.data.values} onchange={handleReqDetailChange}>
+                            </lightning-combobox>
+                        </div>
+                        <template lwc:if={getOtherSectionDependentOnPersonalPronoun}>
+                            <div class="slds-col slds-size_1-of-3 slds-p-left_small">
+                                <lightning-input type="text" label="Comment" name="comment"
+                                    onchange={handleReqDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="slds-text-align_right">
+                        <lightning-button label="Save & Next" variant="brand"
+                            onclick={confirmPersonalInfoSaveNextHandler} class="slds-m-top_medium slds-align_right">
+                        </lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+
+        <template lwc:if={getOtherPersonalDetailSection}>
+            <lightning-card title="Other Personal Information" icon-name="standard:contact">
+                <div class="slds-m-around_medium">
+                    <div class="slds-grid slds-wrap slds-m-top_xxx-small">
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-input type="text" label="Mobile" name="mobile"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-combobox label="Phone Type" options={options}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-input type="text" label="Phone" name="phone"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-combobox label="Phone Type" options={options}>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-m-top_xxx-small">
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Full Referrer" name="fullReferrer"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Website" name="website"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Industry" name="industry"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                    </div>
+
+                    <div class="slds-modal__content slds-m-top-xx_small slds-list_horizontal">
+                        <div>
+                            <b>Add Additional Information : </b>
+                        </div>
+                        <lightning-input type="radio" label="Yes" name="option1" value="Yes" onchange={handleRecordType}
+                            class="slds-m-left_x-small"></lightning-input>
+                        <lightning-input type="radio" label="No" name="option1" value="No" onchange={handleRecordType}
+                            class="slds-m-left_x-small"></lightning-input>
+                    </div>
+
+                    <template lwc:if={getCareerAddressSection}>
+                        <div style="background-color: blue; color: white;height:25px"
+                            class="slds-m-top_small slds-p-left_xx-small">
+                            <h1>Basic Information</h1>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-box slds-m-top_xxx-small">
+                            <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                                <lightning-input type="date" label="Birth Date" name="birthDate"
+                                    onchange={handleCareerDetailChange} class="slds-m-bottom_medium">
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                                <lightning-combobox name="genderIdentity" label="Gender Identity"
+                                    options={Lead_GenderIdentity.data.values} onchange={handleCareerDetailChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-input type="text" label="Social Security #:" name="ssn"
+                                    onchange={handleCareerDetailChange} class="slds-m-bottom_medium">
+                                </lightning-input>
+                            </div>
+                        </div>
+                    </template>
+                    <div class="slds-text-align_right slds-m-top_x-small">
+                        <lightning-button label="Save & Next" variant="brand" onclick={handleOtherPeronalSaveNext}
+                            class="slds-m-top_medium slds-align_right"></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <template lwc:if={getCareerDetailSection}>
+            <lightning-card title="Other Career Detail Information" icon-name="standard:contact">
+                <div class="slds-m-around_medium">
+
+                    <div class="slds-grid slds-wrap slds-m-top_xxx-small">
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-combobox label="Admissions Goal" name="admissionGoals"
+                                options={AdmissionGoal.data.values} onchange={handleCareerDetailChange}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_small">
+                            <lightning-input type="text" label="Current Academic Level" name="currAcademicLevel"
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                    </div>
+
+                    <div class="slds-text-align_right">
+                        <lightning-button label="Preview & Next" variant="brand" onclick={handlePreviewAndNext}
+                            class="slds-m-top_medium slds-align_right"></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <template lwc:if={getPreviewSection}>
+            <lightning-card title="Preview Section" icon-name="standard:contact">
+                <div class="slds-m-around_medium">
+                    <div class="slds-grid slds-wrap slds-m-top_xxx-small">
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="First Name" value={leadList.firstName} disabled
+                                class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Last Name" value={leadList.lastName} disabled
+                                class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="email" label="Email" value={leadList.email} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="School Name/Institution Name" value={leadList.school}
+                                disabled class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Mobile" value={leadList.mobile} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Phone" value={leadList.phone} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Website" value={leadList.website} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Industry" value={leadList.industry} disabled
+                                class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Admissions Goal" value={leadList.admissionGoals}
+                                disabled class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Current Academic Level"
+                                value={leadList.currAcademicLevel} disabled class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="date" label="Birth Date" value={leadList.birthDate} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Gender Identity" class="slds-m-bottom_medium" disabled
+                                value={leadList.genderIdentity}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Social Security #:" value={leadList.ssn} disabled
+                                class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                        <lightning-input type="text" label="Full Referrer" value={leadList.fullReferrer} disabled
+                             class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                    </div>
+
+                    <div class="slds-text-align_right">
+                        <lightning-button label="Save" variant="success" onclick={handleSave}
+                            class="slds-m-top_medium slds-align_right slds-m-right_small"></lightning-button>
+                        <lightning-button label="Edit" variant="brand" onclick={handleEdit}
+                            class="slds-m-top_medium slds-align_right"></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <template lwc:if={getEditSection}>
+            <lightning-card title="Preview Section" icon-name="standard:contact">
+                <div class="slds-m-around_medium">
+                    <div class="slds-grid slds-wrap slds-m-top_xxx-small">
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="First Name" name="firstName" value={leadList.firstName}
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Last Name" value={leadList.lastName} name="lastName"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="email" label="Email" value={leadList.email} name="email"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="School Name/Institution Name" name="school"
+                                value={leadList.school} onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Mobile" value={leadList.mobile} name="mobile"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Phone" value={leadList.phone} name="phone"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Website" value={leadList.website} name="website"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Industry" value={leadList.industry} name="industry"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-combobox label="Admissions Goal" value={leadList.admissionGoals}
+                                name="admissionGoals" options={AdmissionGoal.data.values}
+                                onchange={handleEditDetailChange}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Current Academic Level"
+                                value={leadList.currAcademicLevel} name="currAcademicLevel"
+                                onchange={handleEditDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="date" label="Birth Date" name="birthDate" value={leadList.birthDate}
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-combobox name="genderIdentity" label="Gender Identity"
+                                value={leadList.genderIdentity} options={Lead_GenderIdentity.data.values}
+                                onchange={handleReqDetailChange}>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                            <lightning-input type="text" label="Social Security #:" name="ssn" value={leadList.ssn}
+                                onchange={handleCareerDetailChange} class="slds-m-bottom_medium">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                        <lightning-input type="text" label="Full Referrer" value={leadList.fullReferrer} name={fullReferrer}
+                            onchange={handleCareerDetailChange} class="slds-m-bottom_medium"></lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-text-align_right">
+                        <lightning-button label="Save" variant="success" onclick={handleSave}
+                            class="slds-m-top_medium slds-align_right"></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+</template>

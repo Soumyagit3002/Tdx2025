@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store Interview Rubric Question&apos;s Response Assignment</description>
+        <name>Store_Interview_Rubric_Question_s_Response_Assignment</name>
+        <label>Store Interview Rubric Question&apos;s Response Assignment</label>
+        <locationX>138</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Loop_through_interview_rubric_records.Response__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>responseText</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_through_interview_rubric_records.Response_Rating__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>response_Rating_Picklist</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>updatedInterviewRubricRecordsCollection</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_through_interview_rubric_records</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_interview_rubric_records</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <name>Sort_by_Interviewer_for_Committee_Interview</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Sort by Interviewer for Committee Interview</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <assignNextValueToReference>currentItem_Sort_by_Interviewer_for_Committee_Interview_0</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Interview_Rubric_related_list_to_Application</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Sort_by_Interviewer_for_Committee_Interview_0.Interviewer__c</leftValueReference>
+            <operator>EqualTo</operator>
+            <rightValue>
+                <elementReference>for_UserId_Convert_To_18_Char</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Loop_through_interview_rubric_records</targetReference>
+        </connector>
+    </collectionProcessors>
+    <decisions>
+        <description>Interview rubric records found?</description>
+        <name>Interview_rubric_records_found</name>
+        <label>Interview rubric records found?</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>noRubricRecordsFoundScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No records found.</defaultConnectorLabel>
+        <rules>
+            <name>Yes_records_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Interview_Rubric_related_list_to_Application</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sort_by_Interviewer_for_Committee_Interview</targetReference>
+            </connector>
+            <label>Yes, records found.</label>
+        </rules>
+    </decisions>
+    <description>Screen flow used for selective enrollment program to conduct an interview.  It will get interview questions from the interview rubric-related records and display them to the user for response input.</description>
+    <dynamicChoiceSets>
+        <name>cset_Response_Rating</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Response_Rating__c</picklistField>
+        <picklistObject>Interview_Rubric__c</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>for_UserId_Convert_To_18_Char</name>
+        <dataType>String</dataType>
+        <expression>CASESAFEID({!$User.Id})</expression>
+    </formulas>
+    <interviewLabel>Interview Submission Automation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Interview Submission Automation</label>
+    <loops>
+        <description>Loop through interview rubric records</description>
+        <name>Loop_through_interview_rubric_records</name>
+        <label>Loop through interview rubric records</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <collectionReference>Sort_by_Interviewer_for_Committee_Interview</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Interview_Questions_Screen</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Summary_Confirmation_Screen</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Get Interview Rubric related list to Application</description>
+        <name>Get_Interview_Rubric_related_list_to_Application</name>
+        <label>Get Interview Rubric related list to Application</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Interview_rubric_records_found</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>errorMessageScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Application__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Interview_Rubric__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update interview rubric question records with responses from the user</description>
+        <name>Update_Interview_Rubric_Question_Records</name>
+        <label>Update Interview Rubric Question Records</label>
+        <locationX>50</locationX>
+        <locationY>1082</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>errorMessageScreen</targetReference>
+        </faultConnector>
+        <inputReference>updatedInterviewRubricRecordsCollection</inputReference>
+    </recordUpdates>
+    <screens>
+        <description>Begin Interview Screen</description>
+        <name>Begin_Interview_Screen</name>
+        <label>Begin Interview Screen</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Get_Interview_Rubric_related_list_to_Application</targetReference>
+        </connector>
+        <fields>
+            <name>begin_Screen_Text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: Inter, sans-serif; color: rgb(22, 23, 25);&quot;&gt;To begin the interview process, kindly click on the &apos;Start Interview&apos; button.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Start Interview</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Error message screen for when the flow fails to execute DML element.</description>
+        <name>errorMessageScreen</name>
+        <label>Error Message Screen</label>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>errorMessageScreenText</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;We encountered an error while processing your request. You can click &apos;Done&apos; to finish this process and try again, or you can contact your administrator.  &lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Error message:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(195, 11, 11);&quot;&gt;{!$Flow.FaultMessage}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Close</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Interview Questions Screen</description>
+        <name>Interview_Questions_Screen</name>
+        <label>Interview Questions Screen</label>
+        <locationX>138</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Store_Interview_Rubric_Question_s_Response_Assignment</targetReference>
+        </connector>
+        <fields>
+            <name>questionText</name>
+            <fieldText>&lt;p&gt;Question:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Loop_through_interview_rubric_records.Question__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>responseText</name>
+            <defaultValue>
+                <stringValue>{!Loop_through_interview_rubric_records.Response__c}</stringValue>
+            </defaultValue>
+            <fieldText>Response:</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>response_Rating_Picklist</name>
+            <choiceReferences>cset_Response_Rating</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Response Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>No interview rubric records found</description>
+        <name>noRubricRecordsFoundScreen</name>
+        <label>No interview rubric records found screen</label>
+        <locationX>578</locationX>
+        <locationY>458</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>no_rubric_records_found_text</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;We did not find any interview questions for this application record.  Please click &apos;Done&apos; to complete this process. &lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Summary of the Interview Responses</description>
+        <name>Summary_Confirmation_Screen</name>
+        <label>Summary Confirmation Screen</label>
+        <locationX>50</locationX>
+        <locationY>974</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Go Back</backButtonLabel>
+        <connector>
+            <targetReference>Update_Interview_Rubric_Question_Records</targetReference>
+        </connector>
+        <fields>
+            <name>confirmDataTable</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>Interview_Rubric__c</typeValue>
+            </dataTypeMappings>
+            <extensionName>flowruntime:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Summary of the Interview Responses</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>selectionMode</name>
+                <value>
+                    <stringValue>NO_SELECTION</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>minRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>updatedInterviewRubricRecordsCollection</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columns</name>
+                <value>
+                    <stringValue>[{&quot;apiName&quot;:&quot;Question__c&quot;,&quot;guid&quot;:&quot;column-946d&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;Question&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Response__c&quot;,&quot;guid&quot;:&quot;column-98eb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Your Response&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Response&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Response_Rating__c&quot;,&quot;guid&quot;:&quot;column-2055&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Response Rating&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Response Rating&quot;,&quot;type&quot;:&quot;text&quot;}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>maxRowSelection</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>shouldDisplayLabel</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>confirmatinHelpText</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;If you want to make any changes, please click &apos;Go back&apos;; otherwise, click &apos;Submit&apos; to finish this interview process.&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Begin_Interview_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>currentItem_Sort_by_Interviewer_for_Committee_Interview_0</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Interview_Rubric__c</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>hed__Application__c</objectType>
+    </variables>
+    <variables>
+        <description>Updated collection of Interview Rubric Records</description>
+        <name>updatedInterviewRubricRecordsCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Interview_Rubric__c</objectType>
+    </variables>
+    <variables>
+        <name>var_Slider_Value</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+</Flow>

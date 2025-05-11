@@ -1,0 +1,72 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "cd9a3adf-c098-44d8-baf6-b5e9b6016bea",
+  "label" : "Adult Education Application",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "64007f07-7a65-4150-8b1c-0113cf161cf3",
+          "columns" : [ {
+            "UUID" : "c574a0b2-1bbd-499e-aa34-3e987d6e44a5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "64007f07-7a65-4150-8b1c-0113cf161cf3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "formassemblyAuthToken" : "5c0a27d70fc215ec3c8c0f0e21dce92eeb476b80",
+            "formassemblyFormID" : "45",
+            "formassemblyUseIFrame" : false
+          },
+          "componentName" : "tfa:FormAssemblyForm",
+          "id" : "ede8bb84-4e81-4892-b6b3-25c263a99ca9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c574a0b2-1bbd-499e-aa34-3e987d6e44a5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "856e1a87-5424-4859-ae1b-9bc630b6a24e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Adult Education Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "eb882f57-618c-47ff-b68d-e8fd217c03c2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e29dab66-434c-415e-8c9d-1215e2aab219",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-adult-education-application"
+}

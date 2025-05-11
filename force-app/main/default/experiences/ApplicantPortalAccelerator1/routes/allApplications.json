@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "225c37c3-ced4-436f-94fb-5af68a803cdd",
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "configurationTags" : [ ],
+  "devName" : "All_Applications__c",
+  "id" : "4ae8f8c3-4027-4969-bcfb-91d83745d974",
+  "label" : "All Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-all-applications",
+  "type" : "route",
+  "urlPrefix" : "all-applications"
+}

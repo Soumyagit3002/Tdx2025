@@ -1,0 +1,712 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "225c37c3-ced4-436f-94fb-5af68a803cdd",
+  "label" : "All Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "cacc0318-f2ea-406b-9398-e0c97416aa0d",
+          "columns" : [ {
+            "UUID" : "fe3c7281-d84e-409e-bb0a-c12b7724e720",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 110
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cacc0318-f2ea-406b-9398-e0c97416aa0d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-up\" data-aos-duration=\"1000\" style=\"text-align: center;\">\n    <h2 style=\"font-size: 20pt; font-weight: bold;\">Applications</h2>\n    <br>\n    <p>Which of the below describes why you are here</p>\n    <br>\n    <br>\n    <br>\n    <br>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "e76b859f-9e51-4d95-91d4-79363a229ffb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fe3c7281-d84e-409e-bb0a-c12b7724e720",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "418ec868-7b11-44d4-a62e-e968cc495bf7",
+          "columns" : [ {
+            "UUID" : "146dbc3a-a845-4291-8a81-68cd17dc2ae0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "179ea703-21fc-4e70-b79a-716438f0e608",
+            "columnKey" : "77b46",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "990eb5f6-8d9c-4b2f-8da4-0aefeb615e0b",
+            "columnKey" : "f5b2b",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "90b523ed-87e9-40d2-8599-9d8944a8aeb3",
+            "columnKey" : "fce67",
+            "columnName" : "Column 4",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "418ec868-7b11-44d4-a62e-e968cc495bf7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-right\" data-aos-duration=\"1000\" data-aos-delay=\"200”>\n\n    <a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/ApplicantPortalAccelerator/s/apply-for-credit”>\n\n        <img src= \"https://citycollegesofchicago2--cccpartial.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0687z000001HhuP&operationContext=CHATTER&contentId=05T7z000001zK4T\" alt=\"Your Image Alt Text\">\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "7bfc4a6e-6944-4c95-b91b-5c152f89aca4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "146dbc3a-a845-4291-8a81-68cd17dc2ae0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-right\" data-aos-duration=\"1000\" data-aos-delay=\"200”>\n\n    <a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/ApplicantPortalAccelerator/s/apply-for-adult-ed”>\n\n        <img src= \"https://citycollegesofchicago2--cccpartial.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0687z000001HetP&operationContext=CHATTER&contentId=05T7z000001zH3T\" alt=\"Your Image Alt Text\">\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "93191b0a-0d7b-44e6-8d5b-2ed98b27dd80",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "179ea703-21fc-4e70-b79a-716438f0e608",
+        "regionLabel" : "Column 2",
+        "regionName" : "77b46",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-right\" data-aos-duration=\"1000\" data-aos-delay=\"200”>\n\n    <a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/ApplicantPortalAccelerator/s/apply-for-early-college”>\n\n        <img src=\"https://citycollegesofchicago2--cccpartial.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0687z000001HbsJ&operationContext=CHATTER&contentId=05T7z000001zDsh\" alt=\"Your Image Alt Text\">\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "236918f8-854d-4b12-9419-6c3749c6d281",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "990eb5f6-8d9c-4b2f-8da4-0aefeb615e0b",
+        "regionLabel" : "Column 3",
+        "regionName" : "f5b2b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-right\" data-aos-duration=\"1000\" data-aos-delay=\"200”>\n\n    <a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/ApplicantPortalAccelerator/s/apply-for-early-college”>\n\n        <img src=\"https://citycollegesofchicago2--cccpartial.sandbox.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0687z000001Hi5j&operationContext=CHATTER&contentId=05T7z000001zKFn\" alt=\"Your Image Alt Text\">\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "ed82c5b2-6c64-4575-bc91-1caa815fd1f2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "90b523ed-87e9-40d2-8599-9d8944a8aeb3",
+        "regionLabel" : "Column 4",
+        "regionName" : "fce67",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e82c21cb-6db2-41bd-aae2-70895f62084e",
+          "columns" : [ {
+            "UUID" : "0aadbe2b-b856-4d1c-b5db-d60c9376e26f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c8b96cf3-7876-4f23-9a9a-2f38cd29de21",
+            "columnKey" : "fde55",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e82c21cb-6db2-41bd-aae2-70895f62084e",
+      "regions" : [ {
+        "id" : "0aadbe2b-b856-4d1c-b5db-d60c9376e26f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c8b96cf3-7876-4f23-9a9a-2f38cd29de21",
+        "regionLabel" : "Column 2",
+        "regionName" : "fde55",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b6c7a5aa-4e9f-4ec3-8351-ac6b8041e0d2",
+          "columns" : [ {
+            "UUID" : "a868a89e-baf3-45be-a4de-6853218e45bc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a5a16121-b0ee-4d2a-92de-827be7238e7c",
+            "columnKey" : "56508",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b6c7a5aa-4e9f-4ec3-8351-ac6b8041e0d2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/7UZE0nHFbko\" src=\"https://www.youtube.com/embed/7UZE0nHFbko\"></iframe></div><p>Replace this text with content of your own.</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "bfabaf56-eee6-4d85-9fdc-d8fa7043c96c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a868a89e-baf3-45be-a4de-6853218e45bc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "showTitle" : true,
+            "title" : "Top Articles",
+            "topicList" : [ ]
+          },
+          "componentName" : "forceCommunity:topArticleList",
+          "id" : "a4a63f0b-8264-4785-ac66-3c5a647de341",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "title" : "Trending Articles",
+            "topicId" : "{!topicId}"
+          },
+          "componentName" : "selfService:topicTrendingArticles42",
+          "id" : "e428df7e-2e66-42e5-bd74-c5d3a934c341",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "buttonAlignment" : "center",
+            "buttonBgColor" : "",
+            "buttonBgHoverColor" : "",
+            "buttonBorderColor" : "",
+            "buttonMaxWidth" : 100,
+            "buttonRadius" : 0,
+            "buttonTextColor" : "",
+            "buttonTextHoverColor" : "",
+            "confirmationMessage" : "Got it!",
+            "followUpPromptLabel" : "Can we close your question?",
+            "isAskFollowPromptEnabled" : true,
+            "isIncludeArticlesEnabled" : false,
+            "isIncludeDiscussionsEnabled" : true,
+            "isInitialSatisfactionPromptEnabled" : true,
+            "isPublisherDeflectionEnabled" : true,
+            "label" : "Ask a Question",
+            "maxSuggestions" : 5,
+            "satisfactionPromptLabel" : "Did we help to answer your question?",
+            "showDetails" : false,
+            "showTopics" : true,
+            "uneditableTopics" : false
+          },
+          "componentName" : "forceCommunity:askCommunity",
+          "id" : "ed535549-872d-4fcd-8bac-212e8140c9fb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a5a16121-b0ee-4d2a-92de-827be7238e7c",
+        "regionLabel" : "Column 2",
+        "regionName" : "56508",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b9bfbcae-ed67-4f90-8c7a-dfeb3dd29e91",
+          "columns" : [ {
+            "UUID" : "80974551-2a43-401a-be6e-121a720eedfb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b9bfbcae-ed67-4f90-8c7a-dfeb3dd29e91",
+      "regions" : [ {
+        "id" : "80974551-2a43-401a-be6e-121a720eedfb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "32ec56a6-25f3-439e-b481-3dd0109615fd",
+          "columns" : [ {
+            "UUID" : "79cb8a42-3a8f-4d5b-9124-8c188216c5b6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "32ec56a6-25f3-439e-b481-3dd0109615fd",
+      "regions" : [ {
+        "id" : "79cb8a42-3a8f-4d5b-9124-8c188216c5b6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4d2ce39a-4862-44c6-bc2b-605936619c26",
+          "columns" : [ {
+            "UUID" : "b85c4576-e713-43bc-b4b2-822a66d14ecd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4d2ce39a-4862-44c6-bc2b-605936619c26",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 28px;\">Applications</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 18px;\">Which of the below describes why you are here﻿</span></p><p style=\"text-align: center;\"><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9830c575-9156-4c61-a269-851535dd2574",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b85c4576-e713-43bc-b4b2-822a66d14ecd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/X00A2686206534829A0C47A2BCABF5CA1?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "40eb077a-f427-448a-9588-d6088655b8aa",
+          "columns" : [ {
+            "UUID" : "6b405343-f63a-41bb-a8d8-2c17a707b1ad",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a31cccae-1422-41be-b4cf-6b8c71fb39a2",
+            "columnKey" : "2380d",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d3de3410-465b-407b-b1ac-af791bb9a91b",
+            "columnKey" : "7f288",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "27d54e2d-7ada-43a0-9bc7-346f42b9830d",
+            "columnKey" : "74728",
+            "columnName" : "Column 4",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "40eb077a-f427-448a-9588-d6088655b8aa",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">I want to earn credit towards my associate's degree or transferring to a 4 year university</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "26acbddf-dd12-4a04-b674-547ebb05d420",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(128, 198, 10)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 0,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgba(255, 255, 255, 0)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Start_Credit_Application",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "9f5c1196-b74c-4112-b55d-6e5510f833e6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6b405343-f63a-41bb-a8d8-2c17a707b1ad",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">I want to complete my highschool diploma or learn English</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "87dfeeee-e818-4d5c-b904-0e358d4ec937",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(128, 198, 10)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 0,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgba(255, 255, 255, 0)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Start_Adult_Education_Application",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "8a97deb0-8af2-497a-ad59-64c0c2f0c62b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a31cccae-1422-41be-b4cf-6b8c71fb39a2",
+        "regionLabel" : "Column 2",
+        "regionName" : "2380d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 14px; color: rgb(255, 255, 255);\">I'm a high school student who want to earn college credit&nbsp;</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "fca6a6da-2008-4036-b6bc-fb2cf62dddee",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(128, 198, 10)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 0,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgba(255, 255, 255, 0)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Start_Early_College_Application1",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "2c15d0b7-7105-4ab4-9f09-87639991ca21",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d3de3410-465b-407b-b1ac-af791bb9a91b",
+        "regionLabel" : "Column 3",
+        "regionName" : "7f288",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(255, 255, 255); font-size: 14px;\">I want to learn something new</span></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2a1752a3-90db-48c8-907b-e6ff49f2a2c4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(128, 198, 10)",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 0,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgba(255, 255, 255, 0)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Start_Credit_Application",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "76aa1dd6-ab57-4ff7-8fd5-a1d9ac13a9b9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "27d54e2d-7ada-43a0-9bc7-346f42b9830d",
+        "regionLabel" : "Column 4",
+        "regionName" : "74728",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "63f581d0-a604-420b-b4ad-bc25be0226f4",
+          "columns" : [ {
+            "UUID" : "d86d4aec-b301-48eb-82ff-917bda6da96e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "63f581d0-a604-420b-b4ad-bc25be0226f4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"animated-element\" data-aos=\"fade-up\" data-aos-duration=\"1000\">\n    <h2>Animate On Scroll Example</h2>\n    <p>This element will fade in from the bottom when you scroll down.</p>\n</div>\n\n<div class=\"animated-element\" data-aos=\"fade-right\" data-aos-duration=\"1000\" data-aos-delay=\"200\">\n    <img src=\"{!contentAsset.X28B3BC44A4844047B3CCF7A7C89AF1ED.1}\" alt=\"Your Image Alt Text\">\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "c23716d7-7d70-4686-9551-3547ef06467f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d86d4aec-b301-48eb-82ff-917bda6da96e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8dc1ab49-6d57-449c-8435-bdf48fa13eab",
+          "columns" : [ {
+            "UUID" : "5cf9e296-45ee-4a0e-95f3-994cb33c88dc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8dc1ab49-6d57-449c-8435-bdf48fa13eab",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "buttonAlignment" : "center",
+            "buttonBgColor" : "",
+            "buttonBgHoverColor" : "",
+            "buttonBorderColor" : "",
+            "buttonMaxWidth" : 100,
+            "buttonRadius" : 0,
+            "buttonTextColor" : "",
+            "buttonTextHoverColor" : "",
+            "confirmationMessage" : "Got it!",
+            "followUpPromptLabel" : "Can we close your question?",
+            "isAskFollowPromptEnabled" : true,
+            "isIncludeArticlesEnabled" : false,
+            "isIncludeDiscussionsEnabled" : true,
+            "isInitialSatisfactionPromptEnabled" : true,
+            "isPublisherDeflectionEnabled" : true,
+            "label" : "Ask a Question",
+            "maxSuggestions" : 5,
+            "satisfactionPromptLabel" : "Did we help to answer your question?",
+            "showDetails" : false,
+            "showTopics" : true,
+            "uneditableTopics" : false
+          },
+          "componentName" : "forceCommunity:askCommunity",
+          "id" : "6b96a814-4f25-427c-99bf-97159f2cab27",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5cf9e296-45ee-4a0e-95f3-994cb33c88dc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e25fc27e-4baf-4246-8bce-52659fca29b1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "All Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8b5015e7-dac4-44b8-85ca-8a266743ebbc",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "88f52849-df22-448f-a404-d258e0236221",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-all-applications"
+}

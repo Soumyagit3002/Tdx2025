@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Mogli_Numberx</name>
+        <label>Update Mogli Number</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Mogli_SMS__Mogli_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>vMogliNumber</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Flow to update Mogli number from Phone field
+Update Sept 2024: 
+Updated Trigger criteria so flow only runs if record is new or if Phone number Changes. Set to Before-Save flow. Changed Update element to Assign Element to save a DML Call.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fPhoneMogliNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK(TRIM({!$Record.Phone})),&quot;&quot;,
+
+IF(REGEX(TRIM({!$Record.Phone}),&quot;[\\s\\S\\w\\W]*[a-zA-Z@#$%^&amp;*&lt;&gt;!?\\[\\]_{};:&apos;/~`]+[\\s\\S\\w\\W]*&quot;),&quot;&quot;,
+
+&quot;+1&quot; &amp; SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( SUBSTITUTE((&quot;+&quot;&amp; TRIM({!$Record.Phone})),&quot;++1&quot;,&quot;&quot;),&quot;+1&quot;,&quot;&quot;),&quot;+&quot;,&quot;&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;),&quot;-&quot;,&quot;&quot;),&quot;,&quot;,&quot;&quot;),&quot;.&quot;,&quot;&quot;)))</expression>
+    </formulas>
+    <interviewLabel>[Mogli] Phone Number Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Mogli] Phone Number Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Mogli_Numberx</targetReference>
+        </connector>
+        <filterFormula>OR(ISNEW(),ISCHANGED({!$Record.Phone}))</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>vMogliNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>fPhoneMogliNumber</elementReference>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,59 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.Name}>{translations.Name}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.LegalFirstName}</label>
+                <lightning-input type="text" variant='label-hidden' value={applicationData.firstName}
+                    onchange={handleFormField} name="firstName">
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.MiddleName}</label>
+                <lightning-input type="text" variant='label-hidden' value={applicationData.middleName}
+                    onchange={handleFormField} name="middleName">
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.LegalLastName}</label>
+                <lightning-input type="text" variant='label-hidden' value={applicationData.lastName}
+                    onchange={handleFormField} name="lastName">
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.OtherLastName}</label>
+                <lightning-input type="text" variant='label-hidden'>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <p style="font-size: 0.7rem; margin-top: 22px;">{translations.OtherLastNameHelp}</p>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.NameSuffix}</label>
+                <lightning-combobox variant='label-hidden' options={options}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PersonalPronoun}</label>
+                <lightning-combobox variant='label-hidden' options={options}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+            </div>
+        </div>
+    </div>
+</template>

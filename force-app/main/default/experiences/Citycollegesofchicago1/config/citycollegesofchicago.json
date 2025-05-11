@@ -1,0 +1,36 @@
+{
+  "forgotPasswordRouteId" : "d636d147-703c-4e67-94d6-3732681ea97a",
+  "isAvailableToGuests" : false,
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "a10ddb08-30ce-4c3e-8fc7-7960a5386a42",
+  "mainAppPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "eb531153-c3bf-4fcb-abeb-420c0f3df579",
+  "trustedSitesForScript" : [ {
+    "id" : "118b7ab4-a6c9-4f22-a341-d2e0e09dc635",
+    "isActive" : true,
+    "trustedSiteName" : "d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com",
+    "trustedSiteUrl" : "https://d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/chat/rest/EmbeddedService/EmbeddedServiceConfig.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "295c39cb-d4bb-409c-be57-66de5001c4e8",
+    "isActive" : true,
+    "trustedSiteName" : "d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com1",
+    "trustedSiteUrl" : "https://d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/chat/rest/Visitor/Settings.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "329ad479-bbe5-4aa2-b048-6d6ea2f406ac",
+    "isActive" : true,
+    "trustedSiteName" : "d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com2",
+    "trustedSiteUrl" : "https://d.la2s-core1.sfdc-yfeipo.salesforceliveagent.com/chat/rest/Visitor/Availability.jsonp",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "5e3737ad-2414-4f20-bbc4-a410dbcf048e",
+    "isActive" : true,
+    "trustedSiteName" : "Video Banner",
+    "trustedSiteUrl" : "https://www.gravitytank.com/images/home_banner/gt_temp_vidframe.png",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

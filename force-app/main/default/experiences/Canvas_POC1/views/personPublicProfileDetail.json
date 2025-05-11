@@ -1,0 +1,38 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "19f27dd6-c29b-4a0b-a730-65d92e25959d",
+  "label" : "Person Public Profile Detail",
+  "regions" : [ {
+    "id" : "d8d9afa2-ef65-45cf-936f-a8f0d208425e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "a7cefe70-1816-468a-a153-5abf0d0ae510",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "5b34dc28-fe53-44c8-a9be-0dfd510e4e20",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "211037ed-4d87-4fbd-964a-108750e72ed0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "343beb10-0677-4bcf-91ea-1e335c99dfca",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-0gH"
+}

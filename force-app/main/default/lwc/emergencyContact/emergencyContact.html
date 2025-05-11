@@ -1,0 +1,90 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.EmergencyContact}>{translations.EmergencyContact}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.ContactName}:</label>
+                <lightning-input type="text" variant='label-hidden' name="conName" value={applicationData.conName}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.RelationshipToStudent}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="relToStudent"
+                    value={applicationData.relToStudent} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="inputCls">
+            <label class="lblCls">Contact Address:</label>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.Country}:</label>
+                    <lightning-combobox variant='label-hidden' options={countryOptions} name="conCountry"
+                        value={applicationData.conCountry} onchange={handleFormField}>
+                    </lightning-combobox>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.Address} 1:</label>
+                    <lightning-input type="text" variant='label-hidden' name="conAddressLine1"
+                        value={applicationData.conAddressLine1} onchange={handleFormField}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-2">
+                    <label class="lblCls">{translations.Address} 2:</label>
+                    <lightning-input type="text" variant='label-hidden' name="conAddressLine2"
+                        value={applicationData.conAddressLine2} onchange={handleFormField}>
+                    </lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters inputCls">
+                <div class="slds-col slds-size_1-of-3">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.City}:</label>
+                    <lightning-input type="text" variant='label-hidden' name="conCity"
+                        value={applicationData.conCity} onchange={handleFormField}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <label class="lblCls">{translations.State}:</label>
+                    <lightning-input type="text" variant='label-hidden' name="conState"
+                        value={applicationData.conState} onchange={handleFormField}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PostalCode}:</label>
+                    <lightning-input type="text" variant='label-hidden' name="conPostalCode"
+                        value={applicationData.conPostalCode} onchange={handleFormField}>
+                    </lightning-input>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.Phone}:</label>
+                <lightning-input type="text" variant='label-hidden' name="conPhone" value={applicationData.conPhone}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PhoneType}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="conPhoneType"
+                    value={applicationData.conPhoneType} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.SamePhoneAsStudent}</label>
+                <lightning-input type="checkbox" variant='label-hidden' name="tempLiving"
+                    value={applicationData.tempLiving} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+</template>

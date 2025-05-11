@@ -1,0 +1,98 @@
+<template>
+    <lightning-card title="Send List Email">
+        <div class="slds-p-horizontal_medium">
+            <template if:true={showNoPermissionMessage}>
+                <p>User does not have permission to send list email.</p>
+                <lightning-button label="Back" onclick={handleBack} variant="neutral"></lightning-button>
+            </template>
+
+            <template if:true={showOverLimitMessage}>
+                <p>You have selected over 50 contacts/leads. Please contact the MarCom team to send this communication.</p>
+                <lightning-button label="Back" onclick={handleNavigateToListView} variant="neutral"></lightning-button>
+            </template>
+
+            <template if:true={showEmailForm}>
+                <template if:true={hasDeanPermission}>
+                    <p>Emails sent today: {emailCountToday}</p>
+                    </template>
+                    <template if:false={hasDeanPermission}>
+                        <p>Emails sent today: {emailCountToday}/250</p>
+                        </template>
+                <lightning-combobox
+                name="emailAddresses"
+                label="From: "
+                value={selectedEmail}
+                placeholder="Select an email address"
+                options={emailOptions}
+                onchange={handleEmailChange}>
+            </lightning-combobox>
+                <lightning-input label="Email Subject" value={emailSubject} onchange={handleEmailSubjectChange}></lightning-input>
+
+                <lightning-input-rich-text label="Email Body" value={emailBody} onchange={handleEmailBodyChange}></lightning-input-rich-text>
+
+                <div class="slds-m-top_medium">
+                    <lightning-button label="Select Email Template" onclick={openTemplateModal} icon-name="utility:email" variant="neutral"></lightning-button>
+                    <lightning-button label="Add Attachment" onclick={openModal} icon-name="utility:attach" variant="neutral"></lightning-button>
+                    
+                </div>
+                <template if:true={showAttachments}>
+                    <p>Attachments uploaded:</p>
+                    <p>{fileDisplay}</p>
+                    <lightning-button label="Remove Attachments" onclick={removeAttachments} icon-name="utility:attach" variant="neutral"></lightning-button>
+                </template>
+                <template if:true={isModalOpen}>
+                    <lightning-card title="Attachments">
+                        <div class="slds-m-around_medium">
+                            <lightning-file-upload
+                                label="Upload Files"
+                                name="fileUploader"
+                                accept={acceptedFormats}
+                                record-id={recordId}
+                                onuploadfinished={handleAttachmentUpload}
+                                multiple =true
+                            ></lightning-file-upload>
+                        </div>
+                    </lightning-card>
+                </template>
+                
+                <template if:true={isTemplateModalOpen}>
+                     <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_large">
+                          <div class="slds-modal__container">
+                              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"  title="Close" onclick={closeTemplateModal}>
+                                  <lightning-icon icon-name="utility:close" alternative-text="close"></lightning-icon>
+                                  <span class="slds-assistive-text">Close</span>
+                              </button>
+                              
+                              <div class="slds-modal__header" >
+                                  <h2 class="slds-text-heading_medium">Email Template</h2>
+                              </div>
+                              <div class="slds-modal__content" >
+                                
+                                  
+                                  <c-email-template-modal object-name={objectName} onpasstemplate={handleTemplateSelection} onclosetemplatemodal={handleModalClose} ></c-email-template-modal>
+                              </div>
+                              <div class="slds-modal__footer">
+                                <lightning-button label="Ok" onclick={closeModal} variant="brand"></lightning-button>
+                            </div>
+                          </div>
+                      </section>
+                      <div class="slds-backdrop slds-backdrop_open"></div>
+            
+                  </template>
+
+                  <div class="slds-grid slds-grid_align-end slds-m-top_medium">
+                    <lightning-button label="Send" onclick={handleSend} variant="brand"></lightning-button>
+                </div>
+                <div if:true={emailSendInfo}>
+                    <p>{emailSendInfo.sendsRemaining}/{emailSendInfo.dailySendLimit} send limits remaining</p>
+                </div>
+            </template>
+            <template if:true={showSuccessMessage}>
+                <p>Emails Successfully Sent!</p>
+                <div class="slds-m-top_medium" style="text-align: right;">
+                    <lightning-button label="Go to List View" onclick={handleNavigateToListView} variant="brand"></lightning-button>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

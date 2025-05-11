@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "160601cd-003a-4e3a-ae27-5730b2aceff4",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "fd3a31fc-d608-4bf0-8e7b-6449cda85d41",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Credit_Home_Tile_Menu_1_Component",
+  "id" : "75392d2e-832a-4e81-9e39-45fa2ae4a77b",
+  "type" : "experienceVariation"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case</fullName>
+    <fields>CaseNumber</fields>
+    <fields>IDNumber__c</fields>
+    <fields>ContactId</fields>
+    <fields>ContactPhone</fields>
+    <fields>ContactEmail</fields>
+    <fields>HomeCampus__c</fields>
+    <fields>AdmitTerm__c</fields>
+    <fields>AdmitType__c</fields>
+    <fields>ContactMobile</fields>
+    <fields>ContactAlternateEmail__c</fields>
+    <label>Case</label>
+</CompactLayout>

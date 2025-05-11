@@ -1,0 +1,77 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "dd63de3d-936d-40b1-8303-eaff02d9d891",
+  "label" : "Post App Redirect Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b9bda31b-7731-435d-ad62-cc052ed7dfb8",
+          "columns" : [ {
+            "UUID" : "195d8fb3-1b08-4a65-a2ca-30932d9a6425",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b9bda31b-7731-435d-ad62-cc052ed7dfb8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2 style=\"text-align: left;\"><strong>Thank you for submitting your application to City Colleges of Chicago. We look forward to helping you achieve your academic and career goals. Please click continue to start uploading your application requirements.&nbsp;&nbsp;</strong><br /><br /><strong>Thank you for choosing City Colleges of Chicago.</strong><br /><br /><strong>City Colleges of Chicago Admissions</strong></h2>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "be293afd-5cda-4dfc-b96e-9163785c8639",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:refreshAndRedirect",
+          "id" : "ca8296dd-9955-499a-a7de-1010fe735faa",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "195d8fb3-1b08-4a65-a2ca-30932d9a6425",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f8dcefbb-e56f-4531-b5f2-ea765c5089f4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Post App Redirect Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "adc0931e-ccdd-42b8-a4a6-14ae15f689a4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "60f9b7be-6a56-411e-bd14-0811541ba1e6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-postappredirect"
+}

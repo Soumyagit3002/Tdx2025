@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "eccdea06-0b31-437a-b0e1-984f47bcff7d",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Task_Detail__c",
+  "id" : "bedcefed-b051-4bd5-8b32-6538645d2a54",
+  "label" : "Task Detail",
+  "routeType" : "detail-00T",
+  "type" : "route",
+  "urlPrefix" : "task"
+}

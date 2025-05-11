@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ScorecardCreated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flow checks the box when a scorecard is created on a case. This allows the results to show after the scorecard is graded.</description>
+    <label>Scorecard Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

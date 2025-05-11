@@ -1,0 +1,57 @@
+{
+  "appPageId" : "a10ddb08-30ce-4c3e-8fc7-7960a5386a42",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "5f4da39c-2a50-4ded-9a05-df0c18fd2a4c",
+  "label" : "Register",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "salesforceIdentity:communityLogo2",
+      "id" : "8772f62f-016d-48b0-9332-21c92c616106",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "flowArguments" : "",
+        "flowName" : "Self_Registration_Screenflow_V2"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "d92c9661-ef5a-4ae4-b524-6a253855ff1d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><a href=\"./\" rel=\"noopener noreferrer\" target=\"null\">Already have an account?</a></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "92411b7b-beec-47a7-bdc8-98dd48ecc846",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e91e3b3d-6b44-40ff-83ac-d99af9868b73",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Register"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b48c4df9-844d-404a-b691-7f25e8f56032",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e6482968-a558-4d0f-a399-060783e70a39",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "self-register"
+}

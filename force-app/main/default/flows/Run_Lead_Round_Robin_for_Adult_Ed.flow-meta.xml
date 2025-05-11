@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Most_Recent_Assignment</name>
+        <label>Most Recent Assignment?</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Assign_to_Truman_Adult_Ed_Recruiting1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Truman_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Truman Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Kennedy_King_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Truman Adult Ed Recruiting</label>
+        </rules>
+        <rules>
+            <name>Kennedy_King_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Kennedy King Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Malcolm_X_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Kennedy King Adult Ed Recruiting</label>
+        </rules>
+        <rules>
+            <name>Malcolm_X_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Malcolm X Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Olive_Harvey_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Malcolm X Adult Ed Recruiting</label>
+        </rules>
+        <rules>
+            <name>Olive_Harvey_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Olive-Harvey Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Daley_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Olive-Harvey Adult Ed Recruiting</label>
+        </rules>
+        <rules>
+            <name>Daley_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Daley Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Wright_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Daley Adult Ed Recruiting</label>
+        </rules>
+        <rules>
+            <name>Wright_Adult_Ed_Recruiting</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Most_Recent_Round_Robin.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Wright Adult Ed Recruiting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_to_Truman_Adult_Ed_Recruiting</targetReference>
+            </connector>
+            <label>Wright Adult Ed Recruiting</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Run Lead Round Robing for Adult Ed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Run Lead Round Robin for Adult Ed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Most_Recent_Round_Robin</name>
+        <label>Get Most Recent Round Robin</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Most_Recent_Assignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Adult_Ed_Round_Robin__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Assign_to_Daley_Adult_Ed_Recruiting</name>
+        <label>Assign to Daley Adult Ed Recruiting</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksgEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Kennedy_King_Adult_Ed_Recruiting</name>
+        <label>Assign to Kennedy King Adult Ed Recruiting</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LkskEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Malcolm_X_Adult_Ed_Recruiting</name>
+        <label>Assign to Malcolm X Adult Ed Recruiting</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksmEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Olive_Harvey_Adult_Ed_Recruiting</name>
+        <label>Assign to Olive-Harvey Adult Ed Recruiting</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LkspEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Truman_Adult_Ed_Recruiting</name>
+        <label>Assign to Truman Adult Ed Recruiting</label>
+        <locationX>1370</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksuEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Truman_Adult_Ed_Recruiting1</name>
+        <label>Assign to Truman Adult Ed Recruiting</label>
+        <locationX>1634</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LksuEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Assign_to_Wright_Adult_Ed_Recruiting</name>
+        <label>Assign to Wright Adult Ed Recruiting</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G7z000000LkswEAC</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Populate_Round_Robin_Checkbox</name>
+        <label>Populate Round Robin Checkbox</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Get_Most_Recent_Round_Robin</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Adult_Ed_Round_Robin__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Populate_Round_Robin_Checkbox</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>00G7z000000qyPtEAI</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

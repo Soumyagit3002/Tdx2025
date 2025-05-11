@@ -1,0 +1,48 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d5b8b4d6-d95c-4ee1-98a8-c8a40089ed87",
+  "label" : "Error",
+  "regions" : [ {
+    "id" : "0a751dcb-3e63-41ee-8db9-02415c1a026a",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\">Oh No! This page is still in study hall. Please go back home HERE.</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "66f8c3a3-d8e5-417c-bdfb-23f42a097cab",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b7eb4112-59a6-4eca-9af5-cc32994ded50",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "f3fb3242-1e68-4664-99c4-2dd6d7e208a2",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Error"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0aeafb3a-fb4c-4e62-bd9d-196601769664",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f31ac8bb-6d8c-4e92-9f82-8c3b3f46b90d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "error"
+}

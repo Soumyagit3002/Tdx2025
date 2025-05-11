@@ -1,0 +1,70 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.Address}>{translations.Address}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <label class="lblCls">{translations.Address_TempLivingSituation}</label>
+                <lightning-combobox variant='label-hidden' options={options} name="tempLiving"
+                    value={applicationData.tempLiving} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <label class="lblCls">{translations.Address_PermanentAddText}</label>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.Country}:</label>
+                <lightning-combobox variant='label-hidden' name="country" value={applicationData.country}
+                    options={countryOptions} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.AddressLine1}:</label>
+                <lightning-input type="text" variant='label-hidden' name="addressLine1"
+                    value={applicationData.addressLine1} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <label class="lblCls">{translations.AptSteUnit}:</label>
+                <lightning-input type="text" variant='label-hidden' name="aptUnit" value={applicationData.aptUnit}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.City}:</label>
+                <lightning-input type="text" variant='label-hidden' name="city" value={applicationData.city}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.State}:</label>
+                <lightning-input type="text" variant='label-hidden' name="state" value={applicationData.state}
+                    onchange={handleFormField}>
+                </lightning-input>
+                <!--<lightning-combobox variant='label-hidden' name="state" options={options} value={applicationData.state}
+                    onchange={handleFormField}>
+                </lightning-combobox>-->
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PostalCode}:</label>
+                <lightning-input type="text" variant='label-hidden' name="postalCode" value={applicationData.postalCode}
+                    onchange={handleFormField}>
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+</template>

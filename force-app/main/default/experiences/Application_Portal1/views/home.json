@@ -1,0 +1,60 @@
+{
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "55c93c02-37fa-46a2-9dc9-918b32e8d402",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 28px;\">Applications</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 18px;\">Which of the below describes why you are here﻿</span></p><p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "e719a9bd-dbba-434f-b533-2ed7dba7502b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e79f9623-deba-4730-8b93-d36dea89bcb2",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:applicationHandle",
+      "id" : "e7d91e69-524d-4758-82a4-eed12aec51c7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0559dd76-2a6a-4cfd-aa98-80a6fc2f05a9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "285c4b6e-b78e-49b3-a40f-d5f72f0b55b5",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e5a164d9-1f3f-4c70-8fad-b4726a53a3c1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7dfa366a-a3db-4d98-a83d-e6a0e2896a97",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "4eb87abf-b641-48bd-ae63-4eba9c91956b",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

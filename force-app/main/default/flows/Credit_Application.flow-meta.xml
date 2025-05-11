@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Application_Variables</name>
+        <label>Assign Application Variables</label>
+        <locationX>176</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>varApplication.hed__Application_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Credit</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varApplication.hed__Applicant__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Logged_In_Contact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varApplication.hed__Application_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>APPL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Application_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AssignContactValues</name>
+        <label>AssignContactValues</label>
+        <locationX>176</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>newContact.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$User.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UpdateContact</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>iAmAChoice1</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14.4px; font-family: Roboto, Arial, Helvetica, sans-serif; color: rgb(68, 68, 68);&quot;&gt;First Time College Student: I have not attended college previously&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>iAmAChoice2</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Roboto, Arial, Helvetica, sans-serif; color: rgb(68, 68, 68);&quot;&gt;Transfer: I have attended college elsewhere&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>iAmAChoice3</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Roboto, Arial, Helvetica, sans-serif; color: rgb(68, 68, 68);&quot;&gt;Returning: I have previously earned credit at one of the City Colleges&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>iWantToChoice1</name>
+        <choiceText>&lt;span style=&quot;color: rgb(68, 68, 68); font-family: Roboto, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Pursue a two-year associate degree or certificate or earn college credits to transfer to a four-year institution.&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Pursue a two-year associate degree or certificate or earn college credits to transfer to a four-year institution.</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>iWantToChoice2</name>
+        <choiceText>&lt;span style=&quot;color: rgb(68, 68, 68); font-family: Roboto, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Pursue limited amount of credit courses. This option is not eligible for Financial Aid&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Pursue limited amount of credit courses. This option is not eligible for Financial Aid</stringValue>
+        </value>
+    </choices>
+    <dynamicChoiceSets>
+        <name>imminentRiskHousingChoice</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Imminent_risk_of_homelessness_unhoused__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>iPlanToAttendChoice</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Home_Campus__c</picklistField>
+        <picklistObject>hed__Application__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>Iplantostartclassesin</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Term_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>1246</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Term_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>1251</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Term_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>1253</stringValue>
+            </value>
+        </filters>
+        <limit>3</limit>
+        <object>hed__Term__c</object>
+        <outputAssignments>
+            <assignToReference>varApplication.hed__Term__c</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>iWantTo</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Certificate_or_Limited_Credits__c</picklistField>
+        <picklistObject>hed__Application__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>NameSuffix</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Name_Suffix__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>nameSuffixChoice</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Name_Suffix__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PersonalPronoun</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Pronoun__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>personalPronounsChoice</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Pronoun__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>temporaryLivingSituationChoice</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Temporary_Living_Situation__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>ageCalculation</name>
+        <dataType>Number</dataType>
+        <expression>CASE(MONTH(TODAY()) - MONTH( {!Birthdate} ),
+0,
+IF(DAY(TODAY()) &gt;= DAY({!Birthdate}), YEAR(TODAY()) - YEAR({!Birthdate}), YEAR(TODAY()) - YEAR({!Birthdate}) - 1),
+IF(MONTH(TODAY()) &lt; MONTH({!Birthdate}), YEAR(TODAY()) - YEAR({!Birthdate}) - 1, YEAR(TODAY()) - YEAR({!Birthdate}))
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Credit Application {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Credit Application</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Application_Record</name>
+        <label>Create Application Record</label>
+        <locationX>176</locationX>
+        <locationY>998</locationY>
+        <connector>
+            <targetReference>confirmationScreen</targetReference>
+        </connector>
+        <inputReference>varApplication</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Logged_In_Contact</name>
+        <label>Get Logged In Contact</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Plans_at_City_Colleges_Screen</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>UpdateContact</name>
+        <label>UpdateContact</label>
+        <locationX>176</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Assign_Application_Variables</targetReference>
+        </connector>
+        <inputReference>newContact</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Address_Information</name>
+        <label>Address Information</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Star_Scholarship_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>addressInformationHeader</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 14.4px; font-family: Montserrat, sans-serif; color: rgb(81, 94, 89);&quot;&gt;Address Information&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>temporary_Living_Situation</name>
+            <choiceReferences>temporaryLivingSituationChoice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>If you are in a temporary living situation, please select option below that best describes your housing:</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Are_you_at_imminent_risk_of_homelessness_being_unhoused</name>
+            <choiceReferences>imminentRiskHousingChoice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Are you at imminent risk of homelessness/being unhoused</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <visibilityRule>
+                <conditionLogic>or</conditionLogic>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Under 18 and parent/legal guardian is unable or unwilling to provide you with shelter/housing	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Sleeping in places unfit for human habitation (ex park benches)	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Sharing housing due to economic hardship or loss of housing	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Rotating between several different friend/relative homes	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Living in motels, hotels, trailer parks, or camp grounds	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Living in emergency or transitional shelters	</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>temporary_Living_Situation</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Living in cars, parks, public spaces, abandoned buildings, substandard housing, bus or train stations, etc.	</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>MailingAddress</name>
+            <extensionName>flowruntime:address</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>city</name>
+                <value>
+                    <elementReference>newContact.MailingCountry</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>postalCode</name>
+                <value>
+                    <elementReference>newContact.MailingPostalCode</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>province</name>
+                <value>
+                    <elementReference>newContact.MailingState</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>street</name>
+                <value>
+                    <elementReference>newContact.MailingStreet</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Save</pauseButtonLabel>
+        <pausedText>&lt;p&gt;Your application has been saved. To view your current applications, please click here.&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!myApplicationHyperlink}&lt;/strong&gt;&lt;/p&gt;</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Applicant_Information_Screen</name>
+        <label>Applicant Information</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Address_Information</targetReference>
+        </connector>
+        <fields>
+            <name>applicantInformationHeader</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 14.4px; font-family: Montserrat, sans-serif; color: rgb(81, 94, 89);&quot;&gt;Applicant Information&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Legal_First_Name</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.FirstName</elementReference>
+            </defaultValue>
+            <fieldText>Legal First Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Legal_Last_Name</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.LastName</elementReference>
+            </defaultValue>
+            <fieldText>Legal Last Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Middle_Name</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.MiddleName</elementReference>
+            </defaultValue>
+            <fieldText>Middle Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Other_Last_Names</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.Other_Last_Names__c</elementReference>
+            </defaultValue>
+            <fieldText>Other Last Names</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Name_Suffix</name>
+            <choiceReferences>nameSuffixChoice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Name Suffix</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Personal_Pronoun</name>
+            <choiceReferences>personalPronounsChoice</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.Pronoun__c</elementReference>
+            </defaultValue>
+            <fieldText>Personal Pronoun</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Other_Please_Specify</name>
+            <dataType>String</dataType>
+            <fieldText>Other Please Specify</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Personal_Pronoun</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Other</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>Birthdate</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>Get_Logged_In_Contact.Birthdate</elementReference>
+            </defaultValue>
+            <fieldText>Birthdate</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Save</pauseButtonLabel>
+        <pausedText>&lt;p&gt;Your application has been saved. To view your current applications, please click here.&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!myApplicationHyperlink}&lt;/strong&gt;&lt;/p&gt;</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>confirmationScreen</name>
+        <label>confirmationScreen</label>
+        <locationX>176</locationX>
+        <locationY>1106</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>submitConfirmationHeader</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 26px;&quot;&gt;Thank you for applying at CCC!&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;u style=&quot;font-size: 24px;&quot;&gt;{!myApplicationHyperlink}&lt;/u&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Submit Application</nextOrFinishButtonLabel>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Plans_at_City_Colleges_Screen</name>
+        <label>Plans at City Colleges</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Applicant_Information_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>plansAtCityCollegesHeader</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); font-size: 14.4px; font-family: Montserrat, sans-serif; color: rgb(81, 94, 89);&quot;&gt;Plans at City Colleges&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>I_want_to</name>
+            <choiceReferences>iWantToChoice1</choiceReferences>
+            <choiceReferences>iWantToChoice2</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>I want to</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Plans_at_City_Colleges_Screen_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Plans_at_City_Colleges_Screen_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>I_plan_to_start_classes_in</name>
+                    <choiceReferences>Iplantostartclassesin</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>I plan to start classes in:</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Plans_at_City_Colleges_Screen_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>I_plan_to_attend</name>
+                    <choiceReferences>iPlanToAttendChoice</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>I plan to attend:</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>I_am_a</name>
+            <choiceReferences>iAmAChoice1</choiceReferences>
+            <choiceReferences>iAmAChoice2</choiceReferences>
+            <choiceReferences>iAmAChoice3</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>I am a</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>I_want_to</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <elementReference>iWantToChoice1</elementReference>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>I_want_to</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>false</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Save</pauseButtonLabel>
+        <pausedText>&lt;p&gt;Your application has been saved. To view your current applications, please click here.&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!myApplicationHyperlink}&lt;/strong&gt;&lt;/p&gt;</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Star_Scholarship_Screen</name>
+        <label>Star Scholarship</label>
+        <locationX>176</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>AssignContactValues</targetReference>
+        </connector>
+        <fields>
+            <name>starScholarshipHeader</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(81, 94, 89); font-family: Montserrat, sans-serif; font-size: 14.4px; background-color: rgb(255, 255, 255);&quot;&gt;Star Scholarship&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;color: rgb(81, 94, 89); font-family: Montserrat, sans-serif; font-size: 14.4px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;u&gt;You must be 21 or under to apply&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>youQualify</name>
+            <fieldText>&lt;p&gt;You qualify to apply for Star Scholarship&lt;/p&gt;&lt;p&gt;Your age: {!ageCalculation}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>ageCalculation</leftValueReference>
+                    <operator>LessThanOrEqualTo</operator>
+                    <rightValue>
+                        <numberValue>21.0</numberValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>youDoNotQualify</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;You do not qualify to apply for Star Scholarship&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;Your age: {!ageCalculation}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>ageCalculation</leftValueReference>
+                    <operator>GreaterThanOrEqualTo</operator>
+                    <rightValue>
+                        <numberValue>22.0</numberValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <nextOrFinishButtonLabel>Submit Application</nextOrFinishButtonLabel>
+        <pauseButtonLabel>Save</pauseButtonLabel>
+        <pausedText>&lt;p&gt;Your application has been saved. To view your current applications, please click here.&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;{!myApplicationHyperlink}&lt;/strong&gt;&lt;/p&gt;</pausedText>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Logged_In_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>myApplicationHyperlink</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;a href=&quot;https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/s/my-applications&quot; target=&quot;_self&quot;&gt; My Applications&lt;/a&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>newContact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>varApplication</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>hed__Application__c</objectType>
+    </variables>
+</Flow>

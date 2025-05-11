@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "27e996b7-8a67-43d1-8122-52fa35e56ffe",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "My_Applications__c",
+  "id" : "16ca077f-bc34-4ddc-95df-5858d8afe82b",
+  "label" : "My Applications",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-my-applications",
+  "type" : "route",
+  "urlPrefix" : "my-applications"
+}

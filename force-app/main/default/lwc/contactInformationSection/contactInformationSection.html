@@ -1,0 +1,86 @@
+<template>
+    <h3 class="slds-section__title slds-theme_shade section">
+        <span class="slds-truncate slds-p-horizontal_small" title={translations.ContactInformation}>{translations.ContactInformation}</span>
+    </h3>
+    <div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PreferredPhone} #:</label>
+                <lightning-input type="text" variant='label-hidden' name="preferredPhone"
+                    value={applicationData.preferredPhone} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.PhoneType}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="phoneType1"
+                    value={applicationData.phoneType1} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.OtherPhone} #1:</label>
+                <lightning-input type="text" variant='label-hidden' name="otherPhone1"
+                    value={applicationData.otherPhone1} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.PhoneType}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="phoneType2"
+                    value={applicationData.phoneType2} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.OtherPhone} #2:</label>
+                <lightning-input type="text" variant='label-hidden' name="otherPhone2"
+                    value={applicationData.otherPhone2} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.PhoneType}:</label>
+                <lightning-combobox variant='label-hidden' options={options} name="phoneType3"
+                    value={applicationData.phoneType3} onchange={handleFormField}>
+                </lightning-combobox>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls">{translations.EmalAddress}:</label>
+                <lightning-input type="text" variant='label-hidden' name="emailAddress"
+                    value={applicationData.emailAddress} onchange={handleFormField}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <p class="helpCSS">{translations.ContactInformation_Text1}</p>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-2">
+                <label class="lblCls"><abbr class="slds-required">*</abbr>{translations.OptInHelpfulUpdates}?</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-radio-group variant='label-hidden' name="optIn" value={applicationData.optIn}
+                    options={radioOptions} type="radio" onchange={handleFormField}>
+                </lightning-radio-group>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <p class="helpCSS">{translations.ContactInformation_Text2}</p>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters inputCls">
+            <div class="slds-col slds-size_1-of-1">
+                <p class="helpCSS">{translations.ContactInformation_Text3}
+                    <!--By providing a phone number and/or email address. I am opting-in to receive communications from City Colleges of Chicago (CCC), including automated phone calls and text messages. I understand that CCC will not share my information with external organizations. To learn more about communications from City Colleges of Chicago visit the CCC Communication Guidelines Page-->
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

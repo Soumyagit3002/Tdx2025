@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "ae5e9cdf-e241-4aaf-98f0-8af360b50fe1",
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "configurationTags" : [ ],
+  "devName" : "Program_Enrollment_List",
+  "id" : "7c84c05c-3e3a-4aa0-866f-229032bce7b6",
+  "label" : "Program Enrollment List",
+  "routeType" : "list-11X",
+  "type" : "route",
+  "urlPrefix" : "programEnrollment"
+}

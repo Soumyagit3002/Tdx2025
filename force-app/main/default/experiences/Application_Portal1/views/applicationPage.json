@@ -1,0 +1,55 @@
+{
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "6121a19d-0fe1-4bc6-95fc-1b30219c4070",
+  "label" : "applicationPage",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "Multi-Language",
+        "omniAnalytics" : false,
+        "subType" : "ApplicationPages",
+        "theme" : "lightning",
+        "type" : "Portal"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "e26417c1-a2d7-4c05-b261-d4dcc9bf3261",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "95626ed6-26cc-4f6a-8438-f9a8cf20d062",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "61ed4b04-6d11-4880-93ec-4970a13243c6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "69fa5572-4607-47df-9f08-1829ad89ac64",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Adult ED Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bf2fafa0-4c8b-4368-b363-dc372637f31a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c2d09274-80d1-44ff-9d3e-2e5b907c0ffd",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-applicationpage"
+}

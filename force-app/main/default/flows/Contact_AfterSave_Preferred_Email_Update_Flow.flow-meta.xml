@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Which Preferred email is selected</description>
+        <name>Which_Preferred_email</name>
+        <label>Which Preferred email?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_Email_to_Campus</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Campus Email</defaultConnectorLabel>
+        <rules>
+            <name>Personal_Email_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Preferred_Email__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Personal Email Address</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_email_to_Personal</targetReference>
+            </connector>
+            <label>Personal Email Address</label>
+        </rules>
+    </decisions>
+    <description>This flow will update the &quot;email&quot; field on the contact record based on the picklist value on the preferred email field only when campus email or personal email address are selected.</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact-AfterSave-Preferred Email Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact-AfterSave-Preferred Email Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This will update the Email field on the contact record to whatever is in the Campus Email address field.</description>
+        <name>Update_Email_to_Campus</name>
+        <label>Update Email to Campus</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.Campus_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This will update the Email field on the contact record to whatever is in the Personal Email address field.</description>
+        <name>Update_email_to_Personal</name>
+        <label>Update Email to Personal</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>$Record.Personal_Email_Address__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Which_Preferred_email</targetReference>
+        </connector>
+        <filterFormula>(ISNEW() &amp;&amp; (  (ISPICKVAL({!$Record.hed__Preferred_Email__c}, &quot;Campus Email&quot;)) &amp;&amp; NOT(ISNULL({!$Record.Campus_Email__c})) ||
+(ISPICKVAL({!$Record.hed__Preferred_Email__c}, &quot;Personal Email Address&quot;))&amp;&amp; NOT(ISNULL({!$Record.Personal_Email_Address__c}))
+)) ||
+(ISCHANGED({!$Record.hed__Preferred_Email__c}) || ISCHANGED({!$Record.Campus_Email__c}) || ISCHANGED({!$Record.Personal_Email_Address__c}))</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

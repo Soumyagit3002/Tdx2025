@@ -1,0 +1,39 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d2768dcd-ac11-4360-9610-03f8c98b0a85",
+  "label" : "Schedule Appointment",
+  "regions" : [ {
+    "id" : "fccc77f7-c16e-4b13-8a30-2ea9c4712320",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "direction" : "ltr",
+        "display" : "Display OmniScript on page",
+        "inlineVariant" : "brand",
+        "language" : "MultiLanguage",
+        "subType" : "StudentAppointment",
+        "theme" : "lightning",
+        "type" : "EDUScheduler"
+      },
+      "componentName" : "runtime_omnistudio:omniscript",
+      "id" : "38e2d310-df37-4a43-a061-f0ae58e2e9e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "670cbaca-061c-4c73-8bc2-7d39f43eb651",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "3f0cd1ef-3220-4866-b832-929a0dcef46b",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "scheduleappointment"
+}

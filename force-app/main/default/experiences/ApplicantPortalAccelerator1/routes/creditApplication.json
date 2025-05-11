@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "bd6022a8-0fa6-4805-ba31-2aad41fa2623",
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "configurationTags" : [ ],
+  "devName" : "Credit_Application__c",
+  "id" : "89f465c3-4ac3-4a12-a62a-181ac52ee7e2",
+  "label" : "Credit Application",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-credit-application",
+  "type" : "route",
+  "urlPrefix" : "credit-application"
+}

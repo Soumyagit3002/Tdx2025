@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Assign_Action_Plans</name>
+        <label>Assign Action Plans</label>
+        <locationX>853</locationX>
+        <locationY>1152</locationY>
+        <actionName>randa__ApplicationService_API</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>ActionPlanTemplateNames</name>
+            <value>
+                <elementReference>ActionPlanTemplateNames</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SkipWeekendsAndHolidays</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>StartDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>TargetRecord</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Version</name>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputParameters>
+        <nameSegment>randa__ApplicationService_API</nameSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Adult_Ed_High_School_Separation_Action_Plan</name>
+        <label>Assign Adult Ed &amp; High School Separation Action Plan</label>
+        <locationX>1546</locationX>
+        <locationY>708</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Adult Education Application V2</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>High School Separation Document</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Adult_Education_Action_Plan</name>
+        <label>Assign Adult Education Action Plan</label>
+        <locationX>1810</locationX>
+        <locationY>708</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Adult Education Application V2</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Applying_from_Outside_the_US_Plan</name>
+        <label>Assign Applying from Outside the US Plan</label>
+        <locationX>50</locationX>
+        <locationY>492</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>International Student Application - Applying from Outside the US</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>College_Indicated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Change_in_Visa_Status_Required_Plan</name>
+        <label>Assign Change in Visa Status Required Plan</label>
+        <locationX>314</locationX>
+        <locationY>492</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>International Student Application - Change in Visa Status Required</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>College_Indicated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Credit_Action_Plan</name>
+        <label>Assign Credit Action Plan</label>
+        <locationX>1282</locationX>
+        <locationY>600</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Credit Application</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Early_College_Action_Plan</name>
+        <label>Assign Early College Action Plan</label>
+        <locationX>2074</locationX>
+        <locationY>600</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Early College Application</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Official_copies_of_transcripts_domestic_institutions_only_Plan</name>
+        <label>Assign Official copies of transcripts (domestic institutions only) Plan</label>
+        <locationX>842</locationX>
+        <locationY>708</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Official copies of transcripts (domestic institutions only)</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Official_Transcripts_Plan</name>
+        <label>Assign Official Transcripts Plan</label>
+        <locationX>182</locationX>
+        <locationY>792</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Official Transcripts</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Transferring Into CCC From Another US Institution</description>
+        <name>Assign_Transferring_Into_CCC_From_Another_US_Institution_Plan</name>
+        <label>Assign Transferring Into CCC From Another US Institution Plan</label>
+        <locationX>974</locationX>
+        <locationY>492</locationY>
+        <assignmentItems>
+            <assignToReference>ActionPlanTemplateNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>International Student Application - Transferring Into CCC From Another US Institution</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>International_Transfer_College_Indicated</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Application_Type</name>
+        <label>Application Type</label>
+        <locationX>1810</locationX>
+        <locationY>492</locationY>
+        <defaultConnectorLabel>No Match Found</defaultConnectorLabel>
+        <rules>
+            <name>Credit_Decision_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Application_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Credit_Action_Plan</targetReference>
+            </connector>
+            <label>Credit</label>
+        </rules>
+        <rules>
+            <name>Adult_Education_Decision_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Application_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Adult Ed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Student_Under_18</targetReference>
+            </connector>
+            <label>Adult Education</label>
+        </rules>
+        <rules>
+            <name>Early_College_Decision_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Application_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Early College</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Early_College_Action_Plan</targetReference>
+            </connector>
+            <label>Early College</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>College_Indicated</name>
+        <label>College Indicated?</label>
+        <locationX>314</locationX>
+        <locationY>684</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No College</defaultConnectorLabel>
+        <rules>
+            <name>Yes_College_Indicated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.Have_you_attended_college_previously__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Official_Transcripts_Plan</targetReference>
+            </connector>
+            <label>Yes, College Indicated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>International_Application</name>
+        <label>International Application?</label>
+        <locationX>853</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>International_Currently_in_the_US_not_Attending_CCC</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>US Application</defaultConnectorLabel>
+        <rules>
+            <name>Yes_International_Application</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.MailingCountryCode</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>US</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.MailingCountryCode</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>International_Type</targetReference>
+            </connector>
+            <label>Yes, International Application</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>International_Currently_in_the_US_not_Attending_CCC</name>
+        <label>International Currently in the US not Attending CCC</label>
+        <locationX>1392</locationX>
+        <locationY>384</locationY>
+        <defaultConnector>
+            <targetReference>Application_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>US Application</defaultConnectorLabel>
+        <rules>
+            <name>International_Transferring_Into_CCC_from_Another_US_Institution</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.MailingCountryCode</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>US</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.F_1_VISA__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.Visa_Permit_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Student in Academic/Language</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Transferring_Into_CCC_From_Another_US_Institution_Plan</targetReference>
+            </connector>
+            <label>International Transferring Into CCC from Another US Institution</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>International_Transfer_College_Indicated</name>
+        <label>International Transfer College Indicated?</label>
+        <locationX>974</locationX>
+        <locationY>600</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Action_Plans</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>International Transfer- No College</defaultConnectorLabel>
+        <rules>
+            <name>International_Transfer_Yes_College_Indicated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.hed__Applicant__r.Have_you_attended_college_previously__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Official_copies_of_transcripts_domestic_institutions_only_Plan</targetReference>
+            </connector>
+            <label>International Transfer- Yes, College Indicated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>International_Type</name>
+        <label>International Type</label>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
+        <defaultConnectorLabel>None of the above</defaultConnectorLabel>
+        <rules>
+            <name>Applying_from_Outside_the_US</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.F_1_VISA__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Applying_from_Outside_the_US_Plan</targetReference>
+            </connector>
+            <label>Applying from Outside the US</label>
+        </rules>
+        <rules>
+            <name>Change_in_Visa_Status_Required</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.F_1_VISA__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Change_in_Visa_Status_Required_Plan</targetReference>
+            </connector>
+            <label>Change in Visa Status Required</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Student_Under_18</name>
+        <label>Student Under 18?</label>
+        <locationX>1678</locationX>
+        <locationY>600</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Adult_Education_Action_Plan</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Under 18</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Under_18</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Under_18__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Adult_Ed_High_School_Separation_Action_Plan</targetReference>
+            </connector>
+            <label>Yes, Under 18</label>
+        </rules>
+    </decisions>
+    <description>This flow assigns Action Plan Templates / Items to Application records so that applicants can fulfill their requirements.</description>
+    <environments>Default</environments>
+    <interviewLabel>Assign Application Requirements {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application) Assign Application Requirements</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1601</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>International_Application</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>hed__Application_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>hed__Application__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <triggerOrder>1500</triggerOrder>
+    <variables>
+        <name>ActionPlanTemplateNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

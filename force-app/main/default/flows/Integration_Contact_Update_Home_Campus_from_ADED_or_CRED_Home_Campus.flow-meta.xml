@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>ADED_Campus_Populated</name>
+        <label>ADED Campus Populated?</label>
+        <locationX>512</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>CE_Campus_Populated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ADED_Home_Campus__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Home_Campus_ADED_Home_Campus</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CE_Campus_Populated</name>
+        <label>CE Campus Populated?</label>
+        <locationX>710</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CE_Home_Campus__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Home_Campus_CE_Home_Campus</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CRED_Campus_Populated</name>
+        <label>CRED Campus Populated?</label>
+        <locationX>281</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>ADED_Campus_Populated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CRED_Home_Campus__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Home_Campus_CRED_Home_Campus</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Integration) Contact) Set Home Campus from ADED and CRED Home Campus Changes {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Integration) Contact) Update Home Campus from ADED or CRED Home Campus</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Home_Campus_ADED_Home_Campus</name>
+        <label>Set Home Campus = ADED Home Campus</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Home_Campus__c</field>
+            <value>
+                <elementReference>$Record.ADED_Home_Campus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Home_Campus_CE_Home_Campus</name>
+        <label>Set Home Campus = CE Home Campus</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Home_Campus__c</field>
+            <value>
+                <elementReference>$Record.CE_Home_Campus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Home_Campus_CRED_Home_Campus</name>
+        <label>Set Home Campus = CRED Home Campus</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Home_Campus__c</field>
+            <value>
+                <elementReference>$Record.CRED_Home_Campus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>155</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CRED_Campus_Populated</targetReference>
+        </connector>
+        <filterFormula>(
+ ISNEW() 
+ &amp;&amp; (
+    NOT(ISBLANK({!$Record.CRED_Home_Campus__c}))
+    || NOT(ISBLANK({!$Record.ADED_Home_Campus__c}))
+    || NOT(ISBLANK({!$Record.CE_Home_Campus__c}))
+  )
+) || (
+  ISCHANGED({!$Record.CRED_Home_Campus__c})
+  &amp;&amp; NOT(ISBLANK({!$Record.CRED_Home_Campus__c}))
+) || (
+  ISCHANGED({!$Record.ADED_Home_Campus__c}) 
+  &amp;&amp; NOT(ISBLANK({!$Record.ADED_Home_Campus__c}))
+) || (
+  ISCHANGED({!$Record.CE_Home_Campus__c}) 
+  &amp;&amp; NOT(ISBLANK({!$Record.CE_Home_Campus__c}))
+)</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

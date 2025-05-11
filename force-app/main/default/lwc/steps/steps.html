@@ -1,0 +1,12 @@
+<template>
+    <div class="grantnewrequestbody">
+        <div class="processIndicator">
+            <ol class="timeline" style="font-family: var(--lwc-fontFamily,Open Sans);font-size: 13px;">
+                <template for:each={steps} for:item="step">
+                    <li key={step.value} class={step.cls} value={step.value} data-id={step.name}
+                        onclick={handleClick}>{step.name}</li>
+                </template>
+            </ol>
+        </div>
+    </div>
+</template>

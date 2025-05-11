@@ -1,0 +1,54 @@
+{
+  "appPageId" : "bb0fb22c-ea38-44ea-b799-757ff78a88c0",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "24160946-378f-4c1b-94cf-89103b118cb0",
+  "label" : "Credit Application",
+  "regions" : [ {
+    "id" : "0e3fc854-fdcc-4778-9156-cd63732192c3",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "dir" : "ltr",
+        "flexipageRegionWidth" : "LARGE",
+        "inline" : false,
+        "inlineLabel" : "Launch undefined/undefined",
+        "inlineVariant" : "brand",
+        "layout" : "lightning",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "c:creditApplicationAppEnglish",
+      "id" : "0a9632e0-55b4-43aa-a3dd-e4365245b164",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e30b6bff-a0a8-4f3a-a356-6a1a3414b2d6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "341db78e-26d9-480a-a6f2-5153cdae6ae4",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Credit Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5b0ca204-422e-48e4-9a03-d2caad7f6804",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "872e53b9-7149-48be-88d8-e12701322128",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-credit-application"
+}

@@ -1,0 +1,254 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2c6a90f5-a8d4-454f-8616-8e7a7c8b6ecb",
+  "label" : "Credit Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "743be63e-cc9d-454a-aba9-a11b0a737dee",
+          "columns" : [ {
+            "UUID" : "4caf906f-c157-40d2-95d7-97c3e1e2052c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8b9238fa-a68e-483d-b933-e28d815f0f97",
+            "columnKey" : "603d9",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bf91e4a0-a4d4-4005-b769-2180c82a93a2",
+            "columnKey" : "6757c",
+            "columnName" : "Column 3",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "743be63e-cc9d-454a-aba9-a11b0a737dee",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Get Started</strong></p><p style=\"text-align: center;\"><br></p><p><span style=\"font-size: 14px; color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra vitae congue eu consequat. Vulputate dignissim suspendisse in est. Tortor vitae purus faucibus ornare suspendisse sed nisi. </span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d1de3142-a9dc-49d6-83b9-f73c4c4d3f2c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4caf906f-c157-40d2-95d7-97c3e1e2052c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8b9238fa-a68e-483d-b933-e28d815f0f97",
+        "regionLabel" : "Column 2",
+        "regionName" : "603d9",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Ready to Apply</strong></p><p style=\"text-align: center;\"><br></p><p><span style=\"font-size: 14px; color: rgb(0, 0, 0);\">Viverra vitae congue eu consequat. Vulputate dignissim suspendisse in est. Tortor vitae purus faucibus ornare suspendisse sed nisirnare suspendisse sed nisi. </span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ea6c8ef6-1e3f-4851-bf1c-46252c073819",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 50,
+            "borderRadius" : 1,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(255, 255, 255)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "default",
+            "tileMenuEditor" : "Start_Credit_Application",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "43500ea0-e396-4013-bdbb-485fe0ddbe8d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Not sure which you are?<a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/s/all-applications\" rel=\"noopener noreferrer\" target=\"_self\" style=\"background-color: rgb(255, 255, 255);\"> </a><a href=\"https://citycollegesofchicago2--cccpartial.sandbox.my.site.com/s/all-applications\" rel=\"noopener noreferrer\" target=\"_self\" style=\"background-color: rgb(255, 255, 255); color: rgb(102, 163, 224);\"><u>View All Applications</u></a></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ff545083-3cf2-44ac-a7d2-f5634660b74d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "enableInlineEdit" : true,
+            "filterName" : "Application_Progress",
+            "layout" : "STANDARD",
+            "pageSize" : 5,
+            "scope" : "hed__Application__c",
+            "showActionBar" : true,
+            "showChartsPanel" : true,
+            "showDisplay" : "showall",
+            "showFilterPanel" : true,
+            "showImageIcon" : true,
+            "showManualRefreshButton" : true,
+            "showObjectName" : true,
+            "showPinnedList" : true,
+            "showSearchBar" : true
+          },
+          "componentName" : "forceCommunity:objectHome",
+          "id" : "ceb7158b-139d-4002-9631-4fca70b5be62",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bf91e4a0-a4d4-4005-b769-2180c82a93a2",
+        "regionLabel" : "Column 3",
+        "regionName" : "6757c",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "00477ac5-62a9-430e-b587-aaf3d175353a",
+          "columns" : [ {
+            "UUID" : "d8342337-6a1a-48b0-bee9-d1959fa67930",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e124763d-182f-4df3-b627-c87d91ec9a35",
+            "columnKey" : "9cfc1",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a3dfe02b-538e-4ee0-95a6-4d775f8a6d0e",
+            "columnKey" : "0c573",
+            "columnName" : "Column 3",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "00477ac5-62a9-430e-b587-aaf3d175353a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 18px;\">Resources for Harold Washington College</strong></p><p style=\"text-align: center;\"><br></p><p><strong style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor</strong></p><p><span style=\"color: rgb(0, 0, 0);\">it amet, consectetur adipiscing elit, </span><u style=\"color: rgb(102, 163, 224);\">ore magna aliqua.</u></p><p><br></p><p><strong style=\"color: rgb(0, 0, 0);\">Sed do eiusmod tempor</strong><span style=\"color: rgb(0, 0, 0);\"> </span></p><p><span style=\"color: rgb(0, 0, 0);\">Viverra vitae congue eu </span><u style=\"color: rgb(102, 163, 224);\">consequatore agna aliqu. </u></p><p><br></p><p><strong style=\"color: rgb(0, 0, 0);\">Vulputate dignissim suspend</strong></p><p><span style=\"color: rgb(0, 0, 0);\">ortor vitae purus faucibus ornare </span><u style=\"color: rgb(102, 163, 224);\">suspendisse sed nisi. </u></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "63ae4afe-b14e-4375-a76b-7b2c119b0f04",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d8342337-6a1a-48b0-bee9-d1959fa67930",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e124763d-182f-4df3-b627-c87d91ec9a35",
+        "regionLabel" : "Column 2",
+        "regionName" : "9cfc1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 18px;\">Selective Enrollment﻿</strong></p><p style=\"text-align: center;\"><br></p><p><span style=\"font-size: 14px; color: rgb(0, 0, 0);\">Applying for a program with Selective Enrollent</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3f9f2d4a-71e1-46bd-983b-129f50eaf041",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "",
+            "bannerPosition" : "top",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 1,
+            "boxShadow" : false,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(255, 255, 255)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "default",
+            "tileMenuEditor" : "Selective_Enrollment_Menu1",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "fd3a31fc-d608-4bf0-8e7b-6449cda85d41",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a3dfe02b-538e-4ee0-95a6-4d775f8a6d0e",
+        "regionLabel" : "Column 3",
+        "regionName" : "0c573",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ececb6c5-0094-4486-9851-56ffd33b48e9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f5bad770-3c38-47b3-9bc1-c23fd6706b51",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2493fd1e-543d-41a7-8560-e780baae97e5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

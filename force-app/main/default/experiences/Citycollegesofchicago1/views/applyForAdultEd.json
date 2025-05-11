@@ -1,0 +1,60 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "7bc4163e-de84-48d1-b37b-d3fe0368054f",
+  "label" : "Apply for Adult Ed",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "81bee5e0-10ae-4b19-84a8-c223b37a3660",
+          "columns" : [ {
+            "UUID" : "74673abf-ac69-4f8b-95c2-c78a5a1f7a1f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "81bee5e0-10ae-4b19-84a8-c223b37a3660",
+      "regions" : [ {
+        "id" : "74673abf-ac69-4f8b-95c2-c78a5a1f7a1f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "56807e80-53cf-48fb-b483-6af483b28a7a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Adult-Ed Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fcc53fa9-35c4-4d20-8c65-6e33bd5d3aa8",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "22cf9ce6-c377-442a-befb-0af236a29aaa",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-adult-ed-application"
+}

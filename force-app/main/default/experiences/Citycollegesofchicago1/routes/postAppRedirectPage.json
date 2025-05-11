@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "dd63de3d-936d-40b1-8303-eaff02d9d891",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Post_App_Redirect_Page__c",
+  "id" : "485ae163-36a8-4000-85a3-cb5674501571",
+  "label" : "Post App Redirect Page",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-postappredirect",
+  "type" : "route",
+  "urlPrefix" : "postappredirect"
+}

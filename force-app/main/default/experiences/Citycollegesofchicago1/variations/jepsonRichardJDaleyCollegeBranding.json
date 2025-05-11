@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "2b55fe4e-3cef-4482-893c-f13ee0d9cf87",
+    "propertyOverrides" : {
+      "activeBrandingSetId" : "3935b164-e57c-4de0-afd6-dcdfd206c22c"
+    },
+    "targetId" : "fcc550ea-5cba-407c-a6cd-d24c777b9e71",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Jepson_Richard_J_Daley_College_Branding",
+  "id" : "cfeadd45-27cd-455a-bb3f-074183e6d7a8",
+  "type" : "experienceVariation"
+}

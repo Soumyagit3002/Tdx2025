@@ -1,0 +1,60 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2c9797f5-6bac-41c0-82c7-5346dddd6096",
+  "label" : "Apply for Early College",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a9ace41c-db5e-4fb0-9f78-8ecab085438b",
+          "columns" : [ {
+            "UUID" : "bde581a9-4196-44db-a888-88d465c99270",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a9ace41c-db5e-4fb0-9f78-8ecab085438b",
+      "regions" : [ {
+        "id" : "bde581a9-4196-44db-a888-88d465c99270",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "de5864c5-562b-4c23-abf4-31f3b3923566",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Apply for Early College"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f46e5ce5-2de6-4355-9c6c-f5b5233d98aa",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e6c9a3bf-b0a1-44a3-8245-79e3c4b375a5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-apply-for-early-college"
+}

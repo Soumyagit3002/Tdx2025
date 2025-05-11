@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "598d16b1-51b3-403f-8bb7-64882b29dc31",
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "configurationTags" : [ ],
+  "devName" : "Task_List_View__c",
+  "id" : "45a1833a-0eb4-4640-a9a3-1ab8605b4368",
+  "label" : "Task List View",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-task-list-view",
+  "type" : "route",
+  "urlPrefix" : "task-list-view"
+}

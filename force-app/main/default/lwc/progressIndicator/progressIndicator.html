@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-theme_default">
+        <div style="margin-left: 2%;">
+            <div>
+                <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small">
+                    <span></span>
+                    <span aria-hidden="true">
+                            <span class="fontCSS">Application Progress: {progress}% Complete</span>
+                        </span>
+                </div>
+            </div>
+            <lightning-progress-bar size="medium" value={progress} variant="circular" title={progress}>
+            </lightning-progress-bar>
+        </div>
+    </div>
+</template>

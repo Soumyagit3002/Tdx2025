@@ -1,0 +1,55 @@
+{
+  "appPageId" : "b2f53f20-cc90-47cd-80cc-5857ed47a87b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "42cd14de-935b-49b7-b5ed-fc30aadb3fbd",
+  "label" : "Learning Program Plan Detail",
+  "regions" : [ {
+    "id" : "c44ba0e7-4a4c-4576-b0c9-13d1e2d4f7bf",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "a9fd6893-3b19-4ad6-85cb-a955c031ae7a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "edulearning:programPlanSummaryView",
+      "id" : "381ce377-cb8f-4730-87ab-e53e06a2eaac",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4ae17f23-6266-4819-97db-d415ae1d43ff",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "4a223146-d717-4cb0-a871-50aa0591ad88",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4d4f396f-20d3-4ad6-9909-d14c2ca82988",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bd07ec62-7c4a-470b-a8c2-0c6e1b47bf3f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-0uF"
+}

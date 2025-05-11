@@ -1,0 +1,362 @@
+<template>
+    <div style="padding-bottom: 15px;">
+        <span class="fontCSS">Review your application. Click "Previous" to go back and make edits, if needed.</span>
+    </div>
+    <div class="borderCSS">
+        <lightning-card title="">
+            <h2 class="fontHeadingCSS">Academic Intent</h2>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="I am a" value={appRecord.Test_I_am_a__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="I am enrolling because"
+                            value={appRecord.Test_Why_Are_You_Enrolling__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="I am 18 years old or older"
+                            value={appRecord.Test_I_am_18_years_old_or_older__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="I plan to start classes in"
+                            value={appRecord.Test_I_plan_to_start_classes_in__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="I plan to attend" value={appRecord.Test_I_plan_to_attend__c}
+                            disabled></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="My interests are" value={appRecord.Test_Career_Pathway__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="My primary goal is" value={appRecord.Test_Primary_Goal__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="My secondary goal is"
+                            value={appRecord.Test_Secondary_Goal__c} disabled></lightning-input>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+
+        <lightning-card title="">
+            <h2 class="fontHeadingCSS">Applicant Overview</h2>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Legal First Name" value={appRecord.Test_Legal_First_Name__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Middle Name" value={appRecord.Test_Legal_Middle_Name__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Legal Last Name" value={appRecord.Test_Legal_Last_Name__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Other Last Name(s)"
+                            value={appRecord.Test_Other_Last_Name__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Name Suffix" value={appRecord.Test_Name_Suffix__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Email Address" value={appRecord.Test_Email_Address__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Phone" value={appRecord.Test_Home_Phone__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Phone Type" value={appRecord.Test_Phone_Type__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Country" value={appRecord.Test_Country__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Address Line 1" value={appRecord.Test_AddressLine1__c}
+                            disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Apt/Suite/Unit" value={appRecord.Test_Apt_Ste_Unit__c}
+                            disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="City" value={appRecord.Test_City__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="State" value={appRecord.Test_State__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Postal Code" value={appRecord.Test_Postal_Code__c} disabled>
+                        </lightning-input>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+        <lightning-card title="">
+            <h2 class="fontHeadingCSS">Applicant Details</h2>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="Date of Birth" value={appRecord.Test_BirthDate__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Legal Sex" value={appRecord.Test_Legal_Sex__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Marital Status" value={appRecord.Test_Marital_Status__c}
+                            disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Are you Hispanic or Latino?"
+                            value={appRecord.Test_Are_you_Hispanic_or_Latino__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Are you from one or more of the following racial groups?"
+                            value={appRecord.Test_Are_You_From_Following_Racial_Group__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Is English your native language?"
+                            value={appRecord.Test_Is_English_Your_Native_Language__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Select your Native Language"
+                            value={appRecord.Test_Native_Language__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Birth Country" value={appRecord.Test_Birth_Country__c}
+                            disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Citizenship Status"
+                            value={appRecord.Test_Citizenship_Status__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="Citizenship Date" value={appRecord.Test_Citizenship_Date__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Have you passed the Constitution exam?"
+                            value={appRecord.Test_Have_you_passed_Constitution_exam__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Social Security" value={appRecord.SSN_number__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Confirm Social Security"
+                            value={appRecord.Confirm_SSN_number__c} disabled>
+                        </lightning-input>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+        <lightning-card title="">
+            <h2 class="fontHeadingCSS">Additional Background</h2>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Work Status" value={appRecord.Test_Work_Status__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="Family Income" value={appRecord.Test_Family_Income__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Number of Dependent Minor Children"
+                            value={appRecord.Test_Number_of_Dependent_Minor_Children__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Number of Dependents Other Than Minor Children"
+                            value={appRecord.Test_Numb_of_Dependents_Other_Than_Minor__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Special Needs" value={appRecord.Test_Special_Needs__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Barriers to Employment"
+                            value={appRecord.Test_Barriers_to_Employment__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Which best describes the area in which you live?"
+                            value={appRecord.Test_Do_you_live_in_rural_or_urban__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Do you receive Public Assistance?"
+                            value={appRecord.Test_Do_you_receive_Public_Assistance__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text"
+                            label="Do you currently reside in a correctional or institutional setting?"
+                            value={appRecord.Test_How_did_you_hear_about_the_program__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="How did you hear about the program?"
+                            value={appRecord.Test_Do_you_currently_reside_in__c} disabled></lightning-input>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+        <lightning-card title="">
+            <h2 class="fontHeadingCSS">Educational History</h2>
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="Highest Level of Education"
+                            value={appRecord.Test_Highest_Level_of_Education__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="School Status" value={appRecord.Test_High_School_Status__c}
+                            disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="Last Date Attended"
+                            value={appRecord.Test_Last_Date_Attended__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="date" label="Graduation/Diploma Date"
+                            value={appRecord.Test_Graduation_Diploma_Date__c} disabled></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text" label="School Name" value={appRecord.Test_School_Name__c} disabled>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                        <lightning-input type="text"
+                            label="Have you attended college previously? (other than one of the City Colleges of Chicago)"
+                            value={appRecord.Test_Haveyou_attended_college_previously__c} disabled></lightning-input>
+                    </div>
+                    <template if:true={attendClgPreviously}>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                            <lightning-input type="text" label="College Status" value={appRecord.Test_College_Status__c}
+                                disabled>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                            <lightning-input type="checkbox" label="I attended college outside the US"
+                                checked={appRecord.Test_I_attended_college_outside_the_US__c} disabled>
+                            </lightning-input>
+                        </div>
+                        <template if:true={showClgFlds}>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                                <lightning-input type="text" label="College Country"
+                                    value={appRecord.Test_College_Country__c} disabled>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                                <lightning-input type="text" label="College Name" value={appRecord.Test_College_Name__c}
+                                    disabled>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                                <lightning-input type="text" label="College City" value={appRecord.Test_College_City__c}
+                                    disabled>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                                <lightning-input type="text" label="College State"
+                                    value={appRecord.Test_College_State__c} disabled>
+                                </lightning-input>
+                            </div>
+                        </template>
+                        <template if:false={showClgFlds}>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                                <lightning-input type="text" label="College/University Name"
+                                    value={appRecord.Test_College_University_Full_Name__c} disabled>
+                                </lightning-input>
+                            </div>
+                        </template>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                            <lightning-input type="text" label="Degree" value={appRecord.Test_Degree__c} disabled>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+                            <lightning-input type="date" label="Degree Date" value={appRecord.Test_Degree_Date__c}
+                                disabled>
+                            </lightning-input>
+
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </lightning-card>
+        <lightning-card title="">
+            <div class="disclaimer-container">
+                <h2 class="disclaimer-heading">Disclaimers:</h2>
+                <div class="disclaimer-item">
+                    <lightning-input type="checkbox" name="chk1" onchange={handleChange} label="By submitting your online application, you certify that the information provided is correct
+                        and complete and you understand that withholding or giving false information may make you
+                        ineligible to enroll at the City Colleges of Chicago or subject to dismissal.">
+                    </lightning-input>
+                </div>
+
+                <div class="disclaimer-item">
+                    <lightning-input type="checkbox" name="chk2" onchange={handleChange} label="Submission of the online application also implies understanding that your information may be
+                        used for statistical or compliance reporting purposes."></lightning-input>
+                </div>
+                <template if:true={under18}>
+                    <div class="disclaimer-item">
+                        <lightning-input type="checkbox" name="chk3" onchange={handleChange} label="In order to register for classes, a High School Release Form is required for all
+                        eligible students under 18 years of age."></lightning-input>
+                    </div>
+                </template>
+                <div class="disclaimer-item">
+                    <lightning-input type="checkbox" name="chk4" onchange={handleChange} label="By providing a phone number and/or email address, you are opting-in to receive
+                        communications from City Colleges of Chicago (CCC), including automated phone calls and text
+                        messages. You understand that CCC will not share your information with external
+                        organizations. To learn more about communications from City Colleges of Chicago visit the">
+                    </lightning-input>
+                    <span class="fontCSS"><a style="color:blue !Important;" href="https://www.ccc.edu/menu/communication-guidelines/" target="_blank">CCC Communication Guidelines page.</a></span>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+    <div style="padding-top: 20px;">
+        <span class="fontCSS">To submit your application, click the “Submit” button below.</span>
+    </div>
+    <!-- <div style="padding-top:20px">
+        <c-progress-indicator current-step="5"></c-progress-indicator>
+    </div>-->
+    <div class="slds-m-top_medium" style="float: right;">
+        <lightning-button label="Previous" onclick={handlePrevious} class="slds-m-left_x-small">
+        </lightning-button>
+
+        <lightning-button variant="brand" disabled={submitBtnDisabled} label="Submit" onclick={handleNext}
+            class="slds-m-left_x-small">
+        </lightning-button>
+    </div>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+        </lightning-spinner>
+    </template>
+</template>

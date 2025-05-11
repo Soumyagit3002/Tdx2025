@@ -1,0 +1,26 @@
+/*.custom-container{
+	color : black;
+}
+.image:hover {
+    background-color: rgb(1, 118, 211); 
+}
+.image{
+	width:50px;
+	margin-left: 180px;
+	cursor: pointer;
+}*/
+.centerCSS {
+	text-align: center;
+}
+.custom-button {
+    background-color: #0055B8; 
+    color: white; 
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnPadding{
+	padding-right: 8px;
+}

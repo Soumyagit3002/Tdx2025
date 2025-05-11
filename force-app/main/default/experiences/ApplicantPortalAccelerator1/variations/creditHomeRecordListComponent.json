@@ -1,0 +1,13 @@
+{
+  "componentVariants" : [ {
+    "id" : "1452689c-ebb7-4288-8e79-022734d65a3b",
+    "propertyOverrides" : {
+      "isVisible" : true
+    },
+    "targetId" : "ceb7158b-139d-4002-9631-4fca70b5be62",
+    "type" : "componentVariant"
+  } ],
+  "developerName" : "Credit_Home_Record_List_Component",
+  "id" : "27154d0a-9d0d-4f16-ab3b-b88f9a31ed1e",
+  "type" : "experienceVariation"
+}

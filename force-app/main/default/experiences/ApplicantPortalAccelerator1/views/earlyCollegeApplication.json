@@ -1,0 +1,72 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4d7b4367-5eb6-4bf5-9f56-ab57c84d062e",
+  "label" : "Early College Application",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f519b850-9f3d-40e7-9a70-82bfa5be53d7",
+          "columns" : [ {
+            "UUID" : "b88a60d5-8e56-43d7-b115-2f2d52ce2e89",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f519b850-9f3d-40e7-9a70-82bfa5be53d7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "formassemblyAuthToken" : "7c2ea0d32117477a195ea929cc55fc69e784dc2c",
+            "formassemblyFormID" : "46",
+            "formassemblyUseIFrame" : false
+          },
+          "componentName" : "tfa:FormAssemblyForm",
+          "id" : "4dfe256e-2d3c-490b-9e9e-d35400610475",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b88a60d5-8e56-43d7-b115-2f2d52ce2e89",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "29a4201d-8ae0-4099-b302-a0232ebc7c01",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Early College Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ca0731e8-e234-41de-aef8-5c069088cc45",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be5a6e0e-605b-4f1a-a652-019d8814bcc0",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-early-college-application"
+}

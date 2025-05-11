@@ -1,0 +1,24 @@
+{
+  "forgotPasswordRouteId" : "fc241291-334d-478d-9610-48eb53e36993",
+  "isAvailableToGuests" : false,
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "6ccff9ff-be8a-496c-983d-22932c54148d",
+  "mainAppPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "fc6a926d-5b97-4cdd-ab4d-5b3044d444a0",
+  "trustedSitesForScript" : [ {
+    "id" : "4de6bde9-dfda-4ade-b818-876ee1e81e30",
+    "isActive" : true,
+    "trustedSiteName" : "AOS",
+    "trustedSiteUrl" : "https://unpkg.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "0ec24971-33fa-4b4b-9969-85d287ea5e55",
+    "isActive" : true,
+    "trustedSiteName" : "Images",
+    "trustedSiteUrl" : "https://citycollegesofchicago2--cccpartial.sandbox.file.force.com",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

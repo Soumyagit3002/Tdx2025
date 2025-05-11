@@ -1,0 +1,124 @@
+{
+  "appPageId" : "fcc3273d-d853-44b6-aad6-c32f7ce1f830",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "9f281348-d5dd-4c0a-a933-0c6c5e3e316f",
+  "label" : "My Applications",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "614420dd-c85c-4bcb-9de3-f6d8d02a8a60",
+          "columns" : [ {
+            "UUID" : "9d4f69f1-2967-441c-8aca-40cf3633062f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "614420dd-c85c-4bcb-9de3-f6d8d02a8a60",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "b5b12d81-5d6c-4f9f-b675-1980249dd944",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "4da700e1-dd47-4082-bc66-06da954b4e8f",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Complete Applications"
+              }, {
+                "UUID" : "25d1da9d-bebe-4215-8170-d8b876cf4384",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Incomplete Applications"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "b5b12d81-5d6c-4f9f-b675-1980249dd944",
+          "regions" : [ {
+            "id" : "4da700e1-dd47-4082-bc66-06da954b4e8f",
+            "regionLabel" : "Complete Applications",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "Experience_Site_Student_View",
+                "layout" : "STANDARD",
+                "pageSize" : 25,
+                "scope" : "hed__Application__c",
+                "showActionBar" : true,
+                "showChartsPanel" : true,
+                "showDisplay" : "showall",
+                "showFilterPanel" : true,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : true,
+                "showObjectName" : true,
+                "showPinnedList" : true,
+                "showSearchBar" : true
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "cb82c3f0-512a-409a-ac65-1e94a1f41e85",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "25d1da9d-bebe-4215-8170-d8b876cf4384",
+            "regionLabel" : "Incomplete Applications",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9d4f69f1-2967-441c-8aca-40cf3633062f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2a3480c3-e0a5-4a76-a446-a6cd99202c02",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Applications"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2c70fe5d-267d-43d3-a877-612a398daf98",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "de77bd02-b2e7-432e-95ab-21b6177cdc88",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-applications"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Citycollegesofchicago</container>
+    <containerType>Network</containerType>
+    <label>Selective Enrollment Menu</label>
+    <navigationMenuItem>
+        <label>Start Here</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/selective-enrollment-programs</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

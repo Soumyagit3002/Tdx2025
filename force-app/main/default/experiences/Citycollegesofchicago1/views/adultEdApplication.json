@@ -1,0 +1,72 @@
+{
+  "appPageId" : "472aa17a-db19-4171-aa91-516c8bef0edc",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3ea93816-5273-4ebf-b693-6717eb448891",
+  "label" : "Adult Ed Application",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4094479b-b002-4783-8b4d-7e4223775356",
+          "columns" : [ {
+            "UUID" : "3a0063f4-531b-4762-8ba0-f12219437369",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4094479b-b002-4783-8b4d-7e4223775356",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "formassemblyAuthToken" : "5c0a27d70fc215ec3c8c0f0e21dce92eeb476b80",
+            "formassemblyFormID" : "45",
+            "formassemblyUseIFrame" : false
+          },
+          "componentName" : "tfa:FormAssemblyForm",
+          "id" : "0f308bef-be8e-452a-a974-496c1c8e1326",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3a0063f4-531b-4762-8ba0-f12219437369",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dbdabc5d-74d6-479a-9e1d-2caa7ae19c08",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Early Education Application"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a42ea8bd-6189-4da0-a007-71165142b109",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "06041bdc-d051-4d0e-9d17-6ce5df0744f6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-early-education-application"
+}

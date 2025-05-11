@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Requirements that determine the entitlement assigned to a case</description>
+        <name>Entitlement_Decision</name>
+        <label>Entitlement Decision</label>
+        <locationX>446</locationX>
+        <locationY>695</locationY>
+        <defaultConnector>
+            <targetReference>Update_with_Standard</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>High</defaultConnectorLabel>
+        <rules>
+            <name>High</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Priority</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Normal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Apply_entitlement_to_case</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>High</label>
+        </rules>
+        <rules>
+            <name>Change_of_Admissions_Sub_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SubType__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Changes for Admissions</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_with_Change_of_Admissions_Entitlement</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Change of Admissions Sub Type</label>
+        </rules>
+        <rules>
+            <name>Suspended_Application</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SubType__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Supsended Application</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Entitlement_to_Suspended_Applicaton</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Suspended Application</label>
+        </rules>
+    </decisions>
+    <description>Sets the Entitlement on the case record based on criteria from the case.</description>
+    <environments>Default</environments>
+    <interviewLabel>Entitlement Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Entitlement Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the Entitlements</description>
+        <name>Change_of_Admissions</name>
+        <label>Change of Admissions</label>
+        <locationX>446</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Basic_Process_Entitlements</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Change of Admissions</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Entitlement</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Basic_Process_Entitlements</name>
+        <label>Get Basic Process Entitlements</label>
+        <locationX>446</locationX>
+        <locationY>575</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Entitlement_Decision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Basic Process</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Entitlement</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Entitlements</description>
+        <name>Get_Standard_Entitlements</name>
+        <label>Get Standard Entitlements</label>
+        <locationX>446</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Change_of_Admissions</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Standard</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Entitlement</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Applies the entitlement to the case</description>
+        <name>Apply_entitlement_to_case</name>
+        <label>Apply entitlement to case</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>EntitlementId</field>
+            <value>
+                <elementReference>Get_Basic_Process_Entitlements.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Entitlement_to_Suspended_Applicaton</name>
+        <label>Update Entitlement to Suspended Applicaton</label>
+        <locationX>578</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>EntitlementId</field>
+            <value>
+                <elementReference>Change_of_Admissions.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_with_Change_of_Admissions_Entitlement</name>
+        <label>Update with Change of Admissions Entitlement</label>
+        <locationX>314</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>EntitlementId</field>
+            <value>
+                <elementReference>Change_of_Admissions.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_with_Standard</name>
+        <label>Update with Standard</label>
+        <locationX>842</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>EntitlementId</field>
+            <value>
+                <elementReference>Get_Standard_Entitlements.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Standard_Entitlements</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SubType__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>EntitlementName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

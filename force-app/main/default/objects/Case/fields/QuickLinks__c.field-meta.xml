@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuickLinks__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;http://www.ccc.edu/vss&quot;, &quot;www.ccc.edu/vss&quot;)&amp; BR() &amp;
+HYPERLINK(&quot;https://www.ccc.edu/services/Pages/Residency-Verification.aspx&quot;, &quot;Residency&quot;)&amp; BR()&amp;
+HYPERLINK(&quot;https://www.ccc.edu/services/Pages/Submit-Official-College-Transcripts.aspx&quot;, &quot;Submit Transcripts&quot;)&amp; BR()&amp;
+HYPERLINK(&quot;https://www.ccc.edu/departments/pages/financial-aid.aspx&quot;, &quot;Financial Aid&quot;)&amp; BR()&amp;
+HYPERLINK(&quot;https://www.ccc.edu/services/pages/placement-tests.aspx&quot;, &quot;Placement Testing&quot;)&amp; BR()&amp;
+HYPERLINK(&quot;https://colleges.ccc.edu/paying-for-college/&quot;, &quot;Ways to Pay&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quick Links</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalAIModel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationSourceType>FAQ</applicationSourceType>
+    <externalModelKey>625722e9-33b2-4ca9-98f5-ffedf8a3f0ab</externalModelKey>
+    <externalModelStatus>DISABLED</externalModelStatus>
+    <name>SR1684265403559</name>
+    <trainingJobName>smt-vir-00D7z000000CjarEAC-1adf68ac-fcff-4fca-bf95-ad58df0b1f0e</trainingJobName>
+</ExternalAIModel>
